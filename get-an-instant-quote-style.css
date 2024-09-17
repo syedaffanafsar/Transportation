@@ -1,0 +1,600 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.row-1 {
+  padding: 0;
+  margin: 0;
+}
+
+/* Section 1 */
+
+.sec-1 .navbar-brand img {
+  max-height: 80px;
+  width: 120px;
+}
+
+.sec-1 p {
+  margin: 0;
+}
+
+.sec-1 .nav-item {
+  font-weight: 500;
+  color: #000;
+}
+
+.sec-1 .navbar-light .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #ff0037;
+}
+
+.sec-1 .navbar-light .navbar-nav .nav-link-2 {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  margin-left: 20px;
+}
+
+.navbar-light .navbar-nav .nav-link-2:hover {
+  color: #ff0037;
+}
+
+.sec-1 .dropdown {
+  display: none;
+  position: absolute;
+  top: 40px;
+  background-color: #ffffffec;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  padding: 10px 20px 25px;
+  border-radius: 4px;
+  margin-top: 25px;
+  z-index: 1;
+}
+
+.sec-1 .dropdown a {
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+}
+
+.sec-1 .dropdown a:hover {
+  color: #ff0037;
+}
+
+.sec-1 .dropdown p {
+  font-size: 12px;
+  color: #a5a5a5;
+}
+
+.sec-1 .dropdown .dropdown-txt {
+  display: block;
+  padding: 20px 20px 0px 10px;
+  font-weight: 400;
+}
+
+.sec-1 .dropdown h1 {
+  color: #a5a5a5;
+  font-size: 20px;
+  padding-left: 15px;
+  margin-top: 20px;
+}
+
+.sec-1 li:hover .dropdown {
+  display: block;
+}
+
+.sec-1 .number {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .sec-1 .header-text {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .sec-1 .navbar-brand {
+    order: -1;
+  }
+}
+
+.sec-1 {
+  background-image: url(./get-an-instant-quote-images/bg.jpg);
+  background-repeat: no-repeat;
+  padding: 30px 2% 0px;
+  background-size: cover;
+  height: 90%;
+}
+
+.sec-1 .container-fluid {
+  margin-top: 40px;
+}
+
+.sec-1 .txt-col {
+  margin-left: 50px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.sec-1 h2 {
+  font-size: 70px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1;
+}
+
+.sec-1 h2 .car-ship {
+  color: red;
+}
+
+.sec-1 h3 {
+  font-size: 28px;
+  color: #fff;
+  margin-top: 30px;
+  font-family: "poppins", system-ui;
+  font-weight: 400;
+}
+
+.sec-1 .col h2 .cal {
+  font-family: "poppins Outline", system-ui;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ffffff;
+  color: transparent;
+}
+
+/* Section 3 */
+
+
+.sec-3 {
+  padding-bottom: 20px;
+}
+
+.sec-3 .cont {
+  box-shadow: 0 0 3.438rem 0 rgb(0 0 0 / 30%);
+  background-color: #fff;
+  padding: 3.75rem 3.125rem 3.125rem;
+  border-radius: 1.063rem;
+  margin-top: -50px;
+  width: 95%;
+}
+
+.sec-3 .row-1 .col-3 img {
+  width: 55%;
+  margin-left: 50px;
+}
+
+.sec-3 .row-1 .col-9 {
+  text-align: center;
+  color: #000;
+}
+
+.sec-3 .row-1 .col-9 h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.sec-3 .row-1 .col-9 h3 {
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.sec-3 .row-1 .col-9 h4 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.sec-3 .row-2 h2 {
+  font-size: 15px;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.sec-3 .row-3 .form-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1800px;
+  margin: 0;
+  justify-content: center;
+}
+
+.sec-3 .row-3 .form-container input,
+.sec-3 .row-3 .form-container select {
+  width: 20%;
+  /* 4 items in a row */
+  padding: 10px 10px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ced4da;
+  border-top: 0px solid;
+  border-right: 0px solid;
+  border-left: 0px solid;
+  color: #6c7592;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.sec-3 .row-3 .form-container .wide-input {
+  width: 100%;
+  /* For the full-width inputs like the phone input */
+}
+
+.sec-3 .row-3 .form-container .date-input {
+  width: 23%;
+}
+
+.sec-3 .row-3 .phone-input {
+  position: relative;
+}
+
+.sec-3 .row-4 .add-vehicle img {
+  margin-left: 40px;
+  margin-top: 20px;
+  border: 2px solid red;
+  width: 90px;
+  padding: 5px;
+}
+
+.sec-3 .row-4 .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sec-3 .row-4 .wrapper .clear {
+  padding: 20px 40px;
+  background-color: #fff;
+  color: #ea0a0b;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.sec-3 .row-4 .wrapper .find-zip {
+  padding: 20px 40px;
+  background-color: #fff;
+  color: #ea0a0b;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.sec-3 .row-4 .wrapper .calculator {
+  padding: 20px 40px;
+  background-color: #ff0101;
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 5px;
+  box-shadow: 0 1.25rem 2.5rem 0 rgb(234 10 11 / 30%);
+}
+
+.sec-3 .row-5 p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.sec-3 .row-5 a {
+  color: #c20730;
+  text-decoration: none;
+}
+
+/* Section 4 */
+
+.sec-4 {
+  padding: 20px 50px;
+}
+
+.sec-4 .row {
+  color: #000;
+}
+
+.sec-4 .row h2 {
+  font-size: 45px;
+}
+
+.sec-4 .row h3 {
+  font-size: 30px;
+}
+
+.sec-4 .row ul {
+  margin-left: 30px;
+}
+
+.sec-4 .row li {
+  color: #333333;
+  font-size: 20px;
+}
+
+.sec-4 .row li::marker {
+  color: #EA0A0B;
+  font-size: 25px;
+}
+
+/* Section 5 */
+
+.sec-5 {
+  background: linear-gradient(to right, #002762, #0e1a30, #012762);
+  color: #fff;
+  padding: 20px 50px;
+}
+
+.sec-5 h2 {
+  font-size: 35px;
+}
+
+.sec-5 h3 {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.sec-5 .row ul {
+  margin-left: 50px;
+}
+
+.sec-5 .row li {
+  font-size: 17px;
+}
+
+.sec-5 .row li::marker {
+  color: #EA0A0B;
+  font-size: 23px;
+}
+
+/* Section 6 */
+
+.sec-6 {
+  padding: 20px 0;
+}
+
+.sec-6 .row h3 {
+  font-size: 40px;
+  font-weight: 400;
+  margin-left: 60px;
+  width: 50%;
+}
+
+.sec-6 .row .cont {
+  box-shadow: 0 5px 30px 0 rgb(35 43 54 / 30%);
+  width: 90%;
+  margin: 15px 70px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.sec-6 .row .cont h2 {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+/* Section 7 */
+
+.sec-7 {
+  background: linear-gradient(to right, #002762, #0e1a30, #012762);
+  padding: 20px 60px 15px;
+  color: #fff;
+}
+
+.sec-7 .row h2 {
+  font-size: 35px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+/* Section 8 */
+
+.sec-8 {
+  padding: 20px 70px;
+}
+
+.sec-8 .row .wrapper {
+  display: flex;
+}
+
+.sec-8 .row .wrapper .txt h2 {
+  font-size: 30px;
+  color: #000;
+  margin-top: 120px;
+  margin-left: 40px;
+}
+
+.sec-8 .row ul {
+  margin-left: 25px;
+  color: #000;
+}
+
+.sec-8 .row li {
+  font-size: 17px;
+}
+
+.sec-8 .row li span {
+  font-weight: 500;
+}
+
+.sec-8 .row li::marker {
+  color: #EA0A0B;
+  font-size: 23px;
+}
+
+.sec-8 .para-1 {
+  margin-top: 20px;
+}
+
+.sec-8 .img-2 {
+  margin: 30px 0 30px 28%;
+  width: 20%;
+}
+
+.sec-9 {
+  background: linear-gradient(to right, #002762, #0e1a30, #012762);
+  padding: 25px 80px 15px;
+  color: #fff;
+}
+
+.sec-9 h2 {
+  font-size: 35px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.sec-9 p span {
+  font-weight: 700;
+}
+
+/* Section 10 */
+
+.sec-10 {
+  padding: 25px 80px 15px;
+  color: #000;
+}
+
+.sec-10 h2 {
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.sec-10 p {
+  font-size: 20px;
+}
+
+.sec-10 p a {
+  color: #000;
+}
+
+/* Section 11 */
+
+.sec-11 {
+  border-top: 1px solid #dddddd;
+  padding-top: 30px;
+}
+
+.sec-11 .wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.sec-11 .logo img {
+  width: 120px;
+}
+
+.sec-11 h3 {
+  text-decoration: none;
+  color: #818181;
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 0px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.sec-11 h3:hover {
+  color: #ca0538;
+}
+
+.sec-11 .contact-wrapper {
+  display: flex;
+  margin: 20px 0;
+}
+
+.sec-11 .contact-wrapper h2 {
+  color: #818181;
+  font-size: 18px;
+  margin: 0 0 0 10px;
+  font-weight: 400;
+}
+
+.sec-11 .quick-link h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.sec-11 .contact-us h2 {
+  font-size: 20px;
+}
+
+.sec-11 .info h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.sec-11 .contact-wrapper {
+  display: flex;
+}
+
+/* Section 12 */
+
+.sec-12 {
+  border-top: 1px solid #dddddd;
+  padding: 10px 60px;
+}
+
+.sec-12 .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sec-12 .wrapper .txt {
+  height: auto;
+}
+
+.sec-12 .wrapper .txt h2 {
+  font-size: 20px;
+  font-weight: 300;
+  color: #000;
+}
+
+.sec-12 .wrapper .image {
+  width: 11%;
+  height: 10%;
+}
+
+.sec-12 .wrapper img {
+  width: 15%;
+  margin-right: 10px;
+  background-color: #000000;
+}
+
+/* ScrollBar */
+
+/* For WebKit-based browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 9px;
+  /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #022768, #c20730);
+  /* Gradient for the scrollbar thumb */
+  border-radius: 6px;
+  /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #c20730, #022768);
+  /* Darker gradient on hover */
+}

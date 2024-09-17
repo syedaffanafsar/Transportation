@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Form with 16 Inputs</title>
+    <style>
+      .sec-3 .row-3 .form-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        max-width: 1000px;
+        margin: 0;
+      }
+
+      .sec-3 .row-3 .form-container input,
+      .sec-3 .row-3 .form-container select {
+        width: 20%; /* 4 items in a row */
+        padding: 10px 10px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #ced4da;
+        border-top: 0px solid;
+        border-right: 0px solid;
+        border-left: 0px solid;
+        color: #6c7592;
+        font-size: 17px;
+        font-weight: 400;
+      }
+
+      .sec-3 .row-3 .form-container .wide-input {
+        width: 100%; /* For the full-width inputs like the phone input */
+      }
+
+      .sec-3 .row-3 .form-container .date-input {
+        width: 23%;
+      }
+
+      .sec-3 .row-3 .phone-input {
+        position: relative;
+      }
+
+      .sec-3 .row-3 .phone-input input[type="tel"]::placeholder {
+        color: transparent;
+      }
+
+      .sec-3 .row-3 .phone-input input[type="tel"]:hover::placeholder {
+        color: grey;
+      }
+
+      .sec-3 .row-4 .wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .sec-3 .row-4 .wrapper .clear {
+        padding: 20px 40px;
+        background-color: #fff;
+        color: #ea0a0b;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+      }
+
+      .sec-3 .row-4 .wrapper .find-zip {
+        padding: 20px 40px;
+        background-color: #fff;
+        color: #ea0a0b;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .sec-3 .row-4 .wrapper .calculator {
+        padding: 20px 40px;
+        background-color: #ff0101;
+        color: rgb(255, 255, 255);
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 5px;
+        box-shadow: 0 1.25rem 2.5rem 0 rgb(234 10 11 / 30%);
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="add-vehicle">
+      <img src="add-vehicle.webp" alt="" />
+    </div>
+    <div class="wrapper">
+      <div class="zip-code">
+        <button
+          href="https://tools.usps.com/go/ZipLookupAction!input.action"
+          class="find-zip"
+        >
+          Find Your ZIP Code
+        </button>
+      </div>
+      <div class="butt">
+        <!-- Clear fields button -->
+        <button class="clear" onclick="clearFields()">
+          <i class="fas fa-undo-alt"></i> Clear Fields
+        </button>
+        <button class="calculator">
+          <i class="fas fa-calculator"></i> Continue
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function clearFields() {
+        const inputs = document.querySelectorAll(
+          ".form-container input, .form-container select"
+        );
+        inputs.forEach((input) => {
+          if (input.type === "select-one") {
+            input.selectedIndex = 0; // Reset dropdowns
+          } else {
+            input.value = ""; // Clear all text and number inputs
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
