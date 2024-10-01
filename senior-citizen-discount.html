@@ -1,0 +1,2824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="csrf-token" content="aI61qW1fRVPMwUh0InItFRgEf6Wi8Xdg7sVFuWmD">
+  <link rel="icon" href="style/images/favicon.png" sizes="32x32">
+  <script>if (navigator.userAgent.match(/MSIE|Internet Explorer/i) || navigator.userAgent.match(/Trident\/7\..*?rv:11/i)) { var href = document.location.href; if (!href.match(/[?&]nowprocket/)) { if (href.indexOf("?") == -1) { if (href.indexOf("#") == -1) { document.location.href = href + "?nowprocket=1" } else { document.location.href = href.replace("#", "?nowprocket=1#") } } else { if (href.indexOf("#") == -1) { document.location.href = href + "&nowprocket=1" } else { document.location.href = href.replace("#", "&nowprocket=1#") } } } }</script>
+  <script>(() => { class RocketLazyLoadScripts { constructor() { this.v = "1.2.5.1", this.triggerEvents = ["keydown", "mousedown", "mousemove", "touchmove", "touchstart", "touchend", "wheel"], this.userEventHandler = this.t.bind(this), this.touchStartHandler = this.i.bind(this), this.touchMoveHandler = this.o.bind(this), this.touchEndHandler = this.h.bind(this), this.clickHandler = this.u.bind(this), this.interceptedClicks = [], this.interceptedClickListeners = [], this.l(this), window.addEventListener("pageshow", (t => { this.persisted = t.persisted, this.everythingLoaded && this.m() })), document.addEventListener("DOMContentLoaded", (() => { this.p() })), this.delayedScripts = { normal: [], async: [], defer: [] }, this.trash = [], this.allJQueries = [] } k(t) { document.hidden ? t.t() : (this.triggerEvents.forEach((e => window.addEventListener(e, t.userEventHandler, { passive: !0 }))), window.addEventListener("touchstart", t.touchStartHandler, { passive: !0 }), window.addEventListener("mousedown", t.touchStartHandler), document.addEventListener("visibilitychange", t.userEventHandler)) } _() { this.triggerEvents.forEach((t => window.removeEventListener(t, this.userEventHandler, { passive: !0 }))), document.removeEventListener("visibilitychange", this.userEventHandler) } i(t) { "HTML" !== t.target.tagName && (window.addEventListener("touchend", this.touchEndHandler), window.addEventListener("mouseup", this.touchEndHandler), window.addEventListener("touchmove", this.touchMoveHandler, { passive: !0 }), window.addEventListener("mousemove", this.touchMoveHandler), t.target.addEventListener("click", this.clickHandler), this.L(t.target, !0), this.M(t.target, "onclick", "rocket-onclick"), this.C()) } o(t) { window.removeEventListener("touchend", this.touchEndHandler), window.removeEventListener("mouseup", this.touchEndHandler), window.removeEventListener("touchmove", this.touchMoveHandler, { passive: !0 }), window.removeEventListener("mousemove", this.touchMoveHandler), t.target.removeEventListener("click", this.clickHandler), this.L(t.target, !1), this.M(t.target, "rocket-onclick", "onclick"), this.O() } h() { window.removeEventListener("touchend", this.touchEndHandler), window.removeEventListener("mouseup", this.touchEndHandler), window.removeEventListener("touchmove", this.touchMoveHandler, { passive: !0 }), window.removeEventListener("mousemove", this.touchMoveHandler) } u(t) { t.target.removeEventListener("click", this.clickHandler), this.L(t.target, !1), this.M(t.target, "rocket-onclick", "onclick"), this.interceptedClicks.push(t), t.preventDefault(), t.stopPropagation(), t.stopImmediatePropagation(), this.O() } D() { window.removeEventListener("touchstart", this.touchStartHandler, { passive: !0 }), window.removeEventListener("mousedown", this.touchStartHandler), this.interceptedClicks.forEach((t => { t.target.dispatchEvent(new MouseEvent("click", { view: t.view, bubbles: !0, cancelable: !0 })) })) } l(t) { EventTarget.prototype.addEventListenerBase = EventTarget.prototype.addEventListener, EventTarget.prototype.addEventListener = function (e, i, o) { "click" !== e || t.windowLoaded || i === t.clickHandler || t.interceptedClickListeners.push({ target: this, func: i, options: o }), (this || window).addEventListenerBase(e, i, o) } } L(t, e) { this.interceptedClickListeners.forEach((i => { i.target === t && (e ? t.removeEventListener("click", i.func, i.options) : t.addEventListener("click", i.func, i.options)) })), t.parentNode !== document.documentElement && this.L(t.parentNode, e) } S() { return new Promise((t => { this.T ? this.O = t : t() })) } C() { this.T = !0 } O() { this.T = !1 } M(t, e, i) { t.hasAttribute && t.hasAttribute(e) && (event.target.setAttribute(i, event.target.getAttribute(e)), event.target.removeAttribute(e)) } t() { this._(this), "loading" === document.readyState ? document.addEventListener("DOMContentLoaded", this.R.bind(this)) : this.R() } p() { let t = []; document.querySelectorAll("script[type=rocketlazyloadscript][data-rocket-src]").forEach((e => { let i = e.getAttribute("data-rocket-src"); if (i && 0 !== i.indexOf("data:")) { 0 === i.indexOf("//") && (i = location.protocol + i); try { const o = new URL(i).origin; o !== location.origin && t.push({ src: o, crossOrigin: e.crossOrigin || "module" === e.getAttribute("data-rocket-type") }) } catch (t) { } } })), t = [...new Map(t.map((t => [JSON.stringify(t), t]))).values()], this.j(t, "preconnect") } async R() { this.lastBreath = Date.now(), this.P(this), this.F(this), this.q(), this.A(), this.I(), await this.U(this.delayedScripts.normal), await this.U(this.delayedScripts.defer), await this.U(this.delayedScripts.async); try { await this.W(), await this.H(this), await this.J() } catch (t) { console.error(t) } window.dispatchEvent(new Event("rocket-allScriptsLoaded")), this.everythingLoaded = !0, this.S().then((() => { this.D() })), this.N() } A() { document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t => { t.hasAttribute("data-rocket-src") ? t.hasAttribute("async") && !1 !== t.async ? this.delayedScripts.async.push(t) : t.hasAttribute("defer") && !1 !== t.defer || "module" === t.getAttribute("data-rocket-type") ? this.delayedScripts.defer.push(t) : this.delayedScripts.normal.push(t) : this.delayedScripts.normal.push(t) })) } async B(t) { if (await this.G(), !0 !== t.noModule || !("noModule" in HTMLScriptElement.prototype)) return new Promise((e => { let i; function o() { (i || t).setAttribute("data-rocket-status", "executed"), e() } try { if (navigator.userAgent.indexOf("Firefox/") > 0 || "" === navigator.vendor) i = document.createElement("script"), [...t.attributes].forEach((t => { let e = t.nodeName; "type" !== e && ("data-rocket-type" === e && (e = "type"), "data-rocket-src" === e && (e = "src"), i.setAttribute(e, t.nodeValue)) })), t.text && (i.text = t.text), i.hasAttribute("src") ? (i.addEventListener("load", o), i.addEventListener("error", (function () { i.setAttribute("data-rocket-status", "failed"), e() })), setTimeout((() => { i.isConnected || e() }), 1)) : (i.text = t.text, o()), t.parentNode.replaceChild(i, t); else { const i = t.getAttribute("data-rocket-type"), n = t.getAttribute("data-rocket-src"); i ? (t.type = i, t.removeAttribute("data-rocket-type")) : t.removeAttribute("type"), t.addEventListener("load", o), t.addEventListener("error", (function () { t.setAttribute("data-rocket-status", "failed"), e() })), n ? (t.removeAttribute("data-rocket-src"), t.src = n) : t.src = "data:text/javascript;base64," + window.btoa(unescape(encodeURIComponent(t.text))) } } catch (i) { t.setAttribute("data-rocket-status", "failed"), e() } })); t.setAttribute("data-rocket-status", "skipped") } async U(t) { const e = t.shift(); return e && e.isConnected ? (await this.B(e), this.U(t)) : Promise.resolve() } I() { this.j([...this.delayedScripts.normal, ...this.delayedScripts.defer, ...this.delayedScripts.async], "preload") } j(t, e) { var i = document.createDocumentFragment(); t.forEach((t => { const o = t.getAttribute && t.getAttribute("data-rocket-src") || t.src; if (o) { const n = document.createElement("link"); n.href = o, n.rel = e, "preconnect" !== e && (n.as = "script"), t.getAttribute && "module" === t.getAttribute("data-rocket-type") && (n.crossOrigin = !0), t.crossOrigin && (n.crossOrigin = t.crossOrigin), t.integrity && (n.integrity = t.integrity), i.appendChild(n), this.trash.push(n) } })), document.head.appendChild(i) } P(t) { let e = {}; function i(i, o) { return e[o].eventsToRewrite.indexOf(i) >= 0 && !t.everythingLoaded ? "rocket-" + i : i } function o(t, o) { !function (t) { e[t] || (e[t] = { originalFunctions: { add: t.addEventListener, remove: t.removeEventListener }, eventsToRewrite: [] }, t.addEventListener = function () { arguments[0] = i(arguments[0], t), e[t].originalFunctions.add.apply(t, arguments) }, t.removeEventListener = function () { arguments[0] = i(arguments[0], t), e[t].originalFunctions.remove.apply(t, arguments) }) }(t), e[t].eventsToRewrite.push(o) } function n(e, i) { let o = e[i]; e[i] = null, Object.defineProperty(e, i, { get: () => o || function () { }, set(n) { t.everythingLoaded ? o = n : e["rocket" + i] = o = n } }) } o(document, "DOMContentLoaded"), o(window, "DOMContentLoaded"), o(window, "load"), o(window, "pageshow"), o(document, "readystatechange"), n(document, "onreadystatechange"), n(window, "onload"), n(window, "onpageshow") } F(t) { let e; function i(e) { return t.everythingLoaded ? e : e.split(" ").map((t => "load" === t || 0 === t.indexOf("load.") ? "rocket-jquery-load" : t)).join(" ") } function o(o) { if (o && o.fn && !t.allJQueries.includes(o)) { o.fn.ready = o.fn.init.prototype.ready = function (e) { return t.domReadyFired ? e.bind(document)(o) : document.addEventListener("rocket-DOMContentLoaded", (() => e.bind(document)(o))), o([]) }; const e = o.fn.on; o.fn.on = o.fn.init.prototype.on = function () { return this[0] === window && ("string" == typeof arguments[0] || arguments[0] instanceof String ? arguments[0] = i(arguments[0]) : "object" == typeof arguments[0] && Object.keys(arguments[0]).forEach((t => { const e = arguments[0][t]; delete arguments[0][t], arguments[0][i(t)] = e }))), e.apply(this, arguments), this }, t.allJQueries.push(o) } e = o } o(window.jQuery), Object.defineProperty(window, "jQuery", { get: () => e, set(t) { o(t) } }) } async H(t) { const e = document.querySelector("script[data-webpack]"); e && (await async function () { return new Promise((t => { e.addEventListener("load", t), e.addEventListener("error", t) })) }(), await t.K(), await t.H(t)) } async W() { this.domReadyFired = !0, await this.G(), document.dispatchEvent(new Event("rocket-readystatechange")), await this.G(), document.rocketonreadystatechange && document.rocketonreadystatechange(), await this.G(), document.dispatchEvent(new Event("rocket-DOMContentLoaded")), await this.G(), window.dispatchEvent(new Event("rocket-DOMContentLoaded")) } async J() { await this.G(), document.dispatchEvent(new Event("rocket-readystatechange")), await this.G(), document.rocketonreadystatechange && document.rocketonreadystatechange(), await this.G(), window.dispatchEvent(new Event("rocket-load")), await this.G(), window.rocketonload && window.rocketonload(), await this.G(), this.allJQueries.forEach((t => t(window).trigger("rocket-jquery-load"))), await this.G(); const t = new Event("rocket-pageshow"); t.persisted = this.persisted, window.dispatchEvent(t), await this.G(), window.rocketonpageshow && window.rocketonpageshow({ persisted: this.persisted }), this.windowLoaded = !0 } m() { document.onreadystatechange && document.onreadystatechange(), window.onload && window.onload(), window.onpageshow && window.onpageshow({ persisted: this.persisted }) } q() { const t = new Map; document.write = document.writeln = function (e) { const i = document.currentScript; i || console.error("WPRocket unable to document.write this: " + e); const o = document.createRange(), n = i.parentElement; let s = t.get(i); void 0 === s && (s = i.nextSibling, t.set(i, s)); const c = document.createDocumentFragment(); o.setStart(c, 0), c.appendChild(o.createContextualFragment(e)), n.insertBefore(c, s) } } async G() { Date.now() - this.lastBreath > 45 && (await this.K(), this.lastBreath = Date.now()) } async K() { return document.hidden ? new Promise((t => setTimeout(t))) : new Promise((t => requestAnimationFrame(t))) } N() { this.trash.forEach((t => t.remove())) } static run() { const t = new RocketLazyLoadScripts; t.k(t) } } RocketLazyLoadScripts.run() })();</script>
+  
+  <link rel="preload" as="style" onload="this.rel='stylesheet'"
+    href="https://www.amerifreight.net/public/assets/front/fonts/fontawsome.css" media="all">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/6.0.0/introjs.css"
+    integrity="sha512-4OzqLjfh1aJa7M33b5+h0CSx0Q3i9Qaxlrr1T/Z+Vz+9zs5A7GM3T3MFKXoreghi3iDOSbkPMXiMBhFO7UBW/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" async="" as="style"
+    onload="this.onload=null;this.rel='stylesheet'" media="all">
+  <link rel="preload" async="" as="style" onload="this.rel='stylesheet'"
+    href="https://www.amerifreight.net/public/assets/front/css/select2.min.css">
+  <link rel="preload" async="" as="style" onload="this.rel='stylesheet'"
+    href="https://www.amerifreight.net/public/assets/front/css/owl.carousel.min.css">
+  <link rel="preload" href="https://www.amerifreight.net/public/assets/front/js/jquery.min.js" as="script">
+  <script async="" src="js/senior-citizen-discount-js/google-analytics.js"></script>
+  <title>Senior Citizen Discount</title>
+  <meta name="keywords" content="Senior Citizen Discount">
+  <meta name="description"
+    content="Senior citizens enjoy discounted car shipping with AmeriFreight. Safe, affordable transport. Get your discount today!">
+  <meta name="twitter:title" content="Senior Citizen Discount">
+  <meta name="twitter:description"
+    content="Senior citizens enjoy discounted car shipping with AmeriFreight. Safe, affordable transport. Get your discount today!">
+  <meta name="twitter:image" content="https://www.amerifreight.net/public/assets/front/images/200x200.png">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:title" content="Senior Citizen Discount">
+  <meta property="og:description"
+    content="Senior citizens enjoy discounted car shipping with AmeriFreight. Safe, affordable transport. Get your discount today!">
+  <meta property="og:image" content="style/images/200x200.png">
+  <meta property="og:url" content="senior-citizen-discount.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="AmeriFreight Auto Transport">
+  <link rel="canonical" href="senior-citizen-discount.html">
+  <link href="https://cdnjs.cloudflare.com" rel="preconnect" crossorigin="anonymous">
+  <link href="https://www.googletagmanager.com" rel="preconnect">
+  <link href="https://widget.trustpilot.com" rel="preconnect">
+  <link href="https://cse.google.com" rel="preconnect">
+  <link href="https://7gdrhmqdxblg-u503.pressidiumcdn.com" rel="preconnect">
+  <link rel="stylesheet" href="style/senior-citizen-discount-style.css">
+</head>
+
+<body style="font-family: Roboto, sans-serif;">
+  <script src="js/senior-citizen-discount-js/jquery.min.js"></script>
+  <script defer="" fetchpriority="low">
+    $(document).ready(function () {
+      $(".formbt button").html($(".formbt button").text().replace("Submit Now", "<i class='fas fa-calculator'></i> Continue"));
+      $(".instantquotebtn button").html($(".instantquotebtn button").text().replace("Submit Now", "<i class='fas fa-calculator'></i> Continue"));
+    });
+  </script>
+  <div class="main-wraper">
+    <div class="menu-bar">
+      <div class="topbar">
+        <div class="container" style=" max-width: 1400px;margin: 0 auto;">
+          <div class="row">
+            <div class="col-md-12">
+              <ul class="nav top-navbar justify-content-lg-end justify-content-center p-0 border-bottom py-1">
+                <li><a href="blog.html">Blog</a></li>
+                <li><a
+                    href="reviews.html">Reviews</a>
+                </li>
+                <li><a href="contact-us.html">Contact</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="help.html">Help</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" style=" max-width: 1400px;
+    margin: 0 auto;">
+        <div class="row align-items-center">
+          <div class="col-md-2 col-xl-2 py-2" style="margin-right: -15px;padding-bottom: 9px;
+        padding-left: 20px;">
+            <a class="navbar-brand" href="home.html">
+              <img class="for-desktop" width="120" height="77" src="style/images/amerifreight_logo1629704252579.png"
+                alt="Logo">
+              <img width="115" height="75" class="for-mobile img-responsive"
+                src="style/images/amerifreight_logo1629704252579.png" alt="Logo"
+                srcset="style/images/amerifreight_logo1629704252579.png 767w, images/amerifreight_logo1629704252579.png 1366w"
+                sizes="135px">
+            </a>
+          </div>
+          <div class="col-xl-8 col-md-4  order-md-1  ml-auto pr-0">
+            <nav class="navbar navbar-expand-lg navbar-light" style="padding-bottom: 7px;">
+              <div id="main" style="padding: 0px">
+                <div class="navbar-toggler menuBtn">
+                  <i class="fa fa-bars">
+                  </i>
+                  <br>
+                  <p class="menu-name">MENU
+                  </p>
+                </div>
+              </div>
+              <button class="navbar-toggler menu-bar-button" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                </span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-0 ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link"
+                      href="get-an-instant-quote.html">Get
+                      An Instant Quote
+                    </a>
+                  </li>
+                  <li class="nav-item dropdown menu-step1"> <a class="nav-link dropdown-toggle" href="#" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Why AmeriFreight
+                    </a>
+                    <div class="dropdown-menu dro-left">
+                      <div class="row">
+                        <div class="col-sm-12 col-md-12">
+                          <ul class="megamenu">
+                            <li class="dropdown-item">
+                              <a href="door-to-door.html">Door-to-Door <br>
+                                <span>Door-to-door auto transportation.
+                                </span> </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-sm-12 col-md-12">
+                          <ul class="megamenu">
+                            <li class="dropdown-item">
+                              <a href="no-upfront-payment.html">No
+                                Upfront Payment <br>
+                                <span>We do the work first.
+                                </span> </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-sm-12 col-md-12">
+                          <ul class="megamenu">
+                            <li class="dropdown-item">
+                              <a href="gap-protection.html">Gap Protection <br>
+                                <span>For added peace of mind.
+                                </span> </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-sm-12 col-md-12">
+                          <ul class="megamenu">
+                            <li class="dropdown-item">
+                              <a href="open.html">Open <br>
+                                <span>Conventional, fastest, cheapest.
+                                </span> </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-sm-12 col-md-12">
+                          <ul class="megamenu">
+                            <li class="dropdown-item">
+                              <a href="enclosed.html">Enclosed <br>
+                                <span>Safer and less risk.
+                                </span> </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-sm-12 col-md-12">
+                          <ul class="megamenu">
+                            <li class="dropdown-item">
+                              <a href="expedited.html">Expedited <br>
+                                <span>Need it quick? We can help.
+                                </span> </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-sm-12 col-md-12">
+                          <ul class="megamenu">
+                            <li class="dropdown-item">
+                              <a
+                                href="reviews.html">Reviews
+                                <br>
+                                <span>Most 5-Star Reviews in the industry.
+                                </span> </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown menu-step1"> <a class="nav-link dropdown-toggle" href="#" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">How it Works
+                    </a>
+                    <div class="dropdown-menu dro-left">
+                      <div class="row">
+                        <div class="col-sm-12 col-md-12">
+                          <ul class="megamenu">
+                            <li class="dropdown-item">
+                              <a href="start-to-finish.html">Start to
+                                Finish <br>
+                                <span>How to Ship Your Car
+                                </span> </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-sm-12 col-md-12">
+                          <ul class="megamenu">
+                            <li class="dropdown-item">
+                              <a href="auto-transport-cost.html">Auto Transport Cost
+                                <br>
+                                <span>Learn how to Estimate Costs
+                                </span> </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-sm-12 col-md-12">
+                          <ul class="megamenu">
+                            <li class="dropdown-item">
+                              <a href="cross-country-car-shipping.html">Cross
+                                Country Car Shipping <br>
+                                <span>Coast to Coast
+                                </span> </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown menu-step2"> <a class="nav-link dropdown-toggle" href="#" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Who We Serve
+                    </a>
+                    <div class="dropdown-menu dro-center">
+                      <div class="row">
+                        <div class="col-6 col-md-12">
+                          <h4>
+                            <a href="#">Customers | Business
+                            </a>
+                          </h4>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                          <ul class="megamenu">
+                            <li class="dropdown-item">
+                              <a href="online-auto-purchases.html">Online Auto
+                                Purchases <br>
+                                <span>You’ve bought the car, now what?
+                                </span> </a>
+                            </li>
+                            <li class="dropdown-item">
+                              <a href="seasonal.html">Seasonal <br>
+                                <span>Ebb and flow through the year.
+                                </span> </a>
+                            </li>
+                            <li class="dropdown-item">
+                              <a href="students.html">Students <br>
+                                <span>The smart way to ship your car.
+                                </span> </a>
+                            </li>
+                            <li class="dropdown-item">
+                              <a href="military.html">Military <br>
+                                <span>Let us serve you
+                                </span> </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                          <ul class="megamenu">
+                            <li class="dropdown-item">
+                              <a href="motorcycle.html">Motorcycles <br>
+                                <span>Two wheels? Too easy!
+                                </span> </a>
+                            </li>
+                            <li class="dropdown-item">
+                              <a href="car-enthusiast.html">Car Enthusiast <br>
+                                <span>Auto Shipping to keep you smiling.
+                                </span> </a>
+                            </li>
+                            <li class="dropdown-item">
+                              <a href="relocation.html">Relocation <br>
+                                <span>We can save you a trip.
+                                </span> </a>
+                            </li>
+                            <li class="dropdown-item">
+                              <a href="seniors.html">Seniors <br>
+                                <span>we can assist seniors
+                                </span> </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown menu-step2"> <a class="nav-link dropdown-toggle" href="#" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Discounts
+                    </a>
+                    <div class="dropdown-menu dro-center">
+                      <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                          <ul class="megamenu">
+                            <li class="dropdown-item">
+                              <a href="military-discount.html">Military <br>
+                                <span>Discount for military
+                                </span> </a>
+                            </li>
+                            <li class="dropdown-item">
+                              <a href="first-response-discount.html">First Responders <br>
+                                <span>Discount for first responders
+                                </span> </a>
+                            </li>
+                            <li class="dropdown-item">
+                              <a href="medical-personnel-discount.html">Medical Personnel <br>
+                                <span>Discount for medical personnel
+                                </span> </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                          <ul class="megamenu">
+                            <li class="dropdown-item">
+                              <a href="student-discount.html">Student <br>
+                                <span>Discount for students
+                                </span> </a>
+                            </li>
+                            <li class="dropdown-item">
+                              <a href="senior-citizen-discount.html">Senior Citizens <br>
+                                <span>Discount for senior citizens
+                                </span> </a>
+                            </li>
+                            <li class="dropdown-item">
+                              <a
+                                href="and-more.html">And
+                                More <br>
+                                <span>Explore other discounts
+                                </span> </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div class="col-md-6 col-xl-2 order-xl-2" style="    font-weight: 700;text-align: end;">
+            <a href="tel:(770) 486-1010" id="top_contact_number">(770) 486-1010</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="mobmain">
+      <div id="mySidenav" class="sidenav">
+        <div class="sidenavdata">
+          <div class="close-menu">
+            <button class="closebtn" id="closebtnm">close
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+                viewBox="0 0 16 16">
+                <path
+                  d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z">
+                </path>
+              </svg>
+            </button>
+          </div>
+          <div class="mobilenav">
+            <ul>
+              <li>
+                <a href="get-an-instant-quote.html">
+                  <span class="span-title">Get An Instant Quote
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a class="dropmenu" href="#">
+                  <span class="span-title">Why AmeriFreight
+                  </span>
+                  <i class="fas fa-angle-down">
+                  </i>
+                </a>
+                <ul class="megamenu">
+                  <li> <a href="door-to-door.html">
+                      <span>Door-to-Door
+                      </span>
+                    </a> <a href="no-upfront-payment.html">
+                      <span>No Upfront Payment
+                      </span>
+                    </a> <a href="gap-protection.html">
+                      <span>Gap Protection
+                      </span>
+                    </a> <a href="open.html">
+                      <span>Open
+                      </span>
+                    </a> <a href="enclosed.html">
+                      <span>Enclosed
+                      </span>
+                    </a> <a href="expedited.html">
+                      <span>Expedited
+                      </span>
+                    </a> <a
+                      href="reviews.html">
+                      <span>Reviews
+                      </span>
+                    </a> </li>
+                </ul>
+              </li>
+              <li>
+                <a class="dropmenu" href="#">
+                  <span class="span-title">How it Works
+                  </span>
+                  <i class="fas fa-angle-down">
+                  </i>
+                </a>
+                <ul class="megamenu">
+                  <li> <a href="start-to-finish.html">
+                      <span>Start to Finish
+                      </span>
+                    </a> <a href="auto-transport-cost.html">
+                      <span>Auto Transport Cost
+                      </span>
+                    </a> <a href="cross-country-car-shipping.html">
+                      <span>Cross Country Car Shipping
+                      </span>
+                    </a> </li>
+                </ul>
+              </li>
+              <li>
+                <a class="dropmenu" href="#">
+                  <span class="span-title">Who We Serve
+                  </span>
+                  <i class="fas fa-angle-down">
+                  </i>
+                </a>
+                <ul class="megamenu">
+                  <li> <a href="online-auto-purchases.html">
+                      <span>Online Auto Purchases
+                      </span>
+                    </a> <a href="seasonal.html">
+                      <span>Seasonal
+                      </span>
+                    </a> <a href="students.html">
+                      <span>Students
+                      </span>
+                    </a> <a href="military.html">
+                      <span>Military
+                      </span>
+                    </a> <a href="motorcycle.html">
+                      <span>Motorcycles
+                      </span>
+                    </a> <a href="car-enthusiast.html">
+                      <span>Car Enthusiast
+                      </span>
+                    </a> <a href="relocation.html">
+                      <span>Relocation
+                      </span>
+                    </a> <a href="seniors.html">
+                      <span>Seniors
+                      </span>
+                    </a> </li>
+                </ul>
+              </li>
+              <li>
+                <a class="dropmenu" href="#">
+                  <span class="span-title">Discounts
+                  </span>
+                  <i class="fas fa-angle-down">
+                  </i>
+                </a>
+                <ul class="megamenu">
+                  <li> <a href="military-discount.html">
+                      <span>Military
+                      </span>
+                    </a> <a href="first-response-discount.html">
+                      <span>First Responders
+                      </span>
+                    </a> <a href="medical-personnel-discount.html">
+                      <span>Medical Personnel
+                      </span>
+                    </a> <a href="student-discount.html">
+                      <span>Student
+                      </span>
+                    </a> <a href="senior-citizen-discount.html">
+                      <span>Senior Citizens
+                      </span>
+                    </a> <a href="and-more.html">
+                      <span>And More
+                      </span>
+                    </a> </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <span class="action_widget_section" style="display: none;">
+      <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+        class="btn btn-danger change_background_image_widget_section" style="display: block;">Change Background
+        Image</button>
+    </span>
+    <div class="transport main_background_image">
+
+
+
+      <div class="inner_background_image header-bgimg">
+      </div>
+      <div class="bg_overlay_top_section"></div>
+
+      <div class="transportzoomin banneroverlay">
+        <div class="transportzoomout">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-7 pt-2 colMd6_margin">
+                <h1 class="topHeaderHeading" spellcheck="false">Our Exclusive Senior Citizens Discount on Car Shipping
+                </h1>
+                <p>For our valued senior citizens who have a lifetime of experiences, we offer a discount that reflects
+                  our appreciation for your wisdom and vitality. Whether you're embarking on a well-deserved retirement
+                  adventure, moving closer to family, or simply exploring new horizons, AmeriFreight is here to assist.
+                  We understand the sentimental value of your vehicle, and our careful transport services guarantee a
+                  safe journey to your next chapter, allowing you to fully enjoy the moments that matter most.</p>
+
+
+              </div>
+              <div class="col-md-5 myNewFormSec d-flex justify-content-end">
+                <div class="transportform dynamic_sections pt-3" id="ds_top">
+                  <h2 style="font-size: 24px;">Start your free quote</h2>
+                  <div class="form-group text-left" style="padding-top:0px;padding-bottom: 5px;">
+
+                    <form id="quoteCalculatorForm" action="#" method="POST">
+                      <input type="hidden" name="_token" value="aI61qW1fRVPMwUh0InItFRgEf6Wi8Xdg7sVFuWmD">
+                      <div class="row step_1 mt-2" style="margin-bottom:-2px;">
+                        <div class="col-md-12 originZip_pb">
+
+                          <div class="inputbox pl-0">
+                            <label for="">Origin*</label>
+                            <input type="text" style="font-size: 14px" name="display_origin"
+                              class="form-control pb-0 pt-0" id="display_origin" placeholder="Enter City or Zip"
+                              autocomplete="off">
+                          </div>
+
+                          <div id="suggesstion-box" style="color: black;"></div>
+                        </div>
+                        <div class="col-md-4 d-none">
+                          <div class="inputbox">
+                            <input type="text" style="font-size: 14px" name="origin_zip" class="form-control"
+                              id="origin_zip" placeholder="*Origin Zip" autocomplete="off">
+                          </div>
+                        </div>
+                        <div class="col-md-4 d-none">
+                          <div class="inputbox">
+                            <input type="text" style="font-size: 14px" name="origin_city" class="form-control"
+                              id="origin_city" placeholder="*Origin City" autocomplete="off">
+                          </div>
+                        </div>
+
+                        <div class="col-md-4 d-none">
+                          <select class="select-control"
+                            style="font-size: 14px;font-size: 14px !important;border-bottom: 2px solid #d5d4d4;"
+                            name="origin_state" id="origin_state" placeholder="*Origin State" autocomplete="off">
+                            <option value="">*Origin State</option>
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arkansas">Arkansas</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Columbia">Columbia</option>
+                            <option value="Connecticut">Connecticut</option>
+                            <option value="Delaware">Delaware</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Idaho">Idaho</option>
+                            <option value="Illinois">Illinois</option>
+                            <option value="Indiana">Indiana</option>
+                            <option value="Iowa">Iowa</option>
+                            <option value="Kansas">Kansas</option>
+                            <option value="Kentucky">Kentucky</option>
+                            <option value="Louisiana">Louisiana</option>
+                            <option value="Maine">Maine</option>
+                            <option value="Maryland">Maryland</option>
+                            <option value="Massachusetts">Massachusetts</option>
+                            <option value="Michigan">Michigan</option>
+                            <option value="Minnesota">Minnesota</option>
+                            <option value="Mississippi">Mississippi</option>
+                            <option value="Missouri">Missouri</option>
+                            <option value="Montana">Montana</option>
+                            <option value="Nebraska">Nebraska</option>
+                            <option value="Nevada">Nevada</option>
+                            <option value="New Hampshire">New Hampshire</option>
+                            <option value="New Jersey">New Jersey</option>
+                            <option value="New Mexico">New Mexico</option>
+                            <option value="New York">New York</option>
+                            <option value="North Carolina">North Carolina</option>
+                            <option value="North Dakota">North Dakota</option>
+                            <option value="Ohio">Ohio</option>
+                            <option value="Oklahoma">Oklahoma</option>
+                            <option value="Oregon">Oregon</option>
+                            <option value="Pennsylvania">Pennsylvania</option>
+                            <option value="Rhode Island">Rhode Island</option>
+                            <option value="South Carolina">South Carolina</option>
+                            <option value="South Dakota">South Dakota</option>
+                            <option value="Tennessee">Tennessee</option>
+                            <option value="Texas">Texas</option>
+                            <option value="Utah">Utah</option>
+                            <option value="Vermont">Vermont</option>
+                            <option value="Virginia">Virginia</option>
+                            <option value="Washington">Washington</option>
+                            <option value="West Virginia">West Virginia</option>
+                            <option value="Wisconsin">Wisconsin</option>
+                            <option value="Wyoming">Wyoming</option>
+                          </select>
+                        </div>
+
+                        <div class="col-md-12">
+
+                          <div class="inputbox pl-0">
+                            <label for="">Destination*</label>
+                            <input type="text" style="font-size: 14px" name="display_destination"
+                              class="form-control pb-0 pt-0" id="display_destination" placeholder="Enter City or Zip"
+                              autocomplete="off">
+                            <div id="suggesstion-boxDes" style="color: black;"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 d-none">
+                          <div class="inputbox">
+                            <input type="text" style="font-size: 14px" name="destination_zip" class="form-control"
+                              id="destination_zip" placeholder="*Destination Zip" autocomplete="off">
+                          </div>
+                        </div>
+                        <div class="col-md-4 d-none">
+                          <div class="inputbox">
+                            <input type="text" style="font-size: 14px" name="destination_city" class="form-control"
+                              id="destination_city" placeholder="*Destination City" autocomplete="off">
+                          </div>
+                        </div>
+                        <div class="col-md-4 d-none">
+                          <select class="select-control"
+                            style="font-size: 14px !important;border-bottom: 2px solid #d5d4d4;"
+                            placeholder="*Destination State" id="destination_state" name="destination_state"
+                            autocomplete="off">
+                            <option value="">*Destination State</option>
+
+                            <option value="AL">Alabama
+                            </option>
+
+                            <option value="AK">Alaska
+                            </option>
+
+                            <option value="AZ">Arizona
+                            </option>
+
+                            <option value="AR">Arkansas
+                            </option>
+
+                            <option value="CA">California
+                            </option>
+
+                            <option value="CO">Colorado
+                            </option>
+
+                            <option value="DC">Columbia
+                            </option>
+
+                            <option value="CT">Connecticut
+                            </option>
+
+                            <option value="DE">Delaware
+                            </option>
+
+                            <option value="FL">Florida
+                            </option>
+
+                            <option value="GA">Georgia
+                            </option>
+
+                            <option value="HI">Hawaii
+                            </option>
+
+                            <option value="ID">Idaho
+                            </option>
+
+                            <option value="IL">Illinois
+                            </option>
+
+                            <option value="IN">Indiana
+                            </option>
+
+                            <option value="IA">Iowa
+                            </option>
+
+                            <option value="KS">Kansas
+                            </option>
+
+                            <option value="KY">Kentucky
+                            </option>
+
+                            <option value="LA">Louisiana
+                            </option>
+
+                            <option value="ME">Maine
+                            </option>
+
+                            <option value="MD">Maryland
+                            </option>
+
+                            <option value="MA">Massachusetts
+                            </option>
+
+                            <option value="MI">Michigan
+                            </option>
+
+                            <option value="MN">Minnesota
+                            </option>
+
+                            <option value="MS">Mississippi
+                            </option>
+
+                            <option value="MO">Missouri
+                            </option>
+
+                            <option value="MT">Montana
+                            </option>
+
+                            <option value="NE">Nebraska
+                            </option>
+
+                            <option value="NV">Nevada
+                            </option>
+
+                            <option value="NH">New Hampshire
+                            </option>
+
+                            <option value="NJ">New Jersey
+                            </option>
+
+                            <option value="NM">New Mexico
+                            </option>
+
+                            <option value="NY">New York
+                            </option>
+
+                            <option value="NC">North Carolina
+                            </option>
+
+                            <option value="ND">North Dakota
+                            </option>
+
+                            <option value="OH">Ohio
+                            </option>
+
+                            <option value="OK">Oklahoma
+                            </option>
+
+                            <option value="OR">Oregon
+                            </option>
+
+                            <option value="PA">Pennsylvania
+                            </option>
+
+                            <option value="RI">Rhode Island
+                            </option>
+
+                            <option value="SC">South Carolina
+                            </option>
+
+                            <option value="SD">South Dakota
+                            </option>
+
+                            <option value="TN">Tennessee
+                            </option>
+
+                            <option value="TX">Texas
+                            </option>
+
+                            <option value="UT">Utah
+                            </option>
+
+                            <option value="VT">Vermont
+                            </option>
+
+                            <option value="VA">Virginia
+                            </option>
+
+                            <option value="WA">Washington
+                            </option>
+
+                            <option value="WV">West Virginia
+                            </option>
+
+                            <option value="WI">Wisconsin
+                            </option>
+
+                            <option value="WY">Wyoming
+                            </option>
+                          </select>
+                        </div>
+                        <div class="col-md-12 carrierTypeM_t_b">
+                          <div class="container" style="margin-left: 17px;">
+                            <label class="form-check-label text-secondary mr-4" style="font-size: 14px;"
+                              for="flexRadioDefault1">Carrier
+                              Type</label>
+
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" checked="" type="radio" name="carrier_type" value="1">
+                              <label style="font-size: 14px;" class="form-check-label text-secondary"
+                                for="carrier_type">Open</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="carrier_type" value="2">
+                              <label style="font-size: 14px;" class="form-check-label text-secondary"
+                                for="carrier_type">Enclosed</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row step_2 mt-4" style="display: none;">
+                        <div class="col-md-6 make_pb">
+                          <div class="container pb-0">
+                            <div class="inputbox">
+                              <input type="text" style="font-size: 14px !important;" id="v_make" name="make[]"
+                                class="form-control pt-0 pb-0" placeholder="*Make" autocomplete="off">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 vmodel_pb">
+                          <div class="container pb-0">
+                            <div class="inputbox">
+                              <input type="text" style="font-size: 14px;" id="v_model" name="model[]"
+                                class="form-control pt-0 pb-0" placeholder="*Model" autocomplete="off">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 year_pb">
+                          <div class="container pb-0">
+                            <div class="inputbox">
+                              <input type="text" style="font-size: 14px;" id="v_year" name="year[]"
+                                class="test-input form-control pt-0 pb-0" placeholder="*Year" autocomplete="off">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <select class="select-control pt-0 pb-0"
+                            style="margin-top: -12px;width: 100%;font-size: 14px !important;border-bottom: 2px solid #d5d4d4;"
+                            name="vehicle_type[]" id="vehicleTypeSelect" placeholder="*Vehicle Type">
+                            <option value=""> *Vehicle Type </option>
+                            <option value="1">
+                              Car
+                            </option>
+                            <option value="2">
+                              SUV
+                            </option>
+                            <option value="3">
+                              Pickup
+                            </option>
+                            <option value="4">
+                              Dually
+                            </option>
+                            <option value="5">
+                              Van
+                            </option>
+                            <option value="6">
+                              Motorcycle
+                            </option>
+                            <option value="7">
+                              Boat
+                            </option>
+                            <option value="8">
+                              RV
+                            </option>
+                            <option value="9">
+                              Travel Trailer
+                            </option>
+                            <option value="10">
+                              Other
+                            </option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <select class="select-control pt-0 pb-0"
+                            style="margin-top: -12px;width: 100%;font-size: 14px !important;border-bottom: 2px solid #d5d4d4;"
+                            name="running_condition[]" placeholder="*Running Condition">
+                            <option value="">*Running Condition</option>
+                            <option value="1">
+                              Running
+                            </option>
+                            <option value="2">
+                              Not running
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row step_3 mt-0" style="display: none;">
+                        <div class="col-md-12" style="margin-top: -4px;">
+                          <div class="container">
+                            <div class="inputbox">
+                              <input type="text" style="font-size: 14px;" id="name" name="name" class="form-control"
+                                placeholder="*Your name" autocomplete="off">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 step3_margin">
+                          <div class="container">
+                            <div class="inputbox">
+                              <input type="text" style="font-size: 14px;" id="email" name="email" class="form-control"
+                                placeholder="*Your email" autocomplete="off">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 step3_margin">
+                          <div class="container step3_pb">
+                            <div class="inputbox">
+                              <input type="text" style="font-size: 14px;padding-left: 0px;" name="number"
+                                class="phone2 form-control" placeholder="*Phone 000 000-000" autocomplete="off">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 step3_margin">
+                          <div class="container step_3" style="display: none;">
+                            <label class="mb-0" for="avail_date"
+                              style="color: gray;padding-left: 11px;font-size: 14px;">*Vehicle
+                              Avail Date</label>
+                            <div class="inputbox mb-3">
+                              <input type="date" style="font-size: 14px;" name="avail_date" class="form-control"
+                                autocomplete="off">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="formbt step_1 mt-1 mb-1">
+                        <button style="font-size: 14px !important;padding: 10px;" type="submit" id="quoteBtn_step1"
+                          disabled="">Vehicle Information <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                      </div>
+                      <div class="formbt step_2 mt-1 mb-1" style="display: none;">
+                        <button style="margin-top: -5px;font-size: 14px !important;padding: 10px;" type="submit"
+                          id="quoteBtn_step2">Confirmation Details <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                      </div>
+                      <div class="formbt step_3" style="display: none;margin-top: 5px;margin-bottom: 4px;">
+                        <button type="submit" id="quoteBtn_step3"
+                          style="font-size: 14px !important;padding: 10px;">Calculate Cost</button>
+                      </div>
+                    </form>
+                  </div>
+
+                  <div style="display: none !important;"
+                    class="container d-flex justify-content-center align-items-center" id="multiFormProgress">
+                    <div class="multi_form_progresses">
+                      <div class="multi_form_steps" style="background-color:#CA0538 !important;">
+                        <span><i class="fa fa-check"></i></span>
+                      </div>
+
+                      <span style="background-color: #CA0538 !important;" class="multi_form_line"></span>
+
+                      <div class="multi_form_steps" id="progress_2">
+                        <span class="font-weight-bold">2</span>
+                      </div>
+
+                      <span class="multi_form_line" id="progress_2_line"></span>
+
+                      <div class="multi_form_steps" id="progress_3">
+                        <span class="font-weight-bold">3</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="dynamic-c dynamic_faq_section_edit" style="display: none;">
+                  <h2>Dynamic Content</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dynamic_section_js">
+        <script>
+          $(document).ready(function () {
+            $.ajaxSetup({
+              headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+              }
+            });
+            $("select[name='origin_state']").change(function () {
+              $('input:hidden[name="origin_state_input"]').val($(this).val());
+            });
+            $("select[name='destination_state']").change(function () {
+              $('input:hidden[name="destination_state_input"]').val($(this).val());
+            });
+            $('#quoteBtn_step1').html('Vehicle Information <i class="fa fa-arrow-right" aria-hidden="true" style=""></i>');
+            $('#quoteBtn_step2').html('Confirmation Details <i class="fa fa-arrow-right" aria-hidden="true" style=""></i>');
+            $('#quoteBtn_step3').html('Calculate Cost');
+            $('.phone2').inputmask('+1(999)-999-9999');
+            $("#quoteCalculatorForm").validate({
+              rules: {
+                origin_state: "required",
+                destination_state: "required",
+                "year[]": {
+                  required: true,
+                  digits: true,
+                  minlength: 4,
+                  maxlength: 4
+                },
+                "make[]": "required",
+                "model[]": "required",
+                email: {
+                  required: true,
+                  email: true
+                },
+                avail_date: "required",
+                number: "required",
+                name: "required",
+                "vehicle_type[]": "required",
+                "running_condition[]": "required",
+                origin_zip: "required",
+                origin_city: "required",
+                display_origin: "required",
+                display_destination: "required",
+                destination_zip: "required",
+                destination_city: "required",
+              },
+              messages: {
+                origin_state: "Please select an origin state",
+                destination_state: "Please select an destination state",
+                "year[]": {
+                  required: "Please enter vehicle year",
+                  maxlength: "Please enter 4 digits",
+                  minlength: "Please enter 4 digits"
+                },
+                "make[]": "Please enter vehicle make",
+                "model[]": "Please enter vehicle model",
+                email: {
+                  required: "Please enter an email",
+                  email: "Please enter a valid email address"
+                },
+                avail_date: "Please select date",
+                number: "Please enter a phone",
+                name: "Please enter your name",
+                "vehicle_type[]": "Please select vehicle type",
+                "running_condition[]": "Please select condition",
+                origin_city: "Please select an origin city",
+                origin_zip: "Please select a valid origin city or zip code",
+                destination_zip: "Please select a valid destination city or zip code",
+                display_origin: "Please select a valid destination city or zip code",
+                display_destination: "Please select a valid destination city or zip code",
+                destination_city: "Please select an destination city",
+              }
+            });
+            $("#quoteBtn_step1").click(function (e) {
+              if ($("#quoteCalculatorForm").valid()) {
+                e.preventDefault();
+                $('.step_1').hide(1000);
+                if ($(window).width() <= 767) {
+                  $('#ds_top').css('height', '29.012rem');
+                } else {
+                  $('#ds_top').css('height', '23.012rem');
+                }
+                $('.step_2').show();
+                $('#multiFormProgress').show();
+              }
+            });
+            $("#quoteBtn_step2").click(function (e) {
+              if ($("#quoteCalculatorForm").valid()) {
+                e.preventDefault();
+                $('.step_2').hide(1000);
+                if ($(window).width() <= 767) {
+                  $('#ds_top').css('height', '30.012rem');
+                } else {
+                  $('#ds_top').css('height', '24.012rem');
+                }
+                $('.step_3').show();
+                $('#progress_2').html('<span><i class="fa fa-check"></i></span>').css(
+                  "background-color", "#CA0538");
+                $("#progress_2").attr("style", "background-color: #CA0538;");
+                $("#progress_2_line").attr("style", "background-color: #CA0538;");
+              } else {
+                if ($(window).width() <= 767) {
+                  $('#ds_top').css('height', '34.012rem');
+                } else {
+                  $('#ds_top').css('height', '25.012rem');
+                }
+              }
+            });
+            $("#quoteBtn_step3").click(function (e) {
+              if ($("#quoteCalculatorForm").valid()) {
+                $('#progress_3').html('<span><i class="fa fa-check"></i></span>').css(
+                  "background-color", "#CA0538");
+                $("#progress_3").attr("style", "background-color: #CA0538;");
+              } else {
+                if ($(window).width() <= 767) {
+                  $('#ds_top').css('height', '29.012rem');
+                } else {
+                  $('#ds_top').css('height', '24.012rem');
+                }
+              }
+            });
+            $('.step_3 button').on('click', function (event) {
+              // Prevent the default form submission behavior
+              event.preventDefault();
+
+              var submitButton = $(this);
+              var form = submitButton.closest('form');
+
+              if (form.valid()) {
+                submitButton.prop('disabled', true);
+                form.submit();
+              } else {
+                submitButton.prop('disabled', false);
+              }
+            });
+            var x = $('#origin_zip').length;
+            var x = $('#destination_zip').length;
+            switch (x) {
+              case 1:
+                $("#display_origin").keyup(function () {
+                  $('#origin_city').val('');
+                  $('#origin_state').val('').trigger("change");
+                  check($("#origin_state").val(), $("#destination_state").val());
+                  var code = $('#display_origin').val();
+
+                  var pages = '#' + '/getZipcode/' + code;
+                  var targetUrl = pages;
+                  if (code != '') {
+                    var url = targetUrl;
+                    $.ajax({
+                      type: "POST",
+                      url: url,
+                      data: {
+                        'keyword': code,
+                      },
+                      success: function (data) {
+                        var obj = $.parseJSON(data);
+                        $("#suggesstion-box").html(obj.zipvalues);
+                      }
+                    });
+                  } else {
+                    $('#suggesstion-box').html('');
+                  }
+
+                });
+                break;
+              default:
+            }
+            switch (x) {
+              case 1:
+                $("#display_destination").keyup(function () {
+                  $('#destination_city').val('');
+                  $('#destination_state').val('').trigger("change");
+                  check($("#origin_state").val(), $("#destination_state").val());
+                  var code = $('#display_destination').val();
+
+                  var targetUrl = '#' + '/getZipcodeDesti/' + code;
+                  if (code != '') {
+                    $.ajax({
+                      type: "POST",
+                      url: targetUrl,
+                      data: {
+                        'keyword': code,
+                      },
+                      success: function (data) {
+                        var obj = $.parseJSON(data);
+                        $("#suggesstion-boxDes").html(obj.zipvalues);
+                      }
+                    });
+                  } else {
+                    $("#suggesstion-boxDes").html('');
+                  }
+                });
+                break;
+              default:
+            }
+          });
+
+          $('#display_origin').on('click focusin', function () {
+            this.value = '';
+            $('#origin_city').val('');
+            $('#origin_state').val('').trigger("change");
+            check($("#origin_state").val(), $("#destination_state").val());
+          });
+          $('#display_destination').on('click focusin', function () {
+            this.value = '';
+            $('#destination_city').val('');
+            $('#destination_state').val('').trigger("change");
+            check($("#origin_state").val(), $("#destination_state").val());
+          });
+
+          function setCityState(zipcode) {
+            var targetUrl = '#' + '/OriginZipcode/' + zipcode;
+            $.ajax({
+              type: "POST",
+              url: targetUrl,
+              data: {
+                'zipcode': zipcode,
+              },
+              success: function (data) {
+                var obj = $.parseJSON(data);
+                $('#origin_city').val(obj.city);
+                $('#origin_state').val(obj.state).trigger("change");
+                $('#origin_zip').val(zipcode);
+                $('#display_origin').val(obj.city + "," + ' ' + obj.display_state + ' ' + zipcode);
+
+                $("#f").html('');
+                $("#suggesstion-box").html('');
+                check($("#origin_state").val(), $("#destination_state").val());
+              }
+            });
+          }
+
+          function setCityStateDesti(zipcode) {
+            var targetUrl = '#' + '/DestiZipcode/' + zipcode;
+            $.ajax({
+              type: "POST",
+              url: targetUrl,
+              data: {
+                'zipcodeDesti': zipcode,
+              },
+              success: function (data) {
+                var obj = $.parseJSON(data);
+                $('#destination_city').val(obj.city);
+                $('#destination_state').val(obj.state).trigger("change");
+                $('#destination_zip').val(zipcode);
+                $('#display_destination').val(obj.city + "," + ' ' + obj.display_state + ' ' + zipcode);
+                $("#suggesstion-boxDes").html('');
+                check($("#origin_state").val(), $("#destination_state").val());
+              }
+            });
+          }
+          function check(state1, state2) {
+            if (state1 != '' && state1 != undefined) {
+              if (state2 != '' && state2 != undefined) {
+                $('#quoteBtn_step1').prop('disabled', false);
+              } else {
+                $('#quoteBtn_step1').prop('disabled', true);
+              }
+            } else {
+              $('#quoteBtn_step1').prop('disabled', true);
+            }
+          }
+        </script>
+      </div>
+    </div>
+    <span class="action_widget_section" style="display: none;">
+      <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+        class="btn btn-danger change_background_image_widget_section" style="display: none;">Change Background
+        Image</button>
+    </span>
+    <div class="sliderdata fantastic">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="sliderdatahead">
+              <h4>Who Qualifies as a Senior Citizen?
+              </h4>
+            </div>
+            <p>You might be wondering who qualifies as a senior citizen for this discount. At AmeriFreight, we believe
+              in recognizing and celebrating the contributions of our esteemed senior community. To qualify for our
+              Senior Citizens Discount, all you need is to be 65 years of age or older.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span class="action_widget_section" style="display: none;">
+      <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+        class="btn btn-danger change_background_image_widget_section" style="display: none;">Change Background
+        Image</button>
+    </span>
+    <div class="whyamerifreight decades">
+      <div class="container">
+        <h4>Why AmeriFreight for Senior Car Shipping?</h4>
+        <p>AmeriFreight stands out as the ideal choice for senior car shipping for several reasons:</p>
+        <ul class="smooth">
+          <li><b>Experience:</b>�&nbsp; With nearly two decades of industry experience, we understand the unique needs
+            of senior citizens when it comes to car shipping. Our seasoned team has handled countless relocations for
+            seniors, and we're well-versed in making the process as smooth as possible.
+          </li>
+          <li class=""><b>Safety First:</b>�&nbsp; We prioritize safety above all else. We understand that your vehicle
+            holds not only monetary value but also sentimental value. That's why we go the extra mile to ensure your
+            vehicle is in good hands throughout the transport process. Our rigorous process ensures your vehicles travel
+            with experienced carriers with a good track record while covered with insurance.</li>
+          <li><b>No Upfront Deposit:</b>�&nbsp; Finances are an important consideration, especially during retirement.
+            We understand that you might be hesitant about making an upfront payment. With AmeriFreight, you won't have
+            to worry about paying a deposit until we've secured a carrier for your auto shipping needs.</li>
+        </ul>
+      </div>
+    </div>
+    <span class="action_widget_section" style="display: none;">
+      <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+        class="btn btn-danger change_background_image_widget_section" style="display: none;">Change Background
+        Image</button>
+    </span>
+    <div class="whyamerifreight decades countless">
+      <div class="container">
+        <h4>Stress-Free Auto Transport</h4>
+        <p>We know that moving can be stressful, especially during your retirement years. With AmeriFreight, you can
+          leave the logistics to us. We take care of all the stress of sourcing a registered, insured, and highly rated
+          auto carrier. Your focus can remain on the excitement of your new journey.</p>
+        <p>Our commitment to stress-free auto transport includes:</p>
+        <ul class="smooth">
+          <li><b>Transparency:</b>�&nbsp; We believe in open communication. We'll keep you informed at every step of the
+            process, so you're never left in the dark.
+          </li>
+          <li><b>Personalized Service:</b>�&nbsp; Each senior's situation is unique. We take the time to understand your
+            specific needs and tailor our services accordingly. Whether you have a classic car, an RV, or a family
+            vehicle, we have the expertise to handle it with care.</li>
+          <li><b>Expertise:</b>�&nbsp; We understand the rules and regulations, ensuring that your vehicle shipment is
+            fully compliant.</li>
+        </ul>
+      </div>
+    </div>
+    <span class="action_widget_section" style="display: none;">
+      <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+        class="btn btn-danger change_background_image_widget_section" style="display: none;">Change Background
+        Image</button>
+    </span>
+    <div class="whyamerifreight decades">
+      <div class="container">
+        <h4>Comfort and Convenience</h4>
+        <p>Our Senior Citizens car shipping experience is designed to enhance your comfort and convenience during the
+          entire moving process.</p>
+        <p>Some key features that enhance your comfort and convenience include:</p>
+        <ul class="smooth">
+          <li><b>Personalized Assistance:</b>�&nbsp; Our dedicated team is here to assist you. We understand that senior
+            citizens may have unique questions and concerns. That's why we offer dedicated customer support tailored to
+            assist you throughout the car shipping journey.
+          </li>
+          <li><b>Flexible Scheduling:</b> We work with your schedule. Whether you need your vehicle shipped immediately
+            or at a specific date, we'll accommodate your needs.</li>
+          <li><b>Peace of Mind:</b> Our knowledgeable team is ready to ensure that you have peace of mind knowing that
+            your prized possession is protected during transport.</li>
+        </ul>
+      </div>
+    </div>
+    <span class="action_widget_section" style="display: none;">
+      <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+        class="btn btn-danger change_background_image_widget_section" style="display: none;">Change Background
+        Image</button>
+    </span>
+    <div class="sliderdata fantastic">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="sliderdatahead">
+              <h4> Dedicated Senior Support</h4>
+            </div>
+            <p class="">At AmeriFreight, we understand that <a href="seniors.html"
+                style="color:#000000;">senior citizens</a> may have unique questions and needs. That's why we offer
+              dedicated customer support tailored to assist you throughout the car shipping journey. Our team is
+              patient, understanding, and ready to provide personalized assistance whenever you need it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span class="action_widget_section" style="display: none;">
+
+      <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+        class="btn btn-danger change_background_image_widget_section" style="display: none;">Change Background
+        Image</button>
+
+    </span>
+    <div class="user_top_rating pt-4 transport main_background_image">
+      <div class="inner_background_image">
+        <img src="style/images/review-bg.webp" class="header-bgimg" alt="Car carrier truck loaded with Tesla cars"
+          height="100%" width="100%" loading="lazy">
+      </div>
+      <div class="container dynamic_user_reviews ReviesClass">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="CarShippingHeading text-center ShippingWork mt-3 mb-4">
+              <h2>Our reviews speak for themselves</h2>
+              <p>Hear from other customers about their car shipping experience with AmeriFreight.</p>
+            </div>
+            <div class="hi">
+              <div id="loading-bar-spinner" class="spinner"><img loading="lazy" src="style/images/Double-Ring1.gif"
+                  data-pagespeed-url-hash="1130902564" alt="review slider loader"></div>
+            </div>
+            <div class="owl-carousel owl-theme owl-loaded owl-drag owl_custom_style" style="display:none">
+
+              <div class="item">
+                <div class="review-box">
+                  <div>
+                    <div class="review-body">
+                      <h6>Boat Transport</h6>
+                    </div>
+                    <div class="name-rating-wrap">
+
+                      <div class="d-flex align-items-center">
+                        <div class="star">
+                          <div class="stars-wrapper">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                        </div>
+
+                        <span class="rating"> 5.0</span>
+                        <span class="text-gray-medium text-small">Jul 29, 2024</span>
+                      </div>
+                    </div>
+                    <div class="review-body">
+                      <p>Gina and her crew did an outstanding job of helping to get my boat transferred quickly and
+                        carefully would highly recomm...</p>
+                    </div>
+                  </div>
+                  <div class="date-wrap">
+
+                    <span class="h4 text-caption text-gray-medium">Gina Dodds</span>
+                    <div class="img-wrap"><img decoding="async" src="style/images/TRANSPORT.webp" alt="Transport reviews logo"
+                        loading="lazy"></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="item">
+                <div class="review-box">
+                  <div>
+                    <div class="review-body">
+                      <h6>Great Experience</h6>
+                    </div>
+                    <div class="name-rating-wrap">
+
+                      <div class="d-flex align-items-center">
+                        <div class="star">
+                          <div class="stars-wrapper">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                        </div>
+
+                        <span class="rating"> 5.0</span>
+                        <span class="text-gray-medium text-small">Mar 27, 2024</span>
+                      </div>
+                    </div>
+                    <div class="review-body">
+                      <p>Carovanzieus was very professional, Kept me informed and my vehicle was picked up and
+                        transferred with no issues. Amazin...</p>
+                    </div>
+                  </div>
+                  <div class="date-wrap">
+
+                    <span class="h4 text-caption text-gray-medium">Carovanzieus Mitchell</span>
+                    <div class="img-wrap"><img decoding="async" src="style/images/TRANSPORT.webp" alt="Transport reviews logo"
+                        loading="lazy"></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="item">
+                <div class="review-box">
+                  <div>
+                    <div class="review-body">
+                      <h6>Easy And Stress Free!</h6>
+                    </div>
+                    <div class="name-rating-wrap">
+
+                      <div class="d-flex align-items-center">
+                        <div class="star">
+                          <div class="stars-wrapper">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                        </div>
+
+                        <span class="rating"> 5.0</span>
+                        <span class="text-gray-medium text-small">Mar 15, 2024</span>
+                      </div>
+                    </div>
+                    <div class="review-body">
+                      <p>I moved across the country from Northern Cali to East Tennessee. My original plan was to road
+                        trip with my car and items...</p>
+                    </div>
+                  </div>
+                  <div class="date-wrap">
+
+                    <span class="h4 text-caption text-gray-medium">Maleah Sanders</span>
+                    <div class="img-wrap"><img decoding="async" src="style/images/TRANSPORT.webp" alt="Transport reviews logo"
+                        loading="lazy"></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="item">
+                <div class="review-box">
+                  <div>
+                    <div class="review-body">
+                      <h6>Great Service</h6>
+                    </div>
+                    <div class="name-rating-wrap">
+
+                      <div class="d-flex align-items-center">
+                        <div class="star">
+                          <div class="stars-wrapper">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                        </div>
+
+                        <span class="rating"> 5.0</span>
+                        <span class="text-gray-medium text-small">Jul 31, 2023</span>
+                      </div>
+                    </div>
+                    <div class="review-body">
+                      <p>I called and got connected with Reginald about moving a sedan from Texas to Southern
+                        California. He was profesional, str...</p>
+                    </div>
+                  </div>
+                  <div class="date-wrap">
+
+                    <span class="h4 text-caption text-gray-medium"></span>
+                    <div class="img-wrap"><img decoding="async" src="style/images/TRANSPORT.webp" alt="Transport reviews logo"
+                        loading="lazy"></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="item">
+                <div class="review-box">
+                  <div>
+                    <div class="review-body">
+                      <h6>Thorough and Informative</h6>
+                    </div>
+                    <div class="name-rating-wrap">
+
+                      <div class="d-flex align-items-center">
+                        <div class="star">
+                          <div class="stars-wrapper">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                        </div>
+
+                        <span class="rating"> 5.0</span>
+                        <span class="text-gray-medium text-small">Oct 27, 2021</span>
+                      </div>
+                    </div>
+                    <div class="review-body">
+                      <p>Admittedly, I was apprehensive about having my car shipped across the country at first.
+                        However, I have to say that I ha...</p>
+                    </div>
+                  </div>
+                  <div class="date-wrap">
+
+                    <span class="h4 text-caption text-gray-medium">Harry Davis</span>
+                    <div class="img-wrap"><img decoding="async" src="style/images/GoogleRevws.png" alt="Google reviews badge"
+                        loading="lazy"></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="item">
+                <div class="review-box">
+                  <div>
+                    <div class="review-body">
+                      <h6>Great Experience</h6>
+                    </div>
+                    <div class="name-rating-wrap">
+
+                      <div class="d-flex align-items-center">
+                        <div class="star">
+                          <div class="stars-wrapper">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                        </div>
+
+                        <span class="rating"> 5.0</span>
+                        <span class="text-gray-medium text-small">Apr 18, 2024</span>
+                      </div>
+                    </div>
+                    <div class="review-body">
+                      <p>We had a great experience and our car got delivered in a timely manner. Amerifreight made
+                        moving across the country very...</p>
+                    </div>
+                  </div>
+                  <div class="date-wrap">
+
+                    <span class="h4 text-caption text-gray-medium">Lisa Henderson</span>
+                    <div class="img-wrap"><img decoding="async" src="style/images/TRANSPORT.webp" alt="Transport reviews logo"
+                        loading="lazy"></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="item">
+                <div class="review-box">
+                  <div>
+                    <div class="review-body">
+                      <h6>Very professional</h6>
+                    </div>
+                    <div class="name-rating-wrap">
+
+                      <div class="d-flex align-items-center">
+                        <div class="star">
+                          <div class="stars-wrapper">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                        </div>
+
+                        <span class="rating"> 5.0</span>
+                        <span class="text-gray-medium text-small">Aug 13, 2024</span>
+                      </div>
+                    </div>
+                    <div class="review-body">
+                      <p>Maleah was very easy to work with on shipping a truck from Oregon to Michigan. Walked me thru
+                        everything that I needed t...</p>
+                    </div>
+                  </div>
+                  <div class="date-wrap">
+
+                    <span class="h4 text-caption text-gray-medium">Maleah Sanders</span>
+                    <div class="img-wrap"><img decoding="async" src="style/images/TRANSPORT.webp" alt="Transport reviews logo"
+                        loading="lazy"></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="item">
+                <div class="review-box">
+                  <div>
+                    <div class="review-body">
+                      <h6>2011 Range Rover</h6>
+                    </div>
+                    <div class="name-rating-wrap">
+
+                      <div class="d-flex align-items-center">
+                        <div class="star">
+                          <div class="stars-wrapper">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                        </div>
+
+                        <span class="rating"> 5.0</span>
+                        <span class="text-gray-medium text-small">Jan 16, 2024</span>
+                      </div>
+                    </div>
+                    <div class="review-body">
+                      <p>Melissa was my contact and she made it very easy and stress free. She answered all my questions
+                        very quickly. I would de...</p>
+                    </div>
+                  </div>
+                  <div class="date-wrap">
+
+                    <span class="h4 text-caption text-gray-medium"></span>
+                    <div class="img-wrap"><img decoding="async" src="style/images/TRANSPORT.webp" alt="Transport reviews logo"
+                        loading="lazy"></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="item">
+                <div class="review-box">
+                  <div>
+                    <div class="review-body">
+                      <h6>Freight Transportation</h6>
+                    </div>
+                    <div class="name-rating-wrap">
+
+                      <div class="d-flex align-items-center">
+                        <div class="star">
+                          <div class="stars-wrapper">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                        </div>
+
+                        <span class="rating"> 5.0</span>
+                        <span class="text-gray-medium text-small">Oct 02, 2023</span>
+                      </div>
+                    </div>
+                    <div class="review-body">
+                      <p>Amanda was very helpful and gave me updates constantly. Car was delivered on time as they had
+                        promised. I would recommen...</p>
+                    </div>
+                  </div>
+                  <div class="date-wrap">
+
+                    <span class="h4 text-caption text-gray-medium">Amanda Pike</span>
+                    <div class="img-wrap"><img decoding="async" src="style/images/TRANSPORT.webp" alt="Transport reviews logo"
+                        loading="lazy"></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="item">
+                <div class="review-box">
+                  <div>
+                    <div class="review-body">
+                      <h6>Amanda/Amerifreight</h6>
+                    </div>
+                    <div class="name-rating-wrap">
+
+                      <div class="d-flex align-items-center">
+                        <div class="star">
+                          <div class="stars-wrapper">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                        </div>
+
+                        <span class="rating"> 5.0</span>
+                        <span class="text-gray-medium text-small">Nov 02, 2023</span>
+                      </div>
+                    </div>
+                    <div class="review-body">
+                      <p>Picked up on time. Delivered on time. Vehicle in good condition upon arrival. Amanda kept in
+                        touch the entire time....</p>
+                    </div>
+                  </div>
+                  <div class="date-wrap">
+
+                    <span class="h4 text-caption text-gray-medium">Amanda Pike</span>
+                    <div class="img-wrap"><img decoding="async" src="style/images/TRANSPORT.webp" alt="Transport reviews logo"
+                        loading="lazy"></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="item">
+                <div class="review-box">
+                  <div>
+                    <div class="review-body">
+                      <h6>Attentive &amp; Reliable</h6>
+                    </div>
+                    <div class="name-rating-wrap">
+
+                      <div class="d-flex align-items-center">
+                        <div class="star">
+                          <div class="stars-wrapper">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                        </div>
+
+                        <span class="rating"> 5.0</span>
+                        <span class="text-gray-medium text-small">Jun 21, 2023</span>
+                      </div>
+                    </div>
+                    <div class="review-body">
+                      <p>Rosie was very attentive and competent in her services. We communicated throughout the
+                        coordination &amp; delivery, and she ...</p>
+                    </div>
+                  </div>
+                  <div class="date-wrap">
+
+                    <span class="h4 text-caption text-gray-medium">Rosalind Cook</span>
+                    <div class="img-wrap"><img decoding="async" src="style/images/TRANSPORT.webp" alt="Transport reviews logo"
+                        loading="lazy"></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="item">
+                <div class="review-box">
+                  <div>
+                    <div class="review-body">
+                      <h6>Performance #13087516</h6>
+                    </div>
+                    <div class="name-rating-wrap">
+
+                      <div class="d-flex align-items-center">
+                        <div class="star">
+                          <div class="stars-wrapper">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                        </div>
+
+                        <span class="rating"> 5.0</span>
+                        <span class="text-gray-medium text-small">Aug 02, 2023</span>
+                      </div>
+                    </div>
+                    <div class="review-body">
+                      <p>I believe Christine Davis worked with me to find the best car shipping service available.
+                        Thanks again, Christine....</p>
+                    </div>
+                  </div>
+                  <div class="date-wrap">
+
+                    <span class="h4 text-caption text-gray-medium">Christine Davis</span>
+                    <div class="img-wrap"><img decoding="async" src="style/images/TRANSPORT.webp" alt="Transport reviews logo"
+                        loading="lazy"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="CarShippingHeading text-center ShippingWork mt-3 mb-3">
+              <p>We Believe in transparency. <a class="text-light"
+                  href="#">Click here to view our review policy</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-column mb-5 mt-4 faq-section dynamic-c dynamic_review_static" style="display: none;">
+        <h2>Dynamic Content</h2>
+      </div>
+    </div><span class="action_widget_section">
+
+      <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+        class="btn btn-danger change_background_image_widget_section" style="display: none;">Change Background
+        Image</button>
+
+    </span>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+ -->
+
+    <div class="mainfaqsec without_video">
+
+      <div class="faqquestions">
+
+        <div class="container">
+
+          <div class="row">
+
+            <div class="col-sm-7 col-md-7 col-lg-7 col-xl-7">
+
+              <div class="common">
+                <h4>Frequently Asked Questions</h4>
+                <p>We understand that you may have questions about the car shipping process. Here are some common FAQs
+                  to provide you with the information you need:
+                </p>
+              </div>
+
+              <div class="flex flex-column mb-5 mt-4 faq-section dynamic_faq_section">
+                <div id="accordion">
+                  <div class="card px-lg-4 mb-3 p-2">
+                    <div class="card-header" id="heading-105">
+                      <h5 class="mb-0">
+                        <a class="collapsed d-flex justify-content-between align-items-center" role="button"
+                          href="#faq_105" aria-expanded="false" aria-controls="faq_105">
+                          How should I prepare my vehicle for shipping? <span class="FaqArrows"><i
+                              class="fas fa-chevron-right"></i></span>
+                        </a>
+                      </h5><span></span>
+                    </div>
+                    <div id="faq_105" class="collapse" data-parent="#accordion" aria-labelledby="heading-105">
+                      <div class="card-body text-justify">
+                        Preparing your vehicle for shipping as a senior citizen involves a straightforward process.
+                        Begin by ensuring your vehicle is clean, removing any personal belongings, and documenting any
+                        pre-existing damage by taking photographs from all angles. Rest assured, our knowledgeable team
+                        will provide you with detailed guidance to guarantee a seamless process.
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card px-lg-4 mb-3 p-2">
+                    <div class="card-header" id="heading-106">
+                      <h5 class="mb-0">
+                        <a class="collapsed d-flex justify-content-between align-items-center" role="button"
+                          href="#faq_106" aria-expanded="false" aria-controls="faq_106">
+                          How long can I expect it to take for my vehicle to reach its destination? <span
+                            class="FaqArrows"><i class="fas fa-chevron-right"></i></span>
+                        </a>
+                      </h5><span></span>
+                    </div>
+                    <div id="faq_106" class="collapse" data-parent="#accordion" aria-labelledby="heading-106">
+                      <div class="card-body text-justify">
+                        Delivery times may vary depending on factors such as distance and location. However, you can
+                        rely on us to provide you with a transparent timeline and keep you well-informed throughout the
+                        process. Communication is a top priority when transporting your prized possession.
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card px-lg-4 mb-3 p-2">
+                    <div class="card-header" id="heading-107">
+                      <h5 class="mb-0">
+                        <a class="collapsed d-flex justify-content-between align-items-center" role="button"
+                          href="#faq_107" aria-expanded="false" aria-controls="faq_107">
+                          What factors contribute to the pricing and what payment options are available? <span
+                            class="FaqArrows"><i class="fas fa-chevron-right"></i></span>
+                        </a>
+                      </h5><span></span>
+                    </div>
+                    <div id="faq_107" class="collapse" data-parent="#accordion" aria-labelledby="heading-107">
+                      <div class="card-body text-justify">
+                        The pricing for auto shipping depends on a few critical factors, including the type of vehicle,
+                        the transportation distance, and your preferred transport options. To make it easier for you, we
+                        offer flexible payment options, including credit card payments and other secure methods. Your
+                        financial comfort is our priority.
+
+                      </div>
+                    </div>
+                  </div>
+                  <script>
+                    $(document).ready(function () {
+                      $("#accordion .card").on("click", function () {
+                        $(".card.fadec").removeClass("fadec");
+                        $(this).addClass("fadec");
+                      });
+                    });
+                  </script>
+                </div>
+              </div>
+
+              <div class="flex flex-column mb-5 mt-4 faq-section dynamic-c dynamic_faq_section_edit"
+                style="display: none;">
+
+                <h2>Dynamic Content</h2>
+
+              </div>
+
+            </div>
+
+            <div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
+
+              <div class="QuoteFormButton ShippingBox text-center mt-lg-5">
+
+                <h3>Ready to Get a Quote From AmeriFreight</h3>
+
+                <p>Ready to unlock the Senior Citizens Discount and simplify your car shipping experience? AmeriFreight
+                  is here to make your move stress-free and affordable. Let's embark on this journey together!</p>
+
+                <div class="text-center mb-3">
+
+                  <div class="quotemoneybtn"><a
+                      href="get-an-instant-quote.html"> Get
+                      a Quote</a></div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- begin js -->
+
+        <div class="dynamic_section_js">
+
+          <script>
+
+            $(document).ready(function () {
+
+              var postLimit = 5;
+
+              getFaqData(postLimit);
+
+            });
+
+
+
+            function getFaqData(postLimit) {
+
+              var url = "#";
+
+              var token = $(document).find('[name="_token"]').val();
+
+              var pageSlug = "652";
+
+
+
+              $.ajax({
+
+                type: "GET",
+
+                url: url,
+
+                dataType: 'json',
+
+                data: {
+
+                  '_token': token,
+
+                  'pageSlug': pageSlug,
+
+                  'postLimit': postLimit,
+
+                },
+
+                error: function (XMLHttpRequest, textStatus, errorThrown) { },
+
+                success: function (msg) {
+
+                  var faqResults = msg['faq'];
+
+                  $(".dynamic_faq_section").html(faqResults.details);
+
+                },
+
+              });
+
+            }
+
+            getFaqData(postLimit);
+
+
+
+          </script>
+
+        </div>
+
+      </div>
+
+    </div>
+    <div class="d-none">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo autem molestias placeat illum
+      quod! Officia voluptatem eveniet sed magni nam alias harum in autem ipsa odit facere eos maxime adipisci beatae
+      quos rerum, natus, explicabo qui debitis ullam et minus! Porro nulla, autem necessitatibus, dolor nemo facilis
+      deserunt animi saepe, quia dolore praesentium repellat et cumque eligendi? Quis aliquid quas, nihil aut ducimus
+      expedita explicabo, natus inventore debitis error et, perferendis omnis hic cupiditate. Vitae, ipsam iusto
+      voluptates explicabo reiciendis, possimus iste accusantium corporis eius similique autem nobis, tempora quae unde
+      odio ullam amet officiis quia obcaecati ipsa repellat molestiae. Sunt maiores ducimus, possimus at porro tenetur
+      repellat, reiciendis molestias eos laudantium eveniet dolorum consequatur necessitatibus veritatis aut impedit
+      soluta harum. Reprehenderit incidunt soluta ipsa sapiente officiis eligendi illo, qui repudiandae maxime eos
+      libero quos eius mollitia, ipsam commodi doloremque dolorum. Nihil at rem odit, autem sunt deserunt quae amet
+      asperiores? Nostrum, facere cupiditate, aliquid eius reprehenderit fugit modi voluptatem voluptatibus rerum totam
+      consequuntur delectus qui, numquam laboriosam vitae omnis suscipit velit accusamus iste dolores. Quod sed quo sunt
+      dolorum voluptatibus aliquam eveniet nihil odit, nulla possimus veritatis et temporibus, sequi officiis recusandae
+      optio deleniti quam. Voluptatum possimus veniam sunt dolorem culpa non consequatur cumque aliquam. Ullam, cumque.
+      Dolore, distinctio adipisci eum sunt ipsum porro facilis nulla doloribus deserunt incidunt delectus, repellat
+      quibusdam ipsam, placeat dolorem ut tenetur ipsa? Delectus aspernatur, similique saepe ullam quidem corporis animi
+      reiciendis temporibus dolorum dolores a, nulla libero adipisci blanditiis tenetur aliquid, eveniet ex. Animi,
+      accusamus hic aliquam fugiat inventore veniam voluptates mollitia quaerat laboriosam sint quae quisquam
+      voluptatum, consectetur facere nobis error impedit? Doloremque voluptates vero esse ea adipisci ipsa quibusdam
+      saepe. Doloremque culpa quisquam officiis officia sapiente eligendi modi aut, earum reprehenderit ab, laudantium
+      aliquam labore non illo cupiditate dolorem maiores omnis ea voluptates tempore nihil quibusdam ex? Natus optio
+      laboriosam fugit autem accusantium libero eos totam, repudiandae eius nihil! Quod corrupti dolorem itaque numquam
+      nam. Nemo itaque veniam cumque sunt eos, molestias voluptate dolor suscipit facilis in distinctio libero, laborum
+      vero reiciendis. Hic assumenda amet doloribus, adipisci laborum atque. Illo maxime possimus similique explicabo
+      tenetur nesciunt exercitationem aliquid eligendi voluptatum fuga, animi quia? Iste reprehenderit, atque illum
+      maxime numquam ipsum mollitia minima inventore quae ea quasi, voluptate eveniet. Modi atque dolore aliquid sint
+      facere quod incidunt ex expedita totam, officiis, distinctio veniam repudiandae cum pariatur deleniti ipsa
+      dolorem! Distinctio, ut minus in optio velit vel libero ratione aperiam, repellat perferendis quae tempora
+      molestiae amet nesciunt labore repudiandae consectetur autem hic ex. Modi harum fugit animi obcaecati, voluptatem
+      tempore sequi temporibus quis aut assumenda numquam doloribus quasi nulla. Quod a quisquam odio autem tempora
+      consequuntur perspiciatis accusamus dicta omnis! Natus harum odit vitae, hic in qui! Debitis placeat quos ullam
+      fuga suscipit! Corporis minima quae commodi molestiae ratione ut recusandae odio pariatur dolore provident
+      asperiores iusto, ea animi labore quasi, laborum vitae aperiam quisquam voluptatibus cupiditate quibusdam nemo?
+      Rerum beatae, expedita corporis deserunt laborum in cum sapiente nesciunt voluptatibus provident temporibus ea
+      officia suscipit ullam incidunt distinctio molestias modi tenetur dolorem minus dignissimos neque minima porro.
+      Pariatur laudantium illo dolorem. Voluptate unde sint ducimus qui totam ipsa dignissimos nobis maxime deleniti!
+      Animi iste pariatur debitis nostrum natus maxime dolorum. Dolorem numquam laudantium inventore doloremque officia
+      ipsum quasi magnam cupiditate ratione reiciendis velit illo vero, adipisci ullam, sequi perferendis voluptatem
+      accusantium harum dignissimos quis corporis ducimus? Accusantium eius aperiam optio est deleniti porro laboriosam
+      consequuntur quia similique in repellat beatae veniam, non reiciendis voluptatem ipsa a expedita, iure cupiditate
+      enim. Assumenda ab, harum itaque in, vel corporis sunt voluptatibus autem odio iste, recusandae rem possimus!
+      Suscipit sunt ipsam, itaque soluta iste inventore quasi molestiae ipsum obcaecati, est modi iusto, corporis
+      necessitatibus corrupti ad repudiandae ratione perferendis voluptas distinctio fugiat harum tempora tempore omnis
+      ex. Fuga dignissimos, commodi dicta repudiandae consequuntur aut voluptatum magni maxime laudantium consequatur
+      dolor veritatis quasi doloremque quis! Voluptas expedita earum suscipit corporis deleniti maiores amet molestiae
+      nobis, ea distinctio repellendus exercitationem dolorum perspiciatis odio perferendis labore libero. Harum, optio
+      nulla, doloribus delectus atque laudantium quos voluptates in placeat nostrum minima laborum repudiandae earum
+      provident. Quam velit similique expedita sed autem facere nulla! Non fugit, nulla, aperiam suscipit ipsum nemo
+      alias ex eum placeat sapiente ad, voluptatem numquam. Veritatis illum dolor nisi molestias harum expedita
+      accusamus, distinctio quod et excepturi eius delectus quisquam soluta aliquam similique minus nulla dolorem dicta
+      voluptates ducimus repellendus earum amet aspernatur cum. Nesciunt ducimus officia perferendis doloremque commodi
+      voluptas adipisci tenetur repellendus atque ab, culpa, placeat, fugiat temporibus ad consectetur tempore deserunt
+      molestiae a voluptate. Aut nostrum ullam blanditiis asperiores. Perferendis cumque possimus ducimus et, hic
+      consectetur vitae? Animi aut dolore quidem debitis corporis. Quia ullam sunt reprehenderit ut rerum iusto autem
+      reiciendis cumque? Rem provident voluptas ipsa consequuntur eveniet incidunt esse est fugiat, reiciendis sequi
+      delectus minima, quod, repudiandae vel fuga animi voluptate officiis? Recusandae placeat, esse, impedit molestias
+      cupiditate quisquam perspiciatis in cum at quam asperiores voluptatem porro, similique accusantium quibusdam? Ea
+      in nobis a quos quo error, iure corporis architecto neque asperiores aut? Natus, expedita impedit, ad voluptatum
+      odio praesentium, quasi voluptate neque dolorum nihil assumenda dolores est eaque et. Velit ab sit molestias fuga,
+      fugit quae veniam omnis voluptatem obcaecati, ea voluptas rem, doloribus illo illum porro facilis nesciunt ducimus
+      a quasi! Debitis, ad. Tempore commodi possimus non nostrum temporibus sit facere repellat rem alias, delectus
+      provident voluptatem sint vel amet laborum quia enim doloribus quae? Qui quisquam minima harum enim eveniet natus
+      ut libero, sint possimus quaerat laudantium quibusdam excepturi aliquid, distinctio soluta odio pariatur mollitia
+      reprehenderit neque beatae iste tenetur cum iure. Maxime temporibus blanditiis deserunt, tempora cum accusantium
+      voluptatem accusamus officia mollitia sapiente, quisquam tempore sed incidunt veritatis facilis repellendus quasi
+      numquam, id exercitationem possimus quidem praesentium? Nemo aliquam, ipsam quidem veniam deserunt totam possimus
+      officiis sed laboriosam saepe dicta culpa quas eaque unde aut dignissimos alias quibusdam soluta doloremque
+      veritatis. Nesciunt illum molestias ipsum ratione voluptate officia voluptas odit. Quod tempore placeat
+      reiciendis, quaerat molestias corporis temporibus odio magni? Voluptas ab incidunt deserunt minima delectus nam
+      atque, nostrum tenetur amet veritatis. Nesciunt quae inventore nostrum quas saepe accusamus numquam facilis beatae
+      omnis maxime, eius repellat quos ipsum illum quia provident laudantium pariatur natus itaque reprehenderit
+      adipisci! Animi minima sequi dolore sed inventore quaerat, dolorum iure accusamus blanditiis tenetur asperiores
+      tempore maxime, repellendus itaque, natus dignissimos veritatis suscipit rerum voluptates deleniti aut repudiandae
+      qui in sint? Ad eligendi voluptas unde earum tempore! Pariatur laboriosam necessitatibus libero ipsa cumque
+      voluptas, sunt harum commodi molestias iste et ullam labore maxime consequuntur esse hic architecto facilis
+      accusantium dolores reprehenderit incidunt sed dignissimos ex! Veritatis quae quibusdam animi voluptatum velit
+      natus nostrum iusto optio tempora quas laboriosam, dolores autem! Quaerat, repudiandae at adipisci veritatis
+      pariatur eius saepe nihil nisi quis nostrum exercitationem, dicta necessitatibus autem quam! Beatae aut id atque
+      omnis, quaerat quasi reiciendis? Repellendus dolorem eius ab praesentium accusantium, aut id quasi nulla non
+      reiciendis delectus sed vitae voluptatibus cum fugit. Nulla beatae, libero eveniet corporis aspernatur, iure
+      voluptates eligendi inventore officia nobis vero facere earum dolorum tempora animi nisi dolorem alias, obcaecati
+      voluptatem! Quis non recusandae voluptates distinctio pariatur doloribus animi officiis, possimus reprehenderit!
+      Ipsam earum sit non fuga fugit, quae provident consequuntur alias repudiandae deserunt tempore harum? Fugiat
+      blanditiis veniam voluptas nihil harum aperiam, perspiciatis explicabo nostrum iusto corporis molestias eos
+      inventore delectus temporibus voluptate at obcaecati maiores officia recusandae rem ullam necessitatibus eum, et
+      sint! Numquam, rerum voluptas consectetur fuga provident tenetur, non magni sit ducimus, sequi ea deserunt
+      repellendus vel exercitationem sint adipisci optio dolorum illum accusantium placeat eos delectus temporibus!
+      Voluptatum illum officia velit odio earum quaerat est quis molestiae nisi in, modi animi nesciunt dolorem quia
+      nemo reprehenderit eligendi! Voluptas aut doloribus neque totam quas exercitationem, natus labore vel nihil
+      molestiae quis enim atque quisquam officiis similique hic earum eligendi. Odio repellendus commodi nobis adipisci,
+      qui doloremque expedita error quam dolore soluta. Autem sed rem cumque animi unde, possimus modi dolorum
+      blanditiis, impedit rerum ullam soluta asperiores, ad dolorem delectus odit non sunt ducimus officia? Veritatis
+      reiciendis autem ut nulla. Doloremque libero omnis sapiente quas, ipsam iusto, perferendis ipsum adipisci mollitia
+      consequatur doloribus nostrum ad delectus accusamus reiciendis esse veritatis unde, tenetur est? Nostrum cum eos
+      odit accusamus qui, sed animi illo nulla impedit distinctio, eligendi excepturi saepe? Fugiat dolorem atque aut
+      nostrum soluta voluptatum quisquam vero tempore! Odit dolorem dolores perferendis ipsa numquam unde, sunt officia.
+      Aut excepturi quae molestiae in ullam dolorum quisquam illo veritatis. Reprehenderit deserunt, dolore repudiandae
+      ipsum natus dignissimos praesentium vero sint rem enim illo? Sed, temporibus! Sequi quas asperiores saepe, modi
+      debitis ipsam officiis natus? Ducimus totam commodi iure! Numquam, voluptatum beatae dolorem velit exercitationem
+      quis, hic corporis nobis nemo suscipit, non labore nulla tempore qui. Odit ex similique necessitatibus dignissimos
+      maxime amet doloremque vero impedit excepturi voluptates! Nisi tempore necessitatibus doloribus deserunt ullam hic
+      odit quas sed minima exercitationem non odio voluptate accusamus, id a optio mollitia fugit! Voluptatum eligendi,
+      in aliquid adipisci consectetur doloremque temporibus unde nam ex quo a placeat fugit ullam dicta obcaecati amet,
+      voluptas quaerat laudantium delectus, accusamus eum ad. Delectus consequuntur nostrum exercitationem, laborum
+      inventore cumque quas rem obcaecati commodi repudiandae fugit ab voluptates illum iusto ipsum debitis deleniti aut
+      fuga vero! Similique quaerat a error vero id minus optio, voluptates dolorum repudiandae officiis itaque animi
+      iusto quos consequatur beatae natus earum voluptatum distinctio ex explicabo excepturi aut nam porro consequuntur?
+      Enim aspernatur ipsum sint quidem laboriosam voluptatibus, laudantium eos iusto maxime illum dicta velit commodi
+      tempora voluptas. Sint nobis harum, culpa maxime eos dicta consequuntur aperiam, perferendis aspernatur, tenetur
+      enim optio excepturi vero adipisci. Itaque, vero! Vitae eligendi aliquid numquam pariatur ad asperiores odit aut
+      nam ullam corporis repellat veritatis repudiandae quas optio, temporibus reiciendis alias unde sed accusantium
+      illo debitis. Sed inventore ut amet iure quas voluptatibus tempora aperiam. Facere atque deserunt ut deleniti
+      explicabo reprehenderit iure aliquam, nemo ipsum aut, laudantium repellat dolorem cupiditate, ea cum amet illum.
+      Possimus eum cumque eveniet. Dolores quae odit veritatis, ea qui tempore voluptatem, dolor sint ipsum, saepe error
+      amet explicabo eligendi labore eos soluta mollitia. Earum ex ducimus exercitationem? Rem laborum sed, dolorum
+      cupiditate facere voluptatum ducimus, enim labore harum illum exercitationem libero doloremque quia nisi iure ab
+      perferendis maiores magnam quae cumque nemo expedita, ut quibusdam. Adipisci itaque consectetur, ipsam, recusandae
+      debitis veniam quisquam ut modi fuga unde deleniti dignissimos dolores nesciunt dolore alias cum animi, maxime
+      delectus velit minima enim. Adipisci quibusdam voluptatibus, a illum et illo distinctio quidem libero repudiandae
+      beatae enim minus deleniti? In cumque et mollitia quas similique, temporibus, optio eius asperiores corporis
+      doloremque autem perferendis vel hic modi alias eveniet quis dicta reprehenderit voluptatum ab, libero dolore
+      numquam dolores tenetur. Nobis cupiditate deleniti fuga ipsa rem sequi natus minima minus iusto. Deserunt
+      necessitatibus minima possimus vero. Ratione voluptates eos, beatae eveniet, quidem ullam omnis dicta eligendi
+      error autem magnam distinctio voluptatum, iusto ut doloribus! Recusandae culpa, praesentium quos tempore facere
+      nemo inventore nihil quaerat cum, autem alias, repellat vero eaque aut maxime expedita ipsa ullam! Maxime, est
+      voluptate natus quaerat ex nam tempora libero reiciendis facilis odio illum officiis molestiae aut dolorum
+      delectus, totam iure optio aperiam esse assumenda, repellendus voluptas! Ipsam odio quod, consectetur vitae
+      commodi minima debitis soluta sed necessitatibus ad impedit assumenda in quam officia praesentium iste porro
+      optio? Sequi aliquam quidem dignissimos, dicta obcaecati nesciunt officiis atque, natus delectus ullam illo. Autem
+      in nesciunt expedita aliquam, quos adipisci minus est obcaecati voluptatibus sunt corrupti dolor natus accusamus
+      earum ducimus reprehenderit totam omnis laborum quae asperiores neque non modi! Soluta nisi eligendi, similique
+      sint quam dolor, tempora voluptatibus qui rerum ipsam veritatis dicta autem nostrum tenetur voluptates suscipit.
+      Ipsum nostrum quo modi. Quaerat autem illum dicta minus quo voluptas facere soluta totam iusto id impedit nemo
+      culpa, dolores, dolorum laboriosam sed. Quia nam eaque aliquid, recusandae, deserunt culpa facilis ullam aut,
+      quibusdam dicta mollitia. Suscipit ipsam atque eligendi! Perferendis quos aperiam autem! Deserunt atque
+      perspiciatis, cupiditate aspernatur est quam eum deleniti, inventore, qui temporibus distinctio enim quidem eius
+      voluptates illo quia optio numquam quas. Asperiores ullam sapiente, accusantium iste porro est et. Nesciunt est,
+      nemo voluptate quae fugiat quia ea eaque debitis a? Numquam, atque obcaecati ex enim optio voluptatibus inventore!
+      Consequuntur praesentium, iure in voluptatum, esse hic, distinctio dolorum quidem facilis ea recusandae aut sit
+      doloribus neque dolore eum ab explicabo veniam voluptate repellendus. Vero, amet dolores! Nulla aliquam accusamus
+      iure sit eligendi. Consectetur voluptatem amet minus iusto commodi eaque eveniet facere ipsam quasi? Tenetur minus
+      saepe, quod eligendi odit porro non ducimus ipsa quas dolorum at illum nihil dolorem facilis suscipit velit, autem
+      sequi quis vitae modi cumque beatae. Laboriosam, officia officiis. Provident perspiciatis id blanditiis a
+      reiciendis facilis est non eveniet facere. Porro quis consectetur deleniti magnam nobis cumque, dolorem nulla
+      dolorum blanditiis vitae fuga recusandae praesentium, optio numquam provident. Iste distinctio cumque
+      necessitatibus blanditiis, eum doloremque expedita porro corrupti voluptate sit placeat debitis odit veritatis
+      aliquid consequuntur? Eum repudiandae, maxime, fugit hic nemo magni aspernatur laudantium porro nobis autem
+      facilis expedita impedit debitis doloribus amet animi inventore id delectus suscipit et. Animi aliquam quisquam
+      eos voluptate possimus quia libero illo error, eaque cum at unde necessitatibus, inventore vero iusto magni quidem
+      nemo laboriosam molestiae magnam voluptatibus saepe dolorum in consequuntur! Fugiat sapiente sit soluta? Tempora,
+      repellendus soluta? Ipsum aliquam corporis sequi ea est eveniet, assumenda laborum cum eius dolore expedita illum
+      dolor facere atque natus aliquid sunt quod eaque inventore numquam voluptates consequatur, placeat tenetur?
+      Debitis, itaque asperiores ducimus voluptatibus dolores deserunt odio modi libero cum quas, laboriosam fugiat
+      eaque. Adipisci velit nemo vitae non nobis ullam alias culpa debitis. Voluptates expedita ullam odio laborum
+      aperiam sunt repudiandae similique distinctio eum tenetur placeat minima quam vitae nostrum explicabo eius, labore
+      fugit repellendus maiores alias sed, doloribus voluptatum quos quia. Assumenda laborum numquam magni dolorum
+      accusantium quod? Blanditiis consequatur officia amet! Harum quisquam doloremque deserunt reprehenderit hic
+      molestias? Quae, tempora? Illum corrupti distinctio nemo molestiae cupiditate inventore! Quae placeat adipisci
+      facere tenetur molestiae eveniet iste tempora, voluptatum facilis harum? Tenetur ex iure dignissimos obcaecati
+      ipsam nihil, modi natus eum recusandae. Odit molestiae, placeat voluptas est impedit minima, laboriosam, nobis
+      debitis omnis itaque ut ad ab aspernatur reiciendis quos totam earum! Delectus error dolor ea quidem earum
+      corporis, nihil non ut deleniti ad recusandae alias! Excepturi nemo, eveniet minus, sapiente expedita, delectus
+      quisquam id quae earum maxime fugit? Dolorem magni delectus odit possimus nihil rerum earum quaerat minima
+      cupiditate suscipit ipsum dicta totam aspernatur exercitationem est, rem eveniet. Suscipit libero harum, quasi
+      voluptate vel est modi saepe cum enim et exercitationem repudiandae architecto, quaerat tempora distinctio
+      officiis id. Dicta error repellat ipsum totam explicabo consectetur voluptate sunt nisi alias rerum, modi neque
+      assumenda nulla. Fugit accusamus eum at libero hic nemo vitae quae cumque nobis laborum et laudantium ipsam
+      aspernatur officiis ex, maiores iure voluptate odio cum laboriosam tempora esse ratione eos! Rerum, quis!
+      Voluptatibus vero voluptates distinctio deleniti laborum dolorum ullam amet dicta nisi laboriosam, officia ipsam
+      atque consequatur, rerum similique vel consectetur! Sint eius tenetur aspernatur maiores corrupti nobis maxime
+      incidunt neque saepe doloribus, quasi magni vitae ipsa obcaecati quis aliquid ea error. Tempora exercitationem
+      debitis magni nesciunt odio nemo voluptate ullam asperiores expedita, quibusdam corrupti molestiae vero veritatis
+      officiis explicabo quasi adipisci, cumque reiciendis libero, dolore iure necessitatibus unde? Fuga perferendis et
+      iste consectetur adipisci illum itaque ullam alias dolorem minima magni molestiae blanditiis ratione ipsam at eos
+      dolores eius veritatis, delectus expedita, assumenda cum impedit labore vel. Laborum, ullam accusantium doloremque
+      ex rem dignissimos quisquam, similique, tempore ea libero id quam! Maiores soluta quo dignissimos sapiente ea
+      neque commodi illum nam accusantium! Quidem iusto aperiam ullam tempore veniam sit, temporibus doloremque? Totam
+      incidunt minus voluptatem itaque sed perferendis atque id neque unde molestias, distinctio sint laudantium
+      aspernatur esse ex ut pariatur dicta facilis culpa adipisci iusto praesentium quas nisi inventore. Harum atque
+      voluptas excepturi in facilis asperiores ipsam libero deserunt nobis. Culpa asperiores enim voluptatum officia ex
+      dolor repellat labore facere accusamus doloremque? Suscipit quaerat harum sequi obcaecati minima qui, totam vero
+      dolores possimus, tenetur at nesciunt corrupti ratione a repellat distinctio illo autem vel commodi consequuntur
+      soluta molestias cumque. Voluptates, reiciendis libero cupiditate et officia ea veritatis, iusto ratione
+      consequuntur ipsam expedita est molestiae quaerat numquam excepturi repellat aliquam ex corrupti consectetur saepe
+      itaque esse dolores labore ullam. Officia quod cupiditate animi praesentium non sapiente error provident esse
+      deleniti optio? Assumenda, quo. Rem neque repellat in ad blanditiis, recusandae, impedit inventore accusamus quam
+      unde asperiores ipsum qui perspiciatis sed eveniet libero aliquam natus corrupti doloremque omnis dicta?
+      Doloremque, error? Id libero ex corrupti quisquam doloribus voluptates odit error. Itaque molestias exercitationem
+      quidem placeat incidunt in possimus cum praesentium, eum maxime minima iure, veniam dignissimos laboriosam, quo
+      mollitia consequatur accusamus! Odit consequatur nostrum aliquid ut porro quibusdam molestias ad libero minus ea
+      hic quae, dolores consectetur mollitia exercitationem placeat eos maiores quos, autem at, voluptas sit in enim?
+      Fuga consectetur aliquid quasi itaque suscipit architecto sed ratione accusantium facilis, corporis, voluptatem
+      doloribus maxime sit aut repudiandae voluptatum ipsam minima facere magnam explicabo minus illo tempora!
+      Distinctio blanditiis laboriosam quisquam recusandae quam cumque sunt perferendis at accusantium? Magnam
+      repudiandae mollitia doloremque ipsa, minima aperiam unde? Placeat neque delectus blanditiis repellendus! Neque
+      aliquam eligendi aliquid reprehenderit pariatur quas! Ullam tenetur consequuntur, cum hic cupiditate ratione a,
+      tempora laudantium vero pariatur laboriosam eius facilis error atque dolor voluptates. Omnis sapiente rem dolores
+      qui blanditiis accusamus, eos tempora molestias corrupti similique amet! Odit minima inventore sapiente dolorem
+      quam debitis. Provident reiciendis, totam beatae facilis impedit porro voluptatum sapiente, perspiciatis
+      temporibus magnam sint laborum neque et tempora explicabo veniam delectus! Ducimus optio laboriosam enim dolore
+      eveniet laudantium praesentium eum iusto rem ratione cumque, sint ullam quia aliquam exercitationem repudiandae
+      alias beatae error, soluta facilis? Distinctio officia expedita qui sit perferendis fuga nihil, labore dolorum
+      earum illo impedit perspiciatis sapiente vel doloribus eius cumque quidem! Laudantium, minus, nemo autem
+      perspiciatis excepturi fugit velit iusto voluptas error vero vel optio qui dolorum similique reiciendis! Molestias
+      rem beatae quo officiis fuga recusandae, iure nemo aliquid nihil? Sit voluptas voluptate itaque, quos minima rerum
+      dolor minus blanditiis praesentium rem saepe necessitatibus enim laudantium consequuntur ipsam veritatis eius
+      aperiam tempora corporis ea voluptatem reprehenderit. Error dicta cupiditate quaerat deleniti voluptate nemo
+      facilis iure, rerum sequi. Tempore eligendi esse consequatur pariatur, eveniet totam fugiat porro, repellendus
+      ipsum asperiores quam minus nam hic dolore quae, non officiis nobis accusamus. Ad debitis aliquam repellat est
+      pariatur distinctio iure, impedit labore. Iure dolore dolorum alias doloremque quia ut delectus officiis repellat
+      laboriosam eligendi laborum iste, eaque natus itaque quasi expedita, dolor fuga illum quas illo impedit
+      blanditiis? Architecto officiis sapiente voluptates consectetur, excepturi, pariatur suscipit aliquid dolore at
+      sunt cum iste velit repellendus maxime modi alias exercitationem non itaque asperiores minus. Dolor unde repellat
+      tenetur iusto voluptates tempora eum soluta aspernatur labore consectetur, officia autem eos quia inventore facere
+      fugiat quibusdam molestiae ut possimus reprehenderit alias. Pariatur labore iste culpa. Eligendi fuga odio
+      blanditiis eum. Porro sed quaerat officiis rem hic unde voluptatibus veniam. Odit iste reprehenderit explicabo
+      architecto magnam voluptatibus atque nesciunt modi! Laudantium consequuntur ipsa magnam voluptate soluta inventore
+      ipsam, deserunt, minima repellat exercitationem expedita accusantium? Aspernatur nisi exercitationem iste quaerat
+      assumenda, molestias tempore voluptatum eius ad alias nam temporibus laboriosam. Sed nemo est voluptatem veritatis
+      iure soluta ducimus perferendis suscipit at cum hic ea necessitatibus impedit cumque dolore eum, natus praesentium
+      fugit illo itaque qui iusto neque ipsa consequatur. Eius dolor facilis ut unde reiciendis esse impedit sunt cumque
+      doloribus labore aperiam nesciunt nobis commodi dolore, modi id, ad consequuntur ex expedita! Rerum nulla
+      perferendis fuga ad consectetur. Harum, dolor culpa porro saepe omnis consequatur ex nisi vel. Temporibus ab id
+      numquam sapiente consectetur aliquid omnis repudiandae, maiores dolorum quidem excepturi quas illo optio officiis
+      labore veritatis tempora laudantium voluptatibus sunt vitae fuga vero saepe? Distinctio porro cupiditate
+      voluptates impedit adipisci dolorum, error, minima voluptatum ullam quisquam vero veritatis? Itaque laudantium
+      harum eos, at in maxime tenetur dolorum voluptatum veniam facere officia explicabo. Saepe, accusamus! Aliquam
+      voluptates assumenda asperiores doloribus eum atque saepe, repellat dicta quo enim dolor fugit hic minima quis a
+      excepturi provident voluptas dolorem in maxime facere vitae sit? Voluptatem quibusdam libero sapiente reiciendis.
+      Perspiciatis unde quia nemo molestiae inventore vel deserunt optio eos eligendi maiores explicabo sunt ipsa,
+      fugiat doloribus, expedita maxime sint autem aliquid? Numquam possimus accusamus autem sint ut, quasi ex
+      consequatur quae amet id illum ducimus voluptate! Enim et natus recusandae, at voluptates beatae ab dolorem
+      temporibus obcaecati dicta voluptatibus neque accusamus vero, odio explicabo magnam! Reiciendis eos dicta fugiat
+      deleniti ullam ipsum minima reprehenderit necessitatibus eveniet voluptatem perspiciatis esse at recusandae,
+      corporis laudantium culpa in cum velit adipisci. Repellat in totam quisquam quod corporis inventore veritatis
+      perspiciatis optio? A laborum fugit eveniet magni adipisci cumque magnam eligendi id! Aspernatur nam veritatis
+      iure numquam sequi quibusdam officiis, soluta tempore accusamus. Cumque animi, modi eos exercitationem aut veniam
+      culpa quo maiores architecto perferendis repellendus totam commodi minus illo dolores, iure fugit quas doloribus
+      quidem. Culpa amet deleniti ut aliquid voluptates in impedit, laudantium mollitia incidunt molestias ad fuga nihil
+      vero sint beatae dignissimos provident ab reiciendis! Molestias reprehenderit ratione ut nesciunt rem tempore fuga
+      quod tempora rerum nemo impedit sed deserunt ex possimus odio, odit facere alias sequi. Reiciendis minima
+      inventore optio quibusdam excepturi adipisci obcaecati quam necessitatibus distinctio numquam voluptatem mollitia
+      amet iste sit aperiam, molestias tenetur in placeat beatae corporis magni, unde aliquid modi totam. Nemo quas ipsa
+      ipsam rerum. Quis earum mollitia corrupti hic nihil, vitae sunt saepe sed odit cum similique ab laudantium
+      repellat illum suscipit rerum, dolorem animi obcaecati. Architecto ut exercitationem, quasi nesciunt quidem
+      deserunt repellat animi assumenda ipsa, numquam, temporibus aut! Impedit voluptatem possimus molestiae quos
+      aliquid numquam praesentium, doloribus reprehenderit eveniet voluptas omnis ullam laboriosam corporis recusandae
+      inventore quis nisi magni, nulla saepe deserunt libero ex ad. Ullam, voluptatibus neque sequi quaerat nesciunt
+      recusandae consequatur pariatur assumenda! Velit praesentium porro labore corrupti nam, eveniet illum cupiditate
+      expedita laudantium doloribus. Tenetur, sunt obcaecati aspernatur ab sit assumenda, ratione quas, sapiente ipsam
+      distinctio facere animi rerum nam quod nesciunt ex hic beatae. Ipsa placeat pariatur assumenda laudantium impedit
+      tenetur repellendus magni minus error illum, maxime quibusdam ex recusandae tempore ullam accusamus quo non
+      adipisci cum modi dignissimos sit rem. Corrupti placeat quas similique vel sequi fugit enim magnam sapiente
+      impedit, quae quaerat. Temporibus, harum ipsum? Est temporibus nemo deserunt consequatur quaerat porro. Vitae
+      laboriosam, delectus tenetur odit voluptatibus rerum enim reprehenderit dolorem veritatis aspernatur, ab obcaecati
+      a aperiam iste quam quia, sunt officia optio tempora totam fugiat fuga facilis aliquid? Quo voluptatem repellendus
+      quibusdam accusamus, a modi perspiciatis doloribus repudiandae architecto, eius facilis unde error itaque impedit
+      numquam deleniti, inventore porro! Odit optio repudiandae beatae inventore numquam ab ullam ducimus magnam aliquam
+      voluptates, illum quibusdam recusandae blanditiis? Quisquam quo eligendi illo nihil quibusdam repudiandae
+      perferendis vitae sint natus, ea, ad iste suscipit ratione alias eaque cumque, fugiat illum nesciunt commodi odit
+      fuga doloribus! Dignissimos nam tempore odio ab minima in quae obcaecati. Obcaecati, id? Ratione, aperiam saepe.
+      Iusto, nemo. Beatae voluptatibus quasi, illo dolorem molestias suscipit ut veritatis, blanditiis quos id
+      consectetur laborum impedit temporibus tempore accusantium? Non sed velit excepturi aliquid expedita iusto illum
+      dicta sit nostrum incidunt itaque possimus in veritatis totam reiciendis maxime, culpa perferendis vero autem
+      voluptate unde. Ullam neque voluptate accusantium, doloribus ea porro nostrum rem perspiciatis at soluta mollitia.
+      Cumque possimus deleniti, facere consequatur dolores, dicta mollitia ea sed placeat id ab et vitae rem non est
+      recusandae aperiam minus! Odit, quam at. Atque recusandae ipsa officia laboriosam ullam quasi porro commodi dolor
+      id. Qui, recusandae enim dolore quos aspernatur ut, adipisci sequi alias optio incidunt eos! Quam aut consequatur
+      aspernatur animi! Est sed beatae temporibus ex itaque ut quas commodi, eum sit. Reprehenderit laudantium, nisi,
+      deleniti explicabo fugiat temporibus placeat aperiam excepturi, voluptas tempore eum saepe recusandae tenetur ea.
+      Consectetur laborum eaque totam rem odio provident omnis necessitatibus sunt delectus qui alias autem, eos at
+      voluptatum iure culpa eum! Corrupti, voluptate consequuntur nihil molestias inventore saepe sapiente iste cum quos
+      deserunt exercitationem neque, iusto eveniet vitae atque facere reiciendis reprehenderit minima voluptates!
+      Voluptatem expedita a aliquam maxime dignissimos, aut dolorum non, enim impedit cumque labore, illo vitae corporis
+      ipsam omnis fugit quo cum laborum quod nihil et eaque tenetur. Ducimus laborum ipsum voluptate dignissimos
+      inventore. Maiores, voluptates a fugiat ea voluptate vitae exercitationem officia provident illum iusto, error sit
+      temporibus! Nisi, dolor excepturi! Deserunt magni repellat numquam ipsa optio error enim quibusdam reprehenderit
+      fugit? Praesentium, consequatur id nostrum placeat illo doloribus obcaecati aut enim blanditiis! Optio, ducimus.
+      Non quaerat facere eius deserunt laudantium a sint amet, doloremque velit ullam. Laborum provident eum cupiditate
+      facilis necessitatibus, soluta omnis blanditiis ex saepe quaerat odio doloribus molestiae tenetur aspernatur vitae
+      debitis repellendus nobis quas reiciendis deserunt vel sint quasi. Officia minus ipsa tenetur, quo culpa sit
+      libero laudantium in eos ut adipisci eveniet! Consectetur, quis eum? Voluptatum veniam excepturi error, sunt magni
+      totam reprehenderit tempore dicta consequatur animi ipsa earum sint optio ipsam saepe exercitationem non ex
+      pariatur ullam et nostrum tenetur modi perspiciatis libero. Voluptates nostrum numquam impedit cupiditate, autem,
+      ducimus voluptatum earum quis doloremque, quia ipsum in fuga! Explicabo corrupti, inventore cumque incidunt
+      voluptatum officia. Repellat tenetur, expedita consequatur inventore labore dicta illo vero velit, optio
+      voluptates laboriosam! Cupiditate fugiat iure aliquam fuga iusto expedita ducimus vero atque ratione natus, illo
+      nam adipisci vitae quibusdam nulla dolorem, obcaecati repellendus nostrum fugit quos placeat! Nam laborum tenetur
+      atque facilis quod neque alias placeat expedita, iusto perspiciatis accusamus consequuntur non ex qui soluta
+      quidem! Totam saepe dicta numquam rerum voluptatum sequi eveniet, quis corporis beatae debitis velit magni
+      blanditiis nulla commodi. Nam architecto voluptatibus itaque! Necessitatibus commodi veritatis dolore, atque error
+      laboriosam voluptas tenetur eos voluptatum! Veritatis qui ut distinctio velit, architecto eius officiis nemo
+      corporis inventore nihil. Libero consequatur alias nam eius et fugiat esse ipsam qui aliquam voluptatibus
+      temporibus consectetur velit tempore sapiente delectus quia ab praesentium, possimus nemo maiores error! Error,
+      laboriosam ut. Consequuntur tempore possimus iste saepe eaque omnis voluptatibus laborum adipisci, earum debitis
+      quasi autem facere impedit corporis labore perspiciatis a eligendi iure fuga deleniti asperiores animi architecto
+      reiciendis! Nam, officia iste? Aut, ut optio vitae modi eius amet! Eaque eum, aut quidem, a explicabo nesciunt
+      error praesentium, eius libero maiores repellendus. Iste reiciendis recusandae doloribus dolorum animi, tempore
+      nobis eius tempora delectus sit! Itaque voluptate ad reprehenderit est eius eos, dignissimos hic quia neque
+      aliquam distinctio quaerat architecto tempore fugiat quos, culpa fuga vero quam nulla at ea? Adipisci libero
+      officiis dolorem consectetur maxime corporis obcaecati aperiam minus quidem porro velit ipsa, ex assumenda
+      reprehenderit omnis quaerat sint quia tempora iste quis harum odio. Eveniet sapiente nisi temporibus dignissimos
+      laboriosam fugiat ea natus nemo nesciunt laudantium minima quasi numquam maiores nam nobis, odit libero quam qui,
+      enim tenetur. Ipsum nulla reprehenderit veritatis atque architecto, laboriosam rem optio est repellat harum error
+      explicabo a ipsam suscipit quis illo beatae illum eum earum? Nam aperiam quos, accusantium similique totam harum
+      consectetur sequi aut placeat est excepturi voluptas numquam sunt ex distinctio error. Debitis minima cum non ad
+      aspernatur. Quibusdam itaque dolorem distinctio placeat laborum! Dignissimos sit ad perferendis obcaecati
+      adipisci, explicabo cumque beatae nisi alias quis deleniti ratione aspernatur magni non voluptates quas unde natus
+      provident necessitatibus fugit corrupti, dolores eveniet inventore vel. Officiis qui velit fuga eum harum nam
+      aperiam neque sequi libero ea, fugiat repudiandae molestiae delectus nisi. Velit, aspernatur ipsa molestiae ad
+      enim beatae consectetur facere deserunt est laudantium porro quia consequatur blanditiis maxime fuga voluptatum
+      assumenda, nemo accusamus quo laborum quod magni? Dolores, deserunt quam accusamus molestias est perferendis
+      explicabo recusandae quo ullam debitis vero, nulla, repellat totam illum velit. Reprehenderit, at, incidunt
+      repellat ratione dolore amet, sequi facere similique nesciunt delectus cupiditate in totam officia aspernatur ipsa
+      laboriosam voluptatibus? Optio ipsam tempora repudiandae, temporibus quos harum? Explicabo maxime, alias ut
+      repellendus officiis quia modi mollitia voluptatum similique commodi distinctio eveniet quaerat fugiat accusamus
+      suscipit et minima reprehenderit laboriosam reiciendis adipisci assumenda nobis obcaecati! Sequi aut debitis
+      aperiam reiciendis officia provident amet fugiat mollitia aliquam maiores veritatis quidem modi ab expedita
+      excepturi porro, similique, atque magnam et assumenda temporibus cum ut illum. Impedit similique atque obcaecati
+      nisi ad necessitatibus, eos ipsum nemo minima. Harum delectus distinctio et nobis at nostrum doloribus quisquam,
+      tempora corrupti doloremque debitis, nulla repudiandae cum velit aliquid voluptates? Quaerat tempore nemo incidunt
+      eius totam ratione repellat cum sed quidem quis, aliquid blanditiis et facilis necessitatibus, quasi, voluptatibus
+      architecto ipsam doloribus! Praesentium blanditiis accusamus, necessitatibus nisi, maxime, hic atque doloremque
+      quos vitae accusantium deleniti nostrum quod quo expedita voluptatum voluptatibus! Saepe esse laudantium adipisci
+      obcaecati ipsa! At nisi porro nulla nobis illo unde, libero commodi sit quaerat assumenda id fugit nam dignissimos
+      sed harum quo officiis, sapiente maxime! Quas inventore ab quod nemo natus nihil accusamus autem ex sapiente,
+      minus provident hic adipisci quos itaque! Necessitatibus quod a, eveniet corrupti hic, omnis optio eligendi in ad
+      harum minus temporibus ullam quo? Modi nesciunt sit placeat excepturi expedita, neque architecto nemo impedit at
+      magnam temporibus explicabo consequuntur? Libero fugiat eum doloribus ullam quos aliquid porro mollitia obcaecati
+      commodi et laborum, pariatur, debitis temporibus asperiores aliquam atque quod sed earum non! Facilis, veniam
+      facere excepturi officiis natus perspiciatis voluptatibus. Numquam at excepturi sed laborum cupiditate eveniet
+      molestias, repudiandae error! Cupiditate quos asperiores tempora, vero numquam minus earum repellat praesentium,
+      eligendi rem nobis veritatis perspiciatis id at esse, et consequuntur nulla reiciendis odit! Sint quod ducimus
+      officiis dolor impedit. Ipsa repellat neque obcaecati reprehenderit commodi maxime unde quas, perspiciatis minima
+      sint, aperiam amet? Saepe error iure quidem ipsum, explicabo, vero nulla quae dolorum incidunt repudiandae
+      molestiae laboriosam nostrum nemo rem at quisquam blanditiis adipisci id minima ab maiores non eius iusto numquam.
+      Quam adipisci odit eaque repellendus voluptatem hic totam reprehenderit consequuntur ipsam, fugiat ea quo vel
+      maxime quaerat nam expedita quos fugit eligendi numquam laborum doloribus ad facilis ipsum! Cum facilis mollitia,
+      alias hic aspernatur doloremque beatae laborum vero cupiditate aliquid, sapiente illum et!</div>
+    <span class="action_widget_section">
+      <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+        class="btn btn-danger change_background_image_widget_section" style="display: none;">Change Background
+        Image</button>
+    </span>
+    <div class="amerifreightIndustry">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+
+
+            <div class="goal name w-100 text-left">
+              <div class="Bureau commitment">
+                <h4>AmeriFreight's Industry Credentials</h4>
+              </div>
+              <p>Rest assured, AmeriFreight is highly rated on Google, Transport Reviews, Consumer Affairs, and the
+                Better Business Bureau (BBB). We take our commitment to senior citizens seriously and aim to provide you
+                with outstanding customer service and support throughout your car shipping journey.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+
+            <div class="goal name w-100 text-left">
+              <div class="Bureau commitment mt-2 mt-lg-0">
+                <h4>Our Commitment to Seniors</h4>
+              </div>
+              <p>
+                AmeriFreight's dedication to supporting senior citizens goes beyond just offering discounts. We believe
+                in making your move as smooth as possible, ensuring that your vehicle reaches its destination safely and
+                securely. Your comfort and convenience are our top priorities.
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><span class="action_widget_section">
+      <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+        class="btn btn-danger change_background_image_widget_section" style="display: none;">Change Background
+        Image</button>
+    </span>
+    <div class="container ShippingBox Touch">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 col-12 offset-lg-3">
+              <div class="text-center">
+                <h4>Get in Touch with Us</h4>
+                <div class="hest"></div>
+                <p style="text-align: center;">
+                  We're here to serve you, and communication is our lifeline. If you have more questions or need
+                  personalized assistance, don't hesitate to reach out to our dedicated team for convenient car
+                  shipping.
+                </p>
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="touch-us">
+                      <span class="mar"><img src="style/images/telephone.png"
+                          alt="A red phone icon on a black background, symbolizing communication and connection."
+                          loading="lazy"></span>
+                      <span class="text-dark">Phone</span> <a href="tel:(770) 486-1010" class="text-danger">(770)
+                        486-1010</a>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="touch-us">
+                      <span class="mar"> <img src="style/images/mail.png" alt=" Red envelope email icon."
+                          loading="lazy"></span>
+                      <span class="text-dark">Email</span> <a class="text-danger" href="mailto:info@amerifreight.net">
+                        info@amerifreight.net</a>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="touch-us">
+                      <span class="mar"><img src="style/images/contact.png"
+                          alt="A red phone icon with an envelope, symbolizing communication and messages."
+                          loading="lazy"></span>
+                      <span class="text-dark">Contact Form</span> <a
+                        href="contact-us.html" class="text-danger"> Contact us</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div> <span class="action_widget_section">
+      <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+        class="btn btn-danger change_background_image_widget_section" style="display: none;">Change Background
+        Image</button>
+    </span>
+    <div class="movingservices state-page">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-10 offset-lg-1 order-md-1 order-2">
+            <div class="movingservicesdata text-center">
+              <h4>Unlock Your Senior Citizens Discount</h4>
+              <p class="text-center">Ready to unlock the Senior Citizens Discount and simplify your car shipping
+                experience? AmeriFreight is here to make your move stress-free and affordable. Let's embark on this
+                journey together!</p>
+              <div class="getintouchbtn mb-3 mb-lg-0"><a
+                  href="get-an-instant-quote.html"><span></span>Get
+                  an instant quote</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer pb-0">
+      <div class="container">
+        <div class="row">
+          <div class="col1">
+            <div class="footerdata">
+              <img width="135" height="89" class="img-fluid img-thumbnail" id="bottom_logo"
+                src="style/images/Webp.net-resizeimage-9-e1617178290366.png" alt="amerifreight logo" loading="lazy">
+            </div>
+          </div>
+          <div class="col2">
+            <div class="footerheading">
+              <h4>QUICK LINK
+              </h4>
+            </div>
+            <div class="footerproduct">
+              <ul>
+                <li>
+                  <a href="about-us.html">About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="get-an-instant-quote.html">Get An
+                    Instant Quote
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="reviews.html">Reviews
+                  </a>
+                </li>
+                <li>
+                  <a href="and-more.html">Discounts
+                  </a>
+                </li>
+                <li>
+                  <a href="start-to-finish.html">Why AmeriFreight
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col3">
+            <div class="footerheading">
+              <h4>CONTACT US
+              </h4>
+            </div>
+            <div class="blurbedata">
+              <ul>
+
+                <li>
+                  <i class="fas fa-phone">
+                  </i>
+                  <p>Phone:
+                    <a href="tel:(770) 486-1010" id="bottom_contact_number">(770) 486-1010
+                    </a>
+                  </p>
+                </li>
+                <li>
+                  <i class="fas fa-fax">
+                  </i>
+                  <p>Fax:
+                    <a href="tel:(470) 745-6078" id="footer_fax">1 (470) 745-6078
+                    </a>
+                  </p>
+                </li>
+                <li>
+                  <i class="fas fa-envelope">
+                  </i>
+                  <p>Email:
+                    <a href="mailto:info@amerifreight.net" id="footer_email">Click here
+                    </a>
+                  </p>
+                </li>
+                <li>
+                  <i class="fas fa-clock">
+                  </i>
+                  <p id="bottom_working_hours">Mon - Fri: 8am - 10pm EST<br> Sat: 9am - 6pm<br> Sun: 12pm - 4pm
+                  </p>
+                </li>
+                <li>
+                  <i class="fas fa-map-marker-alt">
+                  </i>
+                  <p id="footer_address">205 Greencastle Road Suite A, Tyrone, GA 30290
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col4">
+            <div class="footerheading">
+              <h4>INFORMATION
+              </h4>
+            </div>
+            <div class="footerproduct">
+              <ul>
+                <li>
+                  <a href="#">Job Openings
+                  </a>
+                </li>
+                <li>
+                  <a href="contact-us.html">Contact Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Shipping By State
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Terms &amp; Conditions
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Privacy Policy
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="border-top w-100 d-lg-flex pt-2" style="border-color: #ddd !important;">
+            <div class="col-sm-12 col-12 col-md-12 col-lg-8 col-xl-8 ">
+              <div class="mainbtmlinks">
+                <div class="btmprivacy">
+                  <p>© AmeriFreight Auto Transport 2024
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-12 col-md-12 col-lg-4 col-xl-4 pr-lg-5">
+              <div class="social-links d-lg-flex d-md-flex justify-content-end">
+                <ul class="d-lg-flex d-md-flex p-0 justify-content-between">
+                  <li>
+                    <a rel="noreferrer" id="facebook_url" href="https://www.facebook.com/AFCarShipping/"
+                      target="_blank">
+                      <img loading="lazy" src="style/images/facebook.png" alt="facebook">
+                    </a>
+                  </li>
+                  <li class="mx-3">
+                    <a rel="noreferrer" id="linkedin_url" href="https://www.linkedin.com/company/amerifreight"
+                      target="_blank">
+                      <img loading="lazy" src="style/images/linkedin.png" alt="linkedin">
+                    </a>
+                  </li>
+                  <li class="mr-3">
+                    <a rel="noreferrer" id="twitter_url" href="https://twitter.com/_amerifreight?lang=en"
+                      target="_blank">
+                      <img loading="lazy" src="style/images/x.png" alt="twitter">
+                    </a>
+                  </li>
+                  <li>
+                    <a rel="noreferrer" id="instagram_url" href="https://www.instagram.com/amerifreightcarshipping/"
+                      target="_blank">
+                      <img loading="lazy" src="style/images/instagram.png" alt="Instagram">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $('img').each(function () {
+          if (!$(this).attr('width') && !$(this).attr('height')) {
+            $(this).attr('width', '100%');
+            $(this).attr('height', '100%');
+          }
+        });
+      });
+    </script>
+    <script src="js/senior-citizen-discount-js/jquery.inputmask.min.js"></script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://www.amerifreight.net/public/assets/front/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"> </script>
+
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/6.0.0/intro.js"
+      integrity="sha512-iC2jUAfCjQVVR2eGiPYjV2lb7ZIF0Tx3xPj/PdGZSJkSJVz5y+88tRwshNmrso1twhzhSQwBPXNLdAqUYmRAPg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://www.amerifreight.net/public/assets/front/js/mapdata.js"></script>
+    <script async="" src="js/senior-citizen-discount-js/jquery.validate.min.js"></script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://www.amerifreight.net/public/assets/front/js/footer.js"></script>
+
+    <script
+      type="rocketlazyloadscript"> (function(c,l,a,r,i,t,y){ c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)}; t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i; y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y); })(window, document, "clarity", "script", "jy6oslzke7"); </script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://www.amerifreight.net/public/assets/front/js/popper.min.js"></script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://www.googletagmanager.com/gtag/js?id=UA-58169218-1"></script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://www.googletagmanager.com/gtag/js?id=AW-698578430"></script>
+    <script type="rocketlazyloadscript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'AW-698578430');
+  </script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://www.amerifreight.net/public/assets/front/js/slick.js"></script>
+    <!-- TrustBox script -->
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" defer=""
+      fetchpriority="low"></script>
+    <!-- End TrustBox script -->
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://www.amerifreight.net/public/assets/front/owlcarousael/dist/owl.carousel.min.js"></script>
+    <script
+      type="rocketlazyloadscript"> $(window).on("load", function() { function initializeCarousel() { $('.owl-carousel').owlCarousel({ loop: true,  margin: 10, nav: false, dots: true, autoplay: true, autoplayTimeout: 3000, autoplayHoverPause: true,  responsiveClass: true, responsive: {  0: { items: 1, nav: true }, 600: { items: 2, nav: false }, 1000: { items: 4, nav: true, loop: true }  } }); }
+            function setDotAriaLabels() { var checkDotsInterval = setInterval(function() { if ($('.owl-dot').length > 0) { $('.owl-dot').each(function(index) { $(this).attr('aria-label', 'Slider Dot ' + (index + 1));});clearInterval(checkDotsInterval); } }, 200);  } if (typeof introJs !== 'undefined') { introJs().start();  } setDotAriaLabels(); $('.owl-carousel').show(); initializeCarousel();$('.hi').hide();});</script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://www.amerifreight.net/public/assets/front/js/lazysizes.min.js"></script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://cse.google.com/cse.js?cx=5f8fdbb42fdb2deb5"></script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://www.amerifreight.net/public/assets/front/js/select2.min.js"></script>
+    <!--Start of Tawk.to Script-->
+    <script type="rocketlazyloadscript">
+			var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+			(function(){
+			var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+			s1.async=true;
+			s1.src='https://embed.tawk.to/63c96366c2f1ac1e202e9114/1gn5aoi4v';
+			s1.charset='UTF-8';
+			s1.setAttribute('crossorigin','*');
+			s0.parentNode.insertBefore(s1,s0);
+			})();
+		</script>
+    <!--End of Tawk.to Script-->
+    <script>
+      window.addEventListener('load', function () {
+        if (window.location.href.indexOf('/car-shipping-auto-transport-quotes-rates-cost-calculator') != -1) {
+          var timeInt = setInterval(function () {
+            if (jQuery('.sub-step-2').is(":visible")) {
+              gtag('event', 'conversion', {
+                'send_to': 'AW-698578430/YP0LCP-KvMIDEP7rjc0C'
+              });
+              clearInterval(timeInt);
+            }
+          }, 3000);
+
+        }
+
+      });
+    </script>
+    <!-- Code for tawk.to to send event to Google Analytics -->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {};
+      Tawk_API.onChatStarted = function () {
+        gtag('event', 'chat_started');
+      }
+    </script>
+
+    <script type="rocketlazyloadscript"
+      data-rocket-type="text/javascript">/* <![CDATA[ */!function(e,n){var r={"selectors":{"block":"pre.EnlighterJSRAW","inline":"code.EnlighterJSRAW"},"options":{"indent":4,"ampersandCleanup":true,"linehover":true,"rawcodeDbclick":false,"textOverflow":"scroll","linenumbers":true,"theme":"enlighter","language":"generic","retainCssClasses":false,"collapse":false,"toolbarOuter":"","toolbarTop":"{BTN_RAW}{BTN_COPY}{BTN_WINDOW}{BTN_WEBSITE}","toolbarBottom":""},"resources":["https:\/\/www.transifex.com\/wp-content\/plugins\/enlighter\/cache\/enlighterjs.min.css?dOSS1a\/3YZ2Sp7U","https:\/\/www.transifex.com\/wp-content\/plugins\/enlighter\/resources\/enlighterjs\/enlighterjs.min.js"]},o=document.getElementsByTagName("head")[0],t=n&&(n.error||n.log)||function(){};e.EnlighterJSINIT=function(){!function(e,n){var r=0,l=null;function c(o){l=o,++r==e.length&&(!0,n(l))}e.forEach(function(e){switch(e.match(/\.([a-z]+)(?:[#?].*)?$/)[1]){case"js/senior-citizen-discount-js":var n=document.createElement("script");n.onload=function(){c(null)},n.onerror=c,n.src=e,n.async=!0,o.appendChild(n);break;case"css":var r=document.createElement("link");r.onload=function(){c(null)},r.onerror=c,r.rel="stylesheet",r.type="text/css",r.href=e,r.media="all",o.appendChild(r);break;default:t("Error: invalid file extension",e)}})}(r.resources,function(e){e?t("Error: failed to dynamically load EnlighterJS resources!",e):"undefined"!=typeof EnlighterJS?EnlighterJS.init(r.selectors.block,r.selectors.inline,r.options):t("Error: EnlighterJS resources not loaded yet!")})},(document.querySelector(r.selectors.block)||document.querySelector(r.selectors.inline))&&e.EnlighterJSINIT()}(window,console); /* ]]> */</script>
+    <script type="text/javascript" id="page-scroll-to-id-plugin-script-js-extra">
+      /* <![CDATA[ */
+      var mPS2id_params = { "instances": { "mPS2id_instance_0": { "selector": "a[href*='#']:not([href='#'])", "autoSelectorMenuLinks": "true", "excludeSelector": "a[href^='#tab-'], a[href^='#tabs-'], a[data-toggle]:not([data-toggle='tooltip']), a[data-slide], a[data-vc-tabs], a[data-vc-accordion], a.screen-reader-text.skip-link", "scrollSpeed": 800, "autoScrollSpeed": "true", "scrollEasing": "easeInOutQuint", "scrollingEasing": "easeOutQuint", "forceScrollEasing": "false", "pageEndSmoothScroll": "true", "stopScrollOnUserAction": "false", "autoCorrectScroll": "false", "autoCorrectScrollExtend": "false", "layout": "vertical", "offset": 0, "dummyOffset": "false", "highlightSelector": "", "clickedClass": "mPS2id-clicked", "targetClass": "mPS2id-target", "highlightClass": "mPS2id-highlight", "forceSingleHighlight": "false", "keepHighlightUntilNext": "false", "highlightByNextTarget": "false", "appendHash": "false", "scrollToHash": "true", "scrollToHashForAll": "true", "scrollToHashDelay": 0, "scrollToHashUseElementData": "true", "scrollToHashRemoveUrlHash": "false", "disablePluginBelow": 0, "adminDisplayWidgetsId": "true", "adminTinyMCEbuttons": "true", "unbindUnrelatedClickEvents": "false", "unbindUnrelatedClickEventsSelector": "", "normalizeAnchorPointTargets": "false", "encodeLinks": "false" } }, "total_instances": "1", "shortcode_class": "_ps2id" };
+      /* ]]> */
+    </script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://7gdrhmqdxblg-u503.pressidiumcdn.com/wp-content/plugins/page-scroll-to-id/js/page-scroll-to-id.min.js?ver=1.7.5"
+      id="page-scroll-to-id-plugin-script-js" defer=""></script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-browser-checker-js-after">
+    /* <![CDATA[ */
+    "use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+    /* ]]> */
+    </script>
+    <script type="text/javascript" id="rocket-preload-links-js-extra">
+      /* <![CDATA[ */
+      var RocketPreloadLinksConfig = { "excludeUris": "\/livechat-lp\/|\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/", "usesTrailingSlash": "1", "imageExt": "jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php", "fileExt": "jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm", "siteUrl": "https:\/\/www.amerifreight.net/", "onHoverDelay": "100", "rateThrottle": "3" };
+      /* ]]> */
+    </script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-preload-links-js-after">
+    /* <![CDATA[ */
+    (function() {
+    "use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+    }());
+    /* ]]> */
+    </script>
+    <script type="text/javascript" id="rocket_lazyload_css-js-extra">
+      /* <![CDATA[ */
+      var rocket_lazyload_css_data = { "threshold": "300" };
+      /* ]]> */
+    </script>
+    <script type="text/javascript" id="rocket_lazyload_css-js-after">
+      /* <![CDATA[ */
+      !function o(n, c, a) { function s(t, e) { if (!c[t]) { if (!n[t]) { var r = "function" == typeof require && require; if (!e && r) return r(t, !0); if (u) return u(t, !0); throw (r = new Error("Cannot find module '" + t + "'")).code = "MODULE_NOT_FOUND", r } r = c[t] = { exports: {} }, n[t][0].call(r.exports, function (e) { return s(n[t][1][e] || e) }, r, r.exports, o, n, c, a) } return c[t].exports } for (var u = "function" == typeof require && require, e = 0; e < a.length; e++)s(a[e]); return s }({ 1: [function (e, t, r) { "use strict"; !function () { const r = "undefined" == typeof rocket_pairs ? [] : rocket_pairs, e = "undefined" == typeof rocket_excluded_pairs ? [] : rocket_excluded_pairs; e.map(t => { var e = t.selector; const r = document.querySelectorAll(e); r.forEach(e => { e.setAttribute("data-rocket-lazy-bg-".concat(t.hash), "excluded") }) }); const o = document.querySelector("#wpr-lazyload-bg-container"); var t = rocket_lazyload_css_data.threshold || 300; const n = new IntersectionObserver(e => { e.forEach(t => { if (t.isIntersecting) { const e = r.filter(e => t.target.matches(e.selector)); e.map(t => { var e; t && ((e = document.createElement("style")).textContent = t.style, o.insertAdjacentElement("afterend", e), t.elements.forEach(e => { n.unobserve(e), e.setAttribute("data-rocket-lazy-bg-".concat(t.hash), "loaded") })) }) } }) }, { rootMargin: t + "px" }); function c() { 0 < (0 < arguments.length && void 0 !== arguments[0] ? arguments[0] : []).length && r.forEach(t => { try { const e = document.querySelectorAll(t.selector); e.forEach(e => { "loaded" !== e.getAttribute("data-rocket-lazy-bg-".concat(t.hash)) && "excluded" !== e.getAttribute("data-rocket-lazy-bg-".concat(t.hash)) && (n.observe(e), (t.elements || (t.elements = [])).push(e)) }) } catch (e) { console.error(e) } }) } c(); const a = function () { const o = window.MutationObserver; return function (e, t) { if (e && 1 === e.nodeType) { const r = new o(t); return r.observe(e, { attributes: !0, childList: !0, subtree: !0 }), r } } }(); t = document.querySelector("body"), a(t, c) }() }, {}] }, {}, [1]);
+      //# sourceMappingURL=lazyload-css.min.js.map
+      /* ]]> */
+    </script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://7gdrhmqdxblg-u503.pressidiumcdn.com/wp-includes/js/underscore.min.js?ver=1.13.4"
+      id="underscore-js" defer=""></script>
+    <script type="text/javascript"
+      id="wp-util-js-extra">var _wpUtilSettings = { "ajax": { "url": "\/wp-admin\/admin-ajax.php" } };</script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://7gdrhmqdxblg-u503.pressidiumcdn.com/wp-includes/js/wp-util.min.js?ver=6.5.5"
+      id="wp-util-js" defer=""></script>
+    <script>window.lazyLoadOptions = [{ elements_selector: "img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]", data_src: "lazy-src", data_srcset: "lazy-srcset", data_sizes: "lazy-sizes", class_loading: "lazyloading", class_loaded: "lazyloaded", threshold: 300, callback_loaded: function (element) { if (element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible") { if (element.classList.contains("lazyloaded")) { if (typeof window.jQuery != "undefined") { if (jQuery.fn.fitVids) { jQuery(element).parent().fitVids() } } } } } }, { elements_selector: ".rocket-lazyload", data_src: "lazy-src", data_srcset: "lazy-srcset", data_sizes: "lazy-sizes", class_loading: "lazyloading", class_loaded: "lazyloaded", threshold: 300, }]; window.addEventListener('LazyLoad::Initialized', function (e) {
+        var lazyLoadInstance = e.detail.instance; if (window.MutationObserver) {
+          var observer = new MutationObserver(function (mutations) {
+            var image_count = 0; var iframe_count = 0; var rocketlazy_count = 0; mutations.forEach(function (mutation) {
+              for (var i = 0; i < mutation.addedNodes.length; i++) {
+                if (typeof mutation.addedNodes[i].getElementsByTagName !== 'function') { continue }
+                if (typeof mutation.addedNodes[i].getElementsByClassName !== 'function') { continue }
+                images = mutation.addedNodes[i].getElementsByTagName('img'); is_image = mutation.addedNodes[i].tagName == "IMG"; iframes = mutation.addedNodes[i].getElementsByTagName('iframe'); is_iframe = mutation.addedNodes[i].tagName == "IFRAME"; rocket_lazy = mutation.addedNodes[i].getElementsByClassName('rocket-lazyload'); image_count += images.length; iframe_count += iframes.length; rocketlazy_count += rocket_lazy.length; if (is_image) { image_count += 1 }
+                if (is_iframe) { iframe_count += 1 }
+              }
+            }); if (image_count > 0 || iframe_count > 0 || rocketlazy_count > 0) { lazyLoadInstance.update() }
+          }); var b = document.getElementsByTagName("body")[0]; var config = { childList: !0, subtree: !0 }; observer.observe(b, config)
+        }
+      }, !1)</script>
+  </div>
+
+
+
+</body>
+
+</html>

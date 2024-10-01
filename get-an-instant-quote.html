@@ -1,898 +1,2106 @@
-<html>
+  <!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-  <link rel="stylesheet" href="get-an-instant-quote-style.css" />
-  <link rel="icon" type="image/x-icon" href="./get-an-instant-quote-images/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="csrf-token" content="6aWfrna2J9HCn3QKEAihyZUeOiPUVaXIVFsBWFm3">
+  <link rel="icon" href="style/images/favicon.png" sizes="32x32">
+  <script>if (navigator.userAgent.match(/MSIE|Internet Explorer/i) || navigator.userAgent.match(/Trident\/7\..*?rv:11/i)) { var href = document.location.href; if (!href.match(/[?&]nowprocket/)) { if (href.indexOf("?") == -1) { if (href.indexOf("#") == -1) { document.location.href = href + "?nowprocket=1" } else { document.location.href = href.replace("#", "?nowprocket=1#") } } else { if (href.indexOf("#") == -1) { document.location.href = href + "&nowprocket=1" } else { document.location.href = href.replace("#", "&nowprocket=1#") } } } }</script>
+  <script>(() => { class RocketLazyLoadScripts { constructor() { this.v = "1.2.5.1", this.triggerEvents = ["keydown", "mousedown", "mousemove", "touchmove", "touchstart", "touchend", "wheel"], this.userEventHandler = this.t.bind(this), this.touchStartHandler = this.i.bind(this), this.touchMoveHandler = this.o.bind(this), this.touchEndHandler = this.h.bind(this), this.clickHandler = this.u.bind(this), this.interceptedClicks = [], this.interceptedClickListeners = [], this.l(this), window.addEventListener("pageshow", (t => { this.persisted = t.persisted, this.everythingLoaded && this.m() })), document.addEventListener("DOMContentLoaded", (() => { this.p() })), this.delayedScripts = { normal: [], async: [], defer: [] }, this.trash = [], this.allJQueries = [] } k(t) { document.hidden ? t.t() : (this.triggerEvents.forEach((e => window.addEventListener(e, t.userEventHandler, { passive: !0 }))), window.addEventListener("touchstart", t.touchStartHandler, { passive: !0 }), window.addEventListener("mousedown", t.touchStartHandler), document.addEventListener("visibilitychange", t.userEventHandler)) } _() { this.triggerEvents.forEach((t => window.removeEventListener(t, this.userEventHandler, { passive: !0 }))), document.removeEventListener("visibilitychange", this.userEventHandler) } i(t) { "HTML" !== t.target.tagName && (window.addEventListener("touchend", this.touchEndHandler), window.addEventListener("mouseup", this.touchEndHandler), window.addEventListener("touchmove", this.touchMoveHandler, { passive: !0 }), window.addEventListener("mousemove", this.touchMoveHandler), t.target.addEventListener("click", this.clickHandler), this.L(t.target, !0), this.M(t.target, "onclick", "rocket-onclick"), this.C()) } o(t) { window.removeEventListener("touchend", this.touchEndHandler), window.removeEventListener("mouseup", this.touchEndHandler), window.removeEventListener("touchmove", this.touchMoveHandler, { passive: !0 }), window.removeEventListener("mousemove", this.touchMoveHandler), t.target.removeEventListener("click", this.clickHandler), this.L(t.target, !1), this.M(t.target, "rocket-onclick", "onclick"), this.O() } h() { window.removeEventListener("touchend", this.touchEndHandler), window.removeEventListener("mouseup", this.touchEndHandler), window.removeEventListener("touchmove", this.touchMoveHandler, { passive: !0 }), window.removeEventListener("mousemove", this.touchMoveHandler) } u(t) { t.target.removeEventListener("click", this.clickHandler), this.L(t.target, !1), this.M(t.target, "rocket-onclick", "onclick"), this.interceptedClicks.push(t), t.preventDefault(), t.stopPropagation(), t.stopImmediatePropagation(), this.O() } D() { window.removeEventListener("touchstart", this.touchStartHandler, { passive: !0 }), window.removeEventListener("mousedown", this.touchStartHandler), this.interceptedClicks.forEach((t => { t.target.dispatchEvent(new MouseEvent("click", { view: t.view, bubbles: !0, cancelable: !0 })) })) } l(t) { EventTarget.prototype.addEventListenerBase = EventTarget.prototype.addEventListener, EventTarget.prototype.addEventListener = function (e, i, o) { "click" !== e || t.windowLoaded || i === t.clickHandler || t.interceptedClickListeners.push({ target: this, func: i, options: o }), (this || window).addEventListenerBase(e, i, o) } } L(t, e) { this.interceptedClickListeners.forEach((i => { i.target === t && (e ? t.removeEventListener("click", i.func, i.options) : t.addEventListener("click", i.func, i.options)) })), t.parentNode !== document.documentElement && this.L(t.parentNode, e) } S() { return new Promise((t => { this.T ? this.O = t : t() })) } C() { this.T = !0 } O() { this.T = !1 } M(t, e, i) { t.hasAttribute && t.hasAttribute(e) && (event.target.setAttribute(i, event.target.getAttribute(e)), event.target.removeAttribute(e)) } t() { this._(this), "loading" === document.readyState ? document.addEventListener("DOMContentLoaded", this.R.bind(this)) : this.R() } p() { let t = []; document.querySelectorAll("script[type=rocketlazyloadscript][data-rocket-src]").forEach((e => { let i = e.getAttribute("data-rocket-src"); if (i && 0 !== i.indexOf("data:")) { 0 === i.indexOf("//") && (i = location.protocol + i); try { const o = new URL(i).origin; o !== location.origin && t.push({ src: o, crossOrigin: e.crossOrigin || "module" === e.getAttribute("data-rocket-type") }) } catch (t) { } } })), t = [...new Map(t.map((t => [JSON.stringify(t), t]))).values()], this.j(t, "preconnect") } async R() { this.lastBreath = Date.now(), this.P(this), this.F(this), this.q(), this.A(), this.I(), await this.U(this.delayedScripts.normal), await this.U(this.delayedScripts.defer), await this.U(this.delayedScripts.async); try { await this.W(), await this.H(this), await this.J() } catch (t) { console.error(t) } window.dispatchEvent(new Event("rocket-allScriptsLoaded")), this.everythingLoaded = !0, this.S().then((() => { this.D() })), this.N() } A() { document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t => { t.hasAttribute("data-rocket-src") ? t.hasAttribute("async") && !1 !== t.async ? this.delayedScripts.async.push(t) : t.hasAttribute("defer") && !1 !== t.defer || "module" === t.getAttribute("data-rocket-type") ? this.delayedScripts.defer.push(t) : this.delayedScripts.normal.push(t) : this.delayedScripts.normal.push(t) })) } async B(t) { if (await this.G(), !0 !== t.noModule || !("noModule" in HTMLScriptElement.prototype)) return new Promise((e => { let i; function o() { (i || t).setAttribute("data-rocket-status", "executed"), e() } try { if (navigator.userAgent.indexOf("Firefox/") > 0 || "" === navigator.vendor) i = document.createElement("script"), [...t.attributes].forEach((t => { let e = t.nodeName; "type" !== e && ("data-rocket-type" === e && (e = "type"), "data-rocket-src" === e && (e = "src"), i.setAttribute(e, t.nodeValue)) })), t.text && (i.text = t.text), i.hasAttribute("src") ? (i.addEventListener("load", o), i.addEventListener("error", (function () { i.setAttribute("data-rocket-status", "failed"), e() })), setTimeout((() => { i.isConnected || e() }), 1)) : (i.text = t.text, o()), t.parentNode.replaceChild(i, t); else { const i = t.getAttribute("data-rocket-type"), n = t.getAttribute("data-rocket-src"); i ? (t.type = i, t.removeAttribute("data-rocket-type")) : t.removeAttribute("type"), t.addEventListener("load", o), t.addEventListener("error", (function () { t.setAttribute("data-rocket-status", "failed"), e() })), n ? (t.removeAttribute("data-rocket-src"), t.src = n) : t.src = "data:text/javascript;base64," + window.btoa(unescape(encodeURIComponent(t.text))) } } catch (i) { t.setAttribute("data-rocket-status", "failed"), e() } })); t.setAttribute("data-rocket-status", "skipped") } async U(t) { const e = t.shift(); return e && e.isConnected ? (await this.B(e), this.U(t)) : Promise.resolve() } I() { this.j([...this.delayedScripts.normal, ...this.delayedScripts.defer, ...this.delayedScripts.async], "preload") } j(t, e) { var i = document.createDocumentFragment(); t.forEach((t => { const o = t.getAttribute && t.getAttribute("data-rocket-src") || t.src; if (o) { const n = document.createElement("link"); n.href = o, n.rel = e, "preconnect" !== e && (n.as = "script"), t.getAttribute && "module" === t.getAttribute("data-rocket-type") && (n.crossOrigin = !0), t.crossOrigin && (n.crossOrigin = t.crossOrigin), t.integrity && (n.integrity = t.integrity), i.appendChild(n), this.trash.push(n) } })), document.head.appendChild(i) } P(t) { let e = {}; function i(i, o) { return e[o].eventsToRewrite.indexOf(i) >= 0 && !t.everythingLoaded ? "rocket-" + i : i } function o(t, o) { !function (t) { e[t] || (e[t] = { originalFunctions: { add: t.addEventListener, remove: t.removeEventListener }, eventsToRewrite: [] }, t.addEventListener = function () { arguments[0] = i(arguments[0], t), e[t].originalFunctions.add.apply(t, arguments) }, t.removeEventListener = function () { arguments[0] = i(arguments[0], t), e[t].originalFunctions.remove.apply(t, arguments) }) }(t), e[t].eventsToRewrite.push(o) } function n(e, i) { let o = e[i]; e[i] = null, Object.defineProperty(e, i, { get: () => o || function () { }, set(n) { t.everythingLoaded ? o = n : e["rocket" + i] = o = n } }) } o(document, "DOMContentLoaded"), o(window, "DOMContentLoaded"), o(window, "load"), o(window, "pageshow"), o(document, "readystatechange"), n(document, "onreadystatechange"), n(window, "onload"), n(window, "onpageshow") } F(t) { let e; function i(e) { return t.everythingLoaded ? e : e.split(" ").map((t => "load" === t || 0 === t.indexOf("load.") ? "rocket-jquery-load" : t)).join(" ") } function o(o) { if (o && o.fn && !t.allJQueries.includes(o)) { o.fn.ready = o.fn.init.prototype.ready = function (e) { return t.domReadyFired ? e.bind(document)(o) : document.addEventListener("rocket-DOMContentLoaded", (() => e.bind(document)(o))), o([]) }; const e = o.fn.on; o.fn.on = o.fn.init.prototype.on = function () { return this[0] === window && ("string" == typeof arguments[0] || arguments[0] instanceof String ? arguments[0] = i(arguments[0]) : "object" == typeof arguments[0] && Object.keys(arguments[0]).forEach((t => { const e = arguments[0][t]; delete arguments[0][t], arguments[0][i(t)] = e }))), e.apply(this, arguments), this }, t.allJQueries.push(o) } e = o } o(window.jQuery), Object.defineProperty(window, "jQuery", { get: () => e, set(t) { o(t) } }) } async H(t) { const e = document.querySelector("script[data-webpack]"); e && (await async function () { return new Promise((t => { e.addEventListener("load", t), e.addEventListener("error", t) })) }(), await t.K(), await t.H(t)) } async W() { this.domReadyFired = !0, await this.G(), document.dispatchEvent(new Event("rocket-readystatechange")), await this.G(), document.rocketonreadystatechange && document.rocketonreadystatechange(), await this.G(), document.dispatchEvent(new Event("rocket-DOMContentLoaded")), await this.G(), window.dispatchEvent(new Event("rocket-DOMContentLoaded")) } async J() { await this.G(), document.dispatchEvent(new Event("rocket-readystatechange")), await this.G(), document.rocketonreadystatechange && document.rocketonreadystatechange(), await this.G(), window.dispatchEvent(new Event("rocket-load")), await this.G(), window.rocketonload && window.rocketonload(), await this.G(), this.allJQueries.forEach((t => t(window).trigger("rocket-jquery-load"))), await this.G(); const t = new Event("rocket-pageshow"); t.persisted = this.persisted, window.dispatchEvent(t), await this.G(), window.rocketonpageshow && window.rocketonpageshow({ persisted: this.persisted }), this.windowLoaded = !0 } m() { document.onreadystatechange && document.onreadystatechange(), window.onload && window.onload(), window.onpageshow && window.onpageshow({ persisted: this.persisted }) } q() { const t = new Map; document.write = document.writeln = function (e) { const i = document.currentScript; i || console.error("WPRocket unable to document.write this: " + e); const o = document.createRange(), n = i.parentElement; let s = t.get(i); void 0 === s && (s = i.nextSibling, t.set(i, s)); const c = document.createDocumentFragment(); o.setStart(c, 0), c.appendChild(o.createContextualFragment(e)), n.insertBefore(c, s) } } async G() { Date.now() - this.lastBreath > 45 && (await this.K(), this.lastBreath = Date.now()) } async K() { return document.hidden ? new Promise((t => setTimeout(t))) : new Promise((t => requestAnimationFrame(t))) } N() { this.trash.forEach((t => t.remove())) } static run() { const t = new RocketLazyLoadScripts; t.k(t) } } RocketLazyLoadScripts.run() })();</script>
+  <link rel="stylesheet" href="style/get-an-instant-quote-style.css">
+  <link rel="preload" as="style" onload="this.rel='stylesheet'"
+    href="https://www.amerifreight.net/public/assets/front/fonts/fontawsome.css" media="all">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/6.0.0/introjs.css"
+    integrity="sha512-4OzqLjfh1aJa7M33b5+h0CSx0Q3i9Qaxlrr1T/Z+Vz+9zs5A7GM3T3MFKXoreghi3iDOSbkPMXiMBhFO7UBW/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" async="" as="style"
+    onload="this.onload=null;this.rel='stylesheet'" media="all">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Bebas+Neue&display=swap" rel="stylesheet" />
-  <!-- Swiper CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="preload" async="" as="style" onload="this.rel='stylesheet'"
+    href="https://www.amerifreight.net/public/assets/front/css/select2.min.css">
+  <link rel="preload" async="" as="style" onload="this.rel='stylesheet'"
+    href="https://www.amerifreight.net/public/assets/front/css/owl.carousel.min.css">
+  <link rel="preload" href="https://www.amerifreight.net/public/assets/front/js/jquery.min.js" as="script">
+  <script async="" src="js/get-an-instant-quote-js/google-analytics.js"></script>
   <title>2024 Car Shipping Quotes Calculator: Get Free Instant Quote</title>
+  <meta name="keywords" content="2024 Car Shipping Quote Rates: Auto Transport Cost Calculator">
+  <meta name="description"
+    content="AmeriFreight’s car shipping and auto transport quote rate calculator will provide you an estimate on what the rate would be to transport your vehicle.">
+  <meta name="twitter:title" content="2024 Car Shipping Quotes Calculator: Get Free Instant Quote">
+  <meta name="twitter:description"
+    content="AmeriFreight’s car shipping and auto transport quote rate calculator will provide you an estimate on what the rate would be to transport your vehicle.">
+  <meta name="twitter:image"
+    content="https://www.amerifreight.net/public/assets/front/style/images/200x200.png">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:title" content="2024 Car Shipping Quotes Calculator: Get Free Instant Quote">
+  <meta property="og:description"
+    content="AmeriFreight’s car shipping and auto transport quote rate calculator will provide you an estimate on what the rate would be to transport your vehicle.">
+  <meta property="og:image" content="style/images/200x200.png">
+  <meta property="og:url"
+    content="#">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="AmeriFreight Auto Transport">
+  <link rel="canonical" href="#">
+  <script type="application/ld+json"
+    defer=""> { "@context": "https://schema.org/", "@type": "Product", "name": "AmeriFreight INSTANT QUOTE: CAR SHIPPING RATE CALCULATOR", "image": "https://www.amerifreight.net/public/assets/front/style/images/new/instant-quote.webp", "description": "AmeriFreight’s car shipping and auto transport quote rate calculator will provide you an estimate on what the rate would be to transport your vehicle.", "brand": { "@type": "Brand", "name": "AmeriFreight" }, "offers": { "@type": "AggregateOffer", "url": "https://www.amerifreight.net/car-shipping-auto-transport-quotes-rates-cost-calculator", "priceCurrency": "USD", "lowPrice": "350", "highPrice": "1300" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "bestRating": "5", "worstRating": "1", "ratingCount": "3698" } } </script>
+  <link href="https://cdnjs.cloudflare.com" rel="preconnect" crossorigin="anonymous">
+  <link href="https://www.googletagmanager.com" rel="preconnect">
+  <link href="https://widget.trustpilot.com" rel="preconnect">
+  <link href="https://cse.google.com" rel="preconnect">
+  <link href="https://7gdrhmqdxblg-u503.pressidiumcdn.com" rel="preconnect">
 </head>
 
-<body>
-  <section class="sec-1">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand ms-5" href="Home.html">
-        <img src="./get-an-instant-quote-images/logo.png" alt="Logo" />
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-        <ul class="navbar-nav me-auto ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="get-an-instant-quote.html">GET AN INSTANT QUOTE</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">WHY AMERIFREIGHT</a>
-            <div class="dropdown">
-              <div class="dropdown-txt">
-                <a href="Door-to-Door.html">Door-to-Door</a>
-                <p>Door-to-door auto trasportation.</p>
-              </div>
-              <div class="dropdown-txt">
-                <a href="#">No Upfront Payment</a>
-                <p>We do the work first.</p>
-              </div>
-              <div class="dropdown-txt">
-                <a href="#">Gap Protection</a>
-                <p>For added peace of mind.</p>
-              </div>
-              <div class="dropdown-txt">
-                <a href="#">Open</a>
-                <p>Conventional, fastest, cheapest</p>
-              </div>
-              <div class="dropdown-txt">
-                <a href="#">Enclosed</a>
-                <p>Safer and less risk.</p>
-              </div>
-              <div class="dropdown-txt">
-                <a href="#">Expedited</a>
-                <p>Need it quick? We can help.</p>
-              </div>
-              <div class="dropdown-txt">
-                <a href="#">Reviews</a>
-                <p>Most 5-Star Reviews in the industry.</p>
+<body style="font-family: Roboto, sans-serif;">
+  <script src="js/get-an-instant-quote-js/jquery.min.js"></script>
+  <script defer="" fetchpriority="low">
+    $(document).ready(function () {
+      $(".formbt button").html($(".formbt button").text().replace("Submit Now", "<i class='fas fa-calculator'></i> Continue"));
+      $(".instantquotebtn button").html($(".instantquotebtn button").text().replace("Submit Now", "<i class='fas fa-calculator'></i> Continue"));
+    });
+  </script>
+  <div class="main-wraper">
+    <section class="sec-1">
+      <div class="menu-bar">
+        <div class="topbar">
+          <div class="container" style=" max-width: 1400px;margin: 0 auto;">
+            <div class="row">
+              <div class="col-md-12">
+                <ul class="nav top-navbar justify-content-lg-end justify-content-center p-0 border-bottom py-1">
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a
+                      href="reviews.html">Reviews</a>
+                  </li>
+                  <li><a href="contact-us.html">Contact</a></li>
+                  <li><a href="about-us.html">About Us</a></li>
+                  <li><a href="help.html">Help</a></li>
+                </ul>
               </div>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">HOW IT WORKS</a>
-            <div class="dropdown">
-              <div class="dropdown-txt">
-                <a href="#">Start to Finish</a>
-                <p>How to Ship Your Car</p>
-              </div>
-              <div class="dropdown-txt">
-                <a href="#">Auto Transport Cost</a>
-                <p>Learn how to Estimate Costs</p>
-              </div>
-              <div class="dropdown-txt">
-                <a href="#">Cross Country Car Shipping</a>
-                <p>Coast to Coast</p>
-              </div>
+          </div>
+        </div>
+
+        <div class="container" style=" max-width: 1400px;
+    margin: 0 auto;">
+          <div class="row align-items-center">
+            <div class="col-md-2 col-xl-2 py-2" style="margin-right: -15px;padding-bottom: 9px;
+        padding-left: 20px;">
+              <a class="navbar-brand" href="home.html">
+                <img class="for-desktop" width="120" height="77"
+                  src="style/images/amerifreight_logo1629704252579.webp" alt="Logo">
+                <img width="135" height="65" class="for-mobile img-responsive"
+                  src="style/images/amerifreight_logo1629704252579.webp" alt="Logo"
+                  srcset="style/images/amerifreight_logo1629704252579.webp 767w, style/images/amerifreight_logo1629704252579.webp 1366w"
+                  sizes="135px">
+              </a>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">WHO WE SERVE</a>
-            <div class="dropdown">
-              <h1>Customers | Business</h1>
-              <div class="row">
-                <div class="col-6">
-                  <div class="dropdown-txt">
-                    <a href="#">Online Auto Purchases</a>
-                    <p>You've bought the car, now What?</p>
-                  </div>
-                  <div class="dropdown-txt">
-                    <a href="#">Seasonal</a>
-                    <p>Ebb and flow through the year.</p>
-                  </div>
-                  <div class="dropdown-txt">
-                    <a href="#">Students</a>
-                    <p>The smart way to ship your car.</p>
-                  </div>
-                  <div class="dropdown-txt">
-                    <a href="#">Military</a>
-                    <p>Let us serve you</p>
+            <div class="col-xl-8 col-md-4  order-md-1  ml-auto pr-0">
+              <nav class="navbar navbar-expand-lg navbar-light" style="padding-bottom: 7px;">
+                <div id="main" style="padding: 0px">
+                  <div class="navbar-toggler menuBtn">
+                    <i class="fa fa-bars">
+                    </i>
+                    <br>
+                    <p class="menu-name">MENU
+                    </p>
                   </div>
                 </div>
-                <div class="col-6">
-                  <div class="dropdown-txt">
-                    <a href="#">Motorcycles</a>
-                    <p>Two wheels? Too easy!</p>
-                  </div>
-                  <div class="dropdown-txt">
-                    <a href="#">Car Enthusiast</a>
-                    <p>Auto Shipping to keep you smiling.</p>
-                  </div>
-                  <div class="dropdown-txt">
-                    <a href="#">Relocation</a>
-                    <p>We can save you a trip.</p>
-                  </div>
-                  <div class="dropdown-txt">
-                    <a href="#">Seniors</a>
-                    <p>we can assist seniors</p>
-                  </div>
+                <button class="navbar-toggler menu-bar-button" type="button" data-toggle="collapse"
+                  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+                  </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-0 ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link"
+                        href="get-an-instant-quote.html">Get
+                        An Instant Quote
+                      </a>
+                    </li>
+                    <li class="nav-item dropdown menu-step1"> <a class="nav-link dropdown-toggle" href="#" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Why Cross Atlantic llc
+                      </a>
+                      <div class="dropdown-menu dro-left">
+                        <div class="row">
+                          <div class="col-sm-12 col-md-12">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="door-to-door.html">Door-to-Door <br>
+                                  <span>Door-to-door auto transportation.
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-12 col-md-12">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="no-upfront-payment.html">No
+                                  Upfront Payment <br>
+                                  <span>We do the work first.
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-12 col-md-12">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="gap-protection.html">Gap Protection <br>
+                                  <span>For added peace of mind.
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-12 col-md-12">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="open.html">Open <br>
+                                  <span>Conventional, fastest, cheapest.
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-12 col-md-12">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="enclosed.html">Enclosed <br>
+                                  <span>Safer and less risk.
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-12 col-md-12">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="expedited.html">Expedited <br>
+                                  <span>Need it quick? We can help.
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-12 col-md-12">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a
+                                  href="reviews-dd.html">Reviews
+                                  <br>
+                                  <span>Most 5-Star Reviews in the industry.
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown menu-step1"> <a class="nav-link dropdown-toggle" href="#" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">How it Works
+                      </a>
+                      <div class="dropdown-menu dro-left">
+                        <div class="row">
+                          <div class="col-sm-12 col-md-12">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="start-to-finish.html">Start to
+                                  Finish <br>
+                                  <span>How to Ship Your Car
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-12 col-md-12">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="auto-transport-cost.html">Auto Transport Cost
+                                  <br>
+                                  <span>Learn how to Estimate Costs
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-12 col-md-12">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="cross-country-car-shipping.html">Cross
+                                  Country Car Shipping <br>
+                                  <span>Coast to Coast
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown menu-step2"> <a class="nav-link dropdown-toggle" href="#" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Who We Serve
+                      </a>
+                      <div class="dropdown-menu dro-center">
+                        <div class="row">
+                          <div class="col-6 col-md-12">
+                            <h4>
+                              <a href="get-an-instant-quote.html">Customers | Business
+                              </a>
+                            </h4>
+                          </div>
+                          <div class="col-sm-12 col-md-6">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="online-auto-purchases.html">Online
+                                  Auto
+                                  Purchases <br>
+                                  <span>You’ve bought the car, now what?
+                                  </span> </a>
+                              </li>
+                              <li class="dropdown-item">
+                                <a href="seasonal.html">Seasonal <br>
+                                  <span>Ebb and flow through the year.
+                                  </span> </a>
+                              </li>
+                              <li class="dropdown-item">
+                                <a href="students.html">Students <br>
+                                  <span>The smart way to ship your car.
+                                  </span> </a>
+                              </li>
+                              <li class="dropdown-item">
+                                <a href="military.html">Military <br>
+                                  <span>Let us serve you
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-12 col-md-6">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="motorcycle.html">Motorcycles <br>
+                                  <span>Two wheels? Too easy!
+                                  </span> </a>
+                              </li>
+                              <li class="dropdown-item">
+                                <a href="car-enthusiast.html">Car Enthusiast <br>
+                                  <span>Auto Shipping to keep you smiling.
+                                  </span> </a>
+                              </li>
+                              <li class="dropdown-item">
+                                <a href="relocation.html">Relocation <br>
+                                  <span>We can save you a trip.
+                                  </span> </a>
+                              </li>
+                              <li class="dropdown-item">
+                                <a href="seniors.html">Seniors <br>
+                                  <span>we can assist seniors
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown menu-step2"> <a class="nav-link dropdown-toggle" href="#" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Discounts
+                      </a>
+                      <div class="dropdown-menu dro-center">
+                        <div class="row">
+                          <div class="col-sm-12 col-md-6">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="military-discount.html">Military <br>
+                                  <span>Discount for military
+                                  </span> </a>
+                              </li>
+                              <li class="dropdown-item">
+                                <a href="first-response-discount.html">First Responders <br>
+                                  <span>Discount for first responders
+                                  </span> </a>
+                              </li>
+                              <li class="dropdown-item">
+                                <a href="medical-personnel-discount.html">Medical Personnel <br>
+                                  <span>Discount for medical personnel
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-12 col-md-6">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="student-discount.html">Student <br>
+                                  <span>Discount for students
+                                  </span> </a>
+                              </li>
+                              <li class="dropdown-item">
+                                <a href="senior-citizen-discount.html">Senior Citizens <br>
+                                  <span>Discount for senior citizens
+                                  </span> </a>
+                              </li>
+                              <li class="dropdown-item">
+                                <a
+                                  href="and-more.html">And
+                                  More <br>
+                                  <span>Explore other discounts
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
-              </div>
+              </nav>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">DISCOUNTS</a>
-            <div class="dropdown">
-              <div class="row">
-                <div class="col-6">
-                  <div class="dropdown-txt">
-                    <a href="#">Military</a>
-                    <p>Discount for military</p>
-                  </div>
-                  <div class="dropdown-txt">
-                    <a href="#">First Responders</a>
-                    <p>Discount for first responders</p>
-                  </div>
-                  <div class="dropdown-txt">
-                    <a href="#">Medical Personnel</a>
-                    <p>Discount for medical personnel</p>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="dropdown-txt">
-                    <a href="#">Student</a>
-                    <p>Discount for students</p>
-                  </div>
-                  <div class="dropdown-txt">
-                    <a href="#">Senior Citizens</a>
-                    <p>Discount for senior citizens</p>
-                  </div>
-                  <div class="dropdown-txt">
-                    <a href="#">And More</a>
-                    <p>Explore other discounts</p>
-                  </div>
-                </div>
-              </div>
+            <div class="col-md-6 col-xl-2 order-xl-2" style="    font-weight: 700;text-align: end;">
+              <a href="tel:(770) 486-1010" id="top_contact_number">(770) 486-1010</a>
             </div>
-          </li>
-          <li class="nav-item mt-2 ms-5"><a class="nav-link-2" href="blog.html">Blog</a></li>
-          <li class="nav-item mt-2"><a class="nav-link-2" href="reviews.html">Reviews</a></li>
-          <li class="nav-item mt-2"><a class="nav-link-2" href="contact-us.html">Contact</a></li>
-          <li class="nav-item mt-2"><a class="nav-link-2" href="about-us.html">About Us</a></li>
-          <li class="nav-item mt-2"><a class="nav-link-2" href="help.html">Help</a></li>
-        </ul>
+          </div>
+        </div>
       </div>
-    </nav>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col txt-col">
-          <h2>
-            INSTANT QUOTE:<br>
-            <span class="car-ship">CAR SHIPPING RATE</span><br>
-            <span class="cal" data-text="CALCULATOR">CALCULATOR</span>
-          </h2>
-          <h3>
-            FOR A RELIABLE CAR SHIPPING QUOTE,<br>
-            USE OUR INSTANT AUTO TRANSPORT RATE<br>
-            CALCULATOR
-          </h3>
+
+
+      <div id="mobmain">
+        <div id="mySidenav" class="sidenav">
+          <div class="sidenavdata">
+            <div class="close-menu">
+              <button class="closebtn" id="closebtnm">close
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z">
+                  </path>
+                </svg>
+              </button>
+            </div>
+            <div class="mobilenav">
+              <ul>
+                <li>
+                  <a href="#">
+                    <span class="span-title">Get An Instant Quote
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropmenu" href="#">
+                    <span class="span-title">Why AmeriFreight
+                    </span>
+                    <i class="fas fa-angle-down">
+                    </i>
+                  </a>
+                  <ul class="megamenu">
+                    <li> <a href="#">
+                        <span>Door-to-Door
+                        </span>
+                      </a> <a href="#">
+                        <span>No Upfront Payment
+                        </span>
+                      </a> <a href="#">
+                        <span>Gap Protection
+                        </span>
+                      </a> <a href="#">
+                        <span>Open
+                        </span>
+                      </a> <a href="#">
+                        <span>Enclosed
+                        </span>
+                      </a> <a href="#">
+                        <span>Expedited
+                        </span>
+                      </a> <a
+                        href="#">
+                        <span>Reviews
+                        </span>
+                      </a> </li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="dropmenu" href="#">
+                    <span class="span-title">How it Works
+                    </span>
+                    <i class="fas fa-angle-down">
+                    </i>
+                  </a>
+                  <ul class="megamenu">
+                    <li> <a href="#">
+                        <span>Start to Finish
+                        </span>
+                      </a> <a href="#">
+                        <span>Auto Transport Cost
+                        </span>
+                      </a> <a href="#">
+                        <span>Cross Country Car Shipping
+                        </span>
+                      </a> </li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="dropmenu" href="#">
+                    <span class="span-title">Who We Serve
+                    </span>
+                    <i class="fas fa-angle-down">
+                    </i>
+                  </a>
+                  <ul class="megamenu">
+                    <li> <a href="#">
+                        <span>Online Auto Purchases
+                        </span>
+                      </a> <a href="#">
+                        <span>Seasonal
+                        </span>
+                      </a> <a href="#">
+                        <span>Students
+                        </span>
+                      </a> <a href="#">
+                        <span>Military
+                        </span>
+                      </a> <a href="#">
+                        <span>Motorcycles
+                        </span>
+                      </a> <a href="#">
+                        <span>Car Enthusiast
+                        </span>
+                      </a> <a href="#">
+                        <span>Relocation
+                        </span>
+                      </a> <a href="#">
+                        <span>Seniors
+                        </span>
+                      </a> </li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="dropmenu" href="#">
+                    <span class="span-title">Discounts
+                    </span>
+                    <i class="fas fa-angle-down">
+                    </i>
+                  </a>
+                  <ul class="megamenu">
+                    <li> <a href="#">
+                        <span>Military
+                        </span>
+                      </a> <a href="#">
+                        <span>First Responders
+                        </span>
+                      </a> <a href="#">
+                        <span>Medical Personnel
+                        </span>
+                      </a> <a href="#">
+                        <span>Student
+                        </span>
+                      </a> <a href="#">
+                        <span>Senior Citizens
+                        </span>
+                      </a> <a
+                        href="#">
+                        <span>And More
+                        </span>
+                      </a> </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="common-wrapper" id="common-wrapper"><button type="button"
+          class="btn btn-danger move_widget_section"><i class="fas fa-arrows-alt"></i></button><span
+          class="action_widget_section" style="display: none;">
+          <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+            class="btn btn-danger change_background_image_widget_section" style="display: block;">Change Background
+            Image</button>
+          <!-- <button type="button" class="btn btn-danger edit_selected_widget">Edit</button> -->
+        </span>
+        <div class="transport main_background_image"><grammarly-extension data-grammarly-shadow-root="true"
+            style="position: absolute; top: 0px; left: 0px; pointer-events: none;"
+            class="dnXmp"></grammarly-extension><grammarly-extension data-grammarly-shadow-root="true"
+            style="position: absolute; top: 0px; left: 0px; pointer-events: none;" class="dnXmp"></grammarly-extension>
+          <div class="bg_overlay_top_section"></div>
+          <div class="transportzoomin banneroverlay" spellcheck="false">
+            <div class="transportzoomout">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <h1 class="text-white" aria-describedby="tooltip518177">INSTANT QUOTE:<br>
+                      <span class="one">CAR SHIPPING RATE</span><br>
+                      <span class="two">CALCULATOR</span>
+                    </h1>
+                    <p class="para">FOR A RELIABLE CAR SHIPPING QUOTE,<br>USE OUR INSTANT AUTO TRANSPORT RATE<br>
+                      CALCULATOR</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <div class="common-wrapper" id="common-wrapper"><button type="button" class="btn btn-danger move_widget_section"><i
+          class="fas fa-arrows-alt"></i></button><span class="action_widget_section" style="display: none;">
+        <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+          class="btn btn-danger change_background_image_widget_section" style="display: none;">Change Background
+          Image</button>
+      </span>
+      <div class="">
+        <div class="dynamic_sections">
+
+
+          <div class="instantquote">
+
+
+            <div class="container">
+
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <div class="instantquoteform suggest">
+                    <div class="row justify-content-center">
+                      <div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+                        <img width="143" height="143"
+                          src="style/images/Car-Shipping-Auto-Transport-Quote-Cost-Rate-Calculator.jpg"
+                          alt="Icon of car shipping rate calculator">
+                      </div>
+                      <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                        <div class="instantdata2">
+                          <h3>Free Instant Quote: Car Shipping Rate Calculator</h3>
+                          <h5 class="submitting-info">By submitting the information below you will receive
+                            a free Instant rate quote on how much it will cost to ship your vehicle.
+                          </h5>
+                          <p><b>Quote up to 5 vehicles of the same condition that will use the same
+                              type of carrier.</b></p>
+                          <p>If you need to ship more than 5 vehicles, vehicles that are in different
+                            condition, or vehicles that require different types of carriers, please
+                            Contact Us directly.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <form action="#" method="POST" role="form"
+                      autocomplete="off" id="instant-quote-form-id">
+                      <input type="hidden" name="_token" value="6aWfrna2J9HCn3QKEAihyZUeOiPUVaXIVFsBWFm3">
+                      <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                          <p class="requiredfields">* Required fields</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-9 col-xl-9">
+                          <div class="row">
+                            <div class="col-sm-12 col-md-6 col-xl-4">
+                              <div class="inputbox">
+                                <input type="number" name="origin_zip" class="form-control" id="origin_zip"
+                                  placeholder="*Origin Zip" value="" autocomplete="off" required="">
+                              </div>
+                              <div id="suggesstion-box"></div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-xl-4">
+                              <div class="inputbox">
+                                <input type="text" name="origin_city" class="form-control" id="origin_city"
+                                  placeholder="*Origin City" value="" autocomplete="off" required="">
+                              </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-xl-4">
+                              <select class="select-control select2" name="origin_state" id="origin_state"
+                                placeholder="*Origin State" autocomplete="off" required="">
+                                <option value="">*Origin State</option>
+                                <option value="Alabama">Alabama</option>
+                                <option value="Alaska">Alaska</option>
+                                <option value="Arizona">Arizona</option>
+                                <option value="Arkansas">Arkansas</option>
+                                <option value="California">California</option>
+                                <option value="Colorado">Colorado</option>
+                                <option value="Columbia">Columbia</option>
+                                <option value="Connecticut">Connecticut</option>
+                                <option value="Delaware">Delaware</option>
+                                <option value="Florida">Florida</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="Hawaii">Hawaii</option>
+                                <option value="Idaho">Idaho</option>
+                                <option value="Illinois">Illinois</option>
+                                <option value="Indiana">Indiana</option>
+                                <option value="Iowa">Iowa</option>
+                                <option value="Kansas">Kansas</option>
+                                <option value="Kentucky">Kentucky</option>
+                                <option value="Louisiana">Louisiana</option>
+                                <option value="Maine">Maine</option>
+                                <option value="Maryland">Maryland</option>
+                                <option value="Massachusetts">Massachusetts</option>
+                                <option value="Michigan">Michigan</option>
+                                <option value="Minnesota">Minnesota</option>
+                                <option value="Mississippi">Mississippi</option>
+                                <option value="Missouri">Missouri</option>
+                                <option value="Montana">Montana</option>
+                                <option value="Nebraska">Nebraska</option>
+                                <option value="Nevada">Nevada</option>
+                                <option value="New Hampshire">New Hampshire</option>
+                                <option value="New Jersey">New Jersey</option>
+                                <option value="New Mexico">New Mexico</option>
+                                <option value="New York">New York</option>
+                                <option value="North Carolina">North Carolina</option>
+                                <option value="North Dakota">North Dakota</option>
+                                <option value="Ohio">Ohio</option>
+                                <option value="Oklahoma">Oklahoma</option>
+                                <option value="Oregon">Oregon</option>
+                                <option value="Pennsylvania">Pennsylvania</option>
+                                <option value="Rhode Island">Rhode Island</option>
+                                <option value="South Carolina">South Carolina</option>
+                                <option value="South Dakota">South Dakota</option>
+                                <option value="Tennessee">Tennessee</option>
+                                <option value="Texas">Texas</option>
+                                <option value="Utah">Utah</option>
+                                <option value="Vermont">Vermont</option>
+                                <option value="Virginia">Virginia</option>
+                                <option value="Washington">Washington</option>
+                                <option value="West Virginia">West Virginia</option>
+                                <option value="Wisconsin">Wisconsin</option>
+                                <option value="Wyoming">Wyoming</option>
+                              </select>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-xl-4">
+                              <div class="inputbox">
+                                <input type="number" name="destination_zip" class="form-control" value=""
+                                  id="destination_zip" placeholder="*Destination Zip" autocomplete="off" required="">
+                              </div>
+                              <div id="suggesstion-boxDes"></div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-xl-4">
+                              <div class="inputbox">
+                                <input type="text" name="destination_city" class="form-control" id="destination_city"
+                                  placeholder="*Destination City" value="" autocomplete="off" required="">
+                              </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-xl-4">
+                              <select class="select-control select2" placeholder="*Destination State"
+                                id="destination_state" name="destination_state" autocomplete="off" required="">
+                                <option value="">*Destination State</option>
+                                <option value="AL">Alabama
+                                </option>
+                                <option value="AK">Alaska
+                                </option>
+                                <option value="AZ">Arizona
+                                </option>
+                                <option value="AR">Arkansas
+                                </option>
+                                <option value="CA">California
+                                </option>
+                                <option value="CO">Colorado
+                                </option>
+                                <option value="DC">Columbia
+                                </option>
+                                <option value="CT">Connecticut
+                                </option>
+                                <option value="DE">Delaware
+                                </option>
+                                <option value="FL">Florida
+                                </option>
+                                <option value="GA">Georgia
+                                </option>
+                                <option value="HI">Hawaii
+                                </option>
+                                <option value="ID">Idaho
+                                </option>
+                                <option value="IL">Illinois
+                                </option>
+                                <option value="IN">Indiana
+                                </option>
+                                <option value="IA">Iowa
+                                </option>
+                                <option value="KS">Kansas
+                                </option>
+                                <option value="KY">Kentucky
+                                </option>
+                                <option value="LA">Louisiana
+                                </option>
+                                <option value="ME">Maine
+                                </option>
+                                <option value="MD">Maryland
+                                </option>
+                                <option value="MA">Massachusetts
+                                </option>
+                                <option value="MI">Michigan
+                                </option>
+                                <option value="MN">Minnesota
+                                </option>
+                                <option value="MS">Mississippi
+                                </option>
+                                <option value="MO">Missouri
+                                </option>
+                                <option value="MT">Montana
+                                </option>
+                                <option value="NE">Nebraska
+                                </option>
+                                <option value="NV">Nevada
+                                </option>
+                                <option value="NH">New Hampshire
+                                </option>
+                                <option value="NJ">New Jersey
+                                </option>
+                                <option value="NM">New Mexico
+                                </option>
+                                <option value="NY">New York
+                                </option>
+                                <option value="NC">North Carolina
+                                </option>
+                                <option value="ND">North Dakota
+                                </option>
+                                <option value="OH">Ohio
+                                </option>
+                                <option value="OK">Oklahoma
+                                </option>
+                                <option value="OR">Oregon
+                                </option>
+                                <option value="PA">Pennsylvania
+                                </option>
+                                <option value="RI">Rhode Island
+                                </option>
+                                <option value="SC">South Carolina
+                                </option>
+                                <option value="SD">South Dakota
+                                </option>
+                                <option value="TN">Tennessee
+                                </option>
+                                <option value="TX">Texas
+                                </option>
+                                <option value="UT">Utah
+                                </option>
+                                <option value="VT">Vermont
+                                </option>
+                                <option value="VA">Virginia
+                                </option>
+                                <option value="WA">Washington
+                                </option>
+                                <option value="WV">West Virginia
+                                </option>
+                                <option value="WI">Wisconsin
+                                </option>
+                                <option value="WY">Wyoming
+                                </option>
+                              </select>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                              <div class="inputbox">
+                                <input type="text" name="make[]" class="form-control" id="" placeholder="*Make"
+                                  autocomplete="off" required="">
+                              </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                              <div class="inputbox">
+                                <input type="text" name="model[]" class="form-control" id="" placeholder="*Model"
+                                  autocomplete="off" required="">
+                              </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                              <div class="inputbox">
+                                <input type="text" name="year[]" class="test-input form-control" id="" max="4"
+                                  placeholder="*Year" autocomplete="off" required="">
+                              </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-xl-4">
+                              <select class="select-control select2" name="vehicle_type[]" placeholder="*Vehicle Type"
+                                autocomplete="off" required="">
+                                <option value="">*Vehicle Type</option>
+                                <option=""="" value="1">
+                                  Car
+                                  </option>
+                                  <option=""="" value="2">
+                                    SUV
+                                    </option>
+                                    <option=""="" value="3">
+                                      Pickup
+                                      </option>
+                                      <option=""="" value="4">
+                                        Dually
+                                        </option>
+                                        <option=""="" value="5">
+                                          Van
+                                          </option>
+                                          <option=""="" value="6">
+                                            Motorcycle
+                                            </option>
+                                            <option=""="" value="7">
+                                              Boat
+                                              </option>
+                                              <option=""="" value="8">
+                                                RV
+                                                </option>
+                                                <option=""="" value="9">
+                                                  Travel Trailer
+                                                  </option>
+                                                  <option=""="" value="10">
+                                                    Other
+                                                    </option>
+                              </select>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-xl-4">
+                              <select class="select-control select2" name="running_condition[]"
+                                placeholder="*Running Condition" autocomplete="off" required="">
+                                <option value="">*Running Condition</option>
+                                <option=""="" value="1">
+                                  Running
+                                  </option>
+                                  <option=""="" value="2">
+                                    Not running
+                                    </option>
+                              </select>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-xl-4">
+                              <select class="select-control select2" name="carrier_type" placeholder="*Carrier Type"
+                                autocomplete="off" required="">
+                                <option value="">*Carrier Type</option>
+                                <option=""="" value="1">
+                                  Open
+                                  </option>
+                                  <option=""="" value="2">
+                                    Enclosed
+                                    </option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-xl-3">
+                          <div class="row">
+                            <div class="col-sm-12 col-md-6 col-xl-12">
+                              <div class="inputbox">
+                                <input type="name" name="name" value="" class="form-control" id="" placeholder="*Name"
+                                  autocomplete="off" required="">
+                              </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-xl-12">
+                              <div class="inputbox">
+                                <input type="email" name="email" value="" class="form-control" id=""
+                                  placeholder="*Email" autocomplete="off" required="">
+                              </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-xl-12">
+                              <div class="inputbox">
+                                <input type="text" name="number" value="" class="phone2 form-control" id=""
+                                  placeholder="*Phone 000 000-000" autocomplete="off" required="">
+                              </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-xl-12">
+                              <div class="inputbox">
+                                <input type="text" onfocus="(this.type='date')" name="avail_date" class="form-control"
+                                  id="" placeholder="*Vehicle Avail.Date" value="" autocomplete="off" required="">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                          <div class="input-group-btn">
+                            <button class="add-more" type="button"><img width="100" height="42"
+                                src="style/images/img.webp"
+                                alt="An image icon of a + symbol to represent add, alongside a car icon with the text Add Vehicle below it.">
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="after-add-more"></div>
+
+                      <div class="row align-items-center">
+                        <div class="col-sm-12 col-md-5 col-lg-6 col-xl-7">
+                          <div class="findebtn">
+                            <p><a class="zipbtn" href="https://tools.usps.com/go/ZipLookupAction!input.action"
+                                target="_blank">Find Your ZIP Code</a></p>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-lg-2 col-xl-2">
+                          <div class="findebtn">
+                            <a
+                              href="#"><i
+                                class="fas fa-undo-alt"></i> Clear Fields</a>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3">
+                          <div class="instantquotebtn">
+                            <button type="submit" id="calculator-submit-btn" class=""><span></span><i
+                                class="fas fa-calculator"></i> Submit Now</button>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="text-center Shippingprivacy">
+                        <p>By submitting your phone number, you consent to our <a class="text-danger" target="_blank"
+                            href="#">Terms &amp; Condition</a> or <a
+                            class="text-danger" target="_blank"
+                            href="#">Privacy Policy</a>. You authorize us to
+                          contact you via email, calls, SMS, and pre-recorded voicemail using automated systems. Message
+                          frequency varies. Your agreement is not a condition of purchase. You can opt out anytime by
+                          replying STOP. Message &amp; data rates may apply.</p>
+                      </div>
+                    </form>
+                    <!-- begin hide item -->
+                    <div class="copy hide">
+
+                    </div>
+                    <!-- end hide item -->
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="dynamic_section_js">
+              <script>
+                $(document).ready(function () {
+                  var url = "#";
+                  var token = $(document).find('[name="_token"]').val();
+                  $.ajax({
+                    type: "GET",
+                    url: url,
+                    dataType: 'json',
+                    data: {
+                      '_token': token,
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) { },
+                    success: function (msg) {
+                      $("#get_all_reviews").html(msg.review.details);
+                    },
+                  });
+
+                  $('.phone2').inputmask('+1(999)-999-9999');
+
+                });
+                $(document).ready(function () {
+                  $("input").attr("autocomplete", "off");
+                });
+              </script>
+              <script>
+                if (performance.navigation.type == 2) {
+                  location.reload(true);
+                }
+              </script>
+              <script>
+                $(document).ready(function () {
+
+                  // if( $('.add-more').length )         // use this if you are using id to check
+                  var x = $('.add-more').length;
+                  switch (x) {
+                    case 1:
+
+
+                      break;
+                    default:
+                  }
+
+                });
+
+
+                $(".add-more").click(function () {
+                  // alert(123);
+                  //  $(".dropdown").empty();
+                  var html = $(".copy").html();
+                  // $('.copy').show();
+                  $(".after-add-more").after(html);
+
+
+                  $('.after-add-more').after(`<div class="copy_item_details mt-1 mb-2">
+                                      <div class="row">
+                                          <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                                              <div class="inputbox">
+                                                  <input type="text" name="make[]" class="form-control" id="" placeholder="*Make" autocomplete="off">
+                                              </div>
+                                          </div>
+                                          <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                                              <div class="inputbox">
+                                                  <input type="text" name="model[]" class="form-control" id="" placeholder="*Model" autocomplete="off">
+                                              </div>
+                                          </div>
+                                          <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                                                <select class="select-control select2" name="running_condition[]"
+                                                    autocomplete="off" required>
+                                                    <option value="">*Running Condition</option>
+                                                                                                            <option value="1">
+                                                            Running</button>
+                                                                                                            <option value="2">
+                                                            Not running</button>
+                                                                                                    </select>
+                                            </div>
+                                      </div>
+                                      <br>
+                                      <div class="row">
+                                          <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                                              <div class="inputbox">
+                                                  <input type="text" name="year[]" max="4" class="test-input form-control" id="" placeholder="*Year" autocomplete="off">
+                                              </div>
+                                          </div>
+                                          <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 ">
+                                              <select class="select-control select2" name="vehicle_type[]" placeholder="*Vehicle Type" autocomplete="off">
+                                                  <option value="">*Vehicle Type</option>   
+                                                                                                                                                                  <option value="1">Car</button>
+                                                                                                                <option value="2">SUV</button>
+                                                                                                                <option value="3">Pickup</button>
+                                                                                                                <option value="4">Dually</button>
+                                                                                                                <option value="5">Van</button>
+                                                                                                                <option value="6">Motorcycle</button>
+                                                                                                                <option value="7">Boat</button>
+                                                                                                                <option value="8">RV</button>
+                                                                                                                <option value="9">Travel Trailer</button>
+                                                                                                                <option value="10">Other</button>
+                                                                                                                                                      </select>
+                                          </div>
+                                          <div class="col-sm-6 col-md-6 col-lg-3 col-xl-6">
+                                              <div class="input-group-btn">
+                                                  <button class="remove" type="button"><i class="fas fa-trash"></i> Remove vehicle</button>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>`);
+                  $('.select2').select2({
+                    allowClear: false
+
+                  });
+
+                  $('.test-input').unbind('keyup change input paste').bind('keyup change input paste', function (e) {
+                    var $this = $(this);
+                    var val = $this.val();
+                    var valLength = val.length;
+                    var maxCount = $this.attr('max');
+                    if (valLength > maxCount) {
+                      $this.val($this.val().substring(0, maxCount));
+                    }
+                  });
+
+
+                });
+                $("body").on("click", ".remove", function () {
+                  $(this).parents(".copy_item_details").remove();
+                });
+                // Testing Code ---
+                $(document).ready(function () {
+                  // if( $('#origin_zip').length )         // use this if you are using id to check
+                  var x = $('#origin_zip').length;
+                  switch (x) {
+                    case 1:
+                      $("#origin_zip").keyup(function () {
+
+                        var code = $('#origin_zip').val();
+                        var pages = '#' + '/getZipcode/' + code;
+
+                        var targetUrl = pages;
+                        if (code != '') {
+
+                          var url = targetUrl;
+                          var token = $(document).find('[name="_token"]').val();
+
+
+                          $.ajax({
+                            type: "POST",
+                            url: url,
+                            data: {
+                              '_token': token,
+                              'keyword': code,
+                            },
+                            success: function (data) {
+                              var obj = $.parseJSON(data);
+                              $("#suggesstion-box").html(obj.zipvalues);
+                            }
+
+                          });
+
+                        } else {
+                          $('#suggesstion-box').html('');
+                        }
+                      });
+                      break;
+                    default:
+                  }
+
+                });
+
+                function setCityState(zipcode) {
+                  var targetUrl = '#' + '/OriginZipcode/' + zipcode;
+                  var token = $(document).find('[name="_token"]').val();
+                  $.ajax({
+                    type: "POST",
+                    url: targetUrl,
+                    data: {
+                      '_token': token,
+                      'zipcode': zipcode,
+                    },
+                    success: function (data) {
+                      var obj = $.parseJSON(data);
+                      $('#origin_city').val(obj.city);
+                      $('#origin_state').val(obj.state).trigger("change");
+                      $('#origin_zip').val(zipcode);
+                      $("#suggesstion-box").html('');
+                    }
+                  });
+                }
+
+
+                $(document).ready(function () {
+                  // if( $('#destination_zip').length )         // use this if you are using id to check
+                  var x = $('#destination_zip').length;
+                  switch (x) {
+                    case 1:
+                      $("#destination_zip").keyup(function () {
+                        var code = $('#destination_zip').val();
+                        var targetUrl = '#' + '/getZipcodeDesti/' + code;
+                        var token = $(document).find('[name="_token"]').val();
+                        if (code != '') {
+                          $.ajax({
+                            type: "POST",
+                            url: targetUrl,
+                            data: {
+                              '_token': token,
+                              'keyword': code,
+                            },
+                            success: function (data) {
+                              var obj = $.parseJSON(data);
+                              $("#suggesstion-boxDes").html(obj.zipvalues);
+                            }
+                          });
+                        } else {
+                          $("#suggesstion-boxDes").html('');
+                        }
+                      });
+                      break;
+                    default:
+                  }
+                });
+
+                function setCityStateDesti(zipcode) {
+                  var targetUrl = '#' + '/DestiZipcode/' + zipcode;
+                  var token = $(document).find('[name="_token"]').val();
+                  $.ajax({
+                    type: "POST",
+                    url: targetUrl,
+                    data: {
+                      '_token': token,
+                      'zipcodeDesti': zipcode,
+                    },
+                    success: function (data) {
+                      var obj = $.parseJSON(data);
+                      $('#destination_city').val(obj.city);
+                      $('#destination_state').val(obj.state).trigger("change");
+                      $('#destination_zip').val(zipcode);
+                      $("#suggesstion-boxDes").html('');
+                    }
+                  });
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="dynamic-c dynamic_faq_section_edit">
+          <h2>Dynamic Content</h2>
         </div>
       </div>
     </div>
-  </section>
-  <section class="sec-3">
-    <div class="container-fluid cont-top">
-      <div class="container-fluid cont">
-        <div class="row row-1">
-          <div class="col-3">
-            <img src="get-an-instant-quote-images/Calculator.jpg" alt="" />
+    <div class="common-wrapper" id="common-wrapper" style="position: relative; left: 0px; top: 0px;"><button
+        type="button" class="btn btn-danger move_widget_section"><i class="fas fa-arrows-alt"></i></button><span
+        class="action_widget_section" style="display: none;">
+        <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+          class="btn btn-danger change_background_image_widget_section" style="display: none;">Change Background
+          Image</button>
+      </span>
+      <div class="companyrating p-0">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-3">
+              <div class="StepsShip d-flex my-4 align-items-center">
+                <div class="Shipdiscount2"><img src="style/images/dollar-white.svg"
+                    alt="Book now button with mouse pointer">
+                </div>
+                <div class="ShipItemdiscount d-flex flex-column text-left">
+                  <h5>Competitive Pricing</h5>
+                  <p>Affordable rates, unmatched quality.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="StepsShip d-flex my-4 align-items-center">
+                <div class="Shipdiscount2 text-center"><img src="style/images/logo-white.png"
+                    height="50px" width="50px" alt="Book now button with mouse pointer"></div>
+                <div class="ShipItemdiscount d-flex flex-column text-left">
+                  <h5>AFTA Plan</h5>
+                  <p>Additional Damage Protection Plan.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="StepsShip d-flex my-4 align-items-center">
+                <div class="Shipdiscount2"><img src="style/images/door-ico.png" height="50" width="50"
+                    alt="Book now button with mouse pointer"></div>
+                <div class="ShipItemdiscount d-flex flex-column text-left">
+                  <h5>Door to Door Service</h5>
+                  <p>Convenient delivery, right home.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="StepsShip d-flex my-4 align-items-center">
+                <div class="Shipdiscount2"><img src="style/images/discount.png" height="50" width="50"
+                    alt="Book now button with mouse pointer"></div>
+                <div class="ShipItemdiscount d-flex flex-column text-left">
+                  <h5>Multiple Discounts</h5>
+                  <p>Save more with us.</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-9">
-            <h2>Free Instant Quote: Car Shipping Rate Calculator</h2>
-            <h3>
-              By submitting the information below you will receive a free
-              Instant rate quote on how<br />much it will cost to ship your
-              vehicle.
-            </h3>
-            <h4>
-              Quote up to 5 vehicles of the same condition that will use the
-              same type of carrier.
+        </div>
+      </div>
+    </div>
+
+
+    <div class="common-wrapper" id="common-wrapper"><button type="button" class="btn btn-danger move_widget_section"><i
+          class="fas fa-arrows-alt"></i></button><span class="action_widget_section" style="display: none;">
+        <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+          class="btn btn-danger change_background_image_widget_section" style="display: none;">Change Background
+          Image</button>
+        <!-- <button type="button" class="btn btn-danger edit_selected_widget">Edit</button> -->
+      </span>
+      <div class="whyamerifreight pleasant instant">
+        <div class="container">
+          <div class="quotedata">
+            <h4 class="mb-2">
+              <div class="">How to Use the Car Shipping Cost Calculator for Accurate Auto Shipping Quotes</div>
             </h4>
-            <p>
-              If you need to ship more than 5 vehicles, vehicles that are in
-              different condition, or vehicles that require different types of
-              carriers, please<br />Contact Us directly.
-            </p>
+            <p class=""></p>
+            <p class=""></p>
+            <div class="">To receive the most precise car shipping cost estimate, have your origin, destination, and
+              vehicle details ready. Our auto shipping calculator will provide a quick quote.</div>
+            <p></p>
+            <p class=""><span style="font-size: 28px; font-weight: 700;" class="">What Information Do I Need to Use the
+                Car Shipping Calculator?</span><br></p>
+            <p class="">Welcome to Cross Atlantic llc's Car Shipping Cost Calculator, your source for instant and reliable car
+              shipping quotes tailored to your needs! Whether you need to calculate auto shipping costs for an SUV,
+              truck, or car, our calculator provides the most accurate estimate in seconds. With over 20 years of
+              experience, we’ve built a trusted reputation for affordable auto transport. Let's find your perfect car
+              shipping solution today!</p>
+            <h5 class="">Follow these simple steps.</h5>
+            <p class="">To give you the most accurate estimate for the cost of shipping a car, make sure you have some
+              key information on
+              hand. We will need the following:</p>
+            <ul>
+              <li>Origin and destination cities, states, and zip codes</li>
+              <li class="">The car's make, model, year, and vehicle type</li>
+              <li>Running condition</li>
+              <li>Open or enclosed car carrier transport</li>
+              <li>Date your vehicle is first available for pickup</li>
+            </ul>
+            <p class="">After you enter and submit this information, you'll have a personalized car shipping quote
+              within
+              seconds. You will be contacted by one of our agents to assist you with any further information you may
+              need to ship your vehicle.</p>
           </div>
-        </div>
-        <div class="row row-2">
-          <h2>* Required fields</h2>
-        </div>
-        <div class="row row-3">
-          <div class="form-container">
-            <!-- First row -->
-            <input type="number" placeholder="*Origin Zip" />
-            <input type="email" placeholder="*Origin City" autocomplete="on" />
-            <select>
-              <option value="" disabled selected>Select an option</option>
-              <option value="Alabama" data-select2-id="20">Alabama</option>
-              <option value="Alaska" data-select2-id="21">Alaska</option>
-              <option value="Arizona" data-select2-id="22">Arizona</option>
-              <option value="Arkansas" data-select2-id="23">Arkansas</option>
-              <option value="California" data-select2-id="24">
-                California
-              </option>
-              <option value="Colorado" data-select2-id="25">Colorado</option>
-              <option value="Columbia" data-select2-id="26">Columbia</option>
-              <option value="Connecticut" data-select2-id="27">
-                Connecticut
-              </option>
-              <option value="Delaware" data-select2-id="28">Delaware</option>
-              <option value="Florida" data-select2-id="29">Florida</option>
-              <option value="Georgia" data-select2-id="30">Georgia</option>
-              <option value="Hawaii" data-select2-id="31">Hawaii</option>
-              <option value="Idaho" data-select2-id="32">Idaho</option>
-              <option value="Illinois" data-select2-id="33">Illinois</option>
-              <option value="Indiana" data-select2-id="34">Indiana</option>
-              <option value="Iowa" data-select2-id="35">Iowa</option>
-              <option value="Kansas" data-select2-id="36">Kansas</option>
-              <option value="Kentucky" data-select2-id="37">Kentucky</option>
-              <option value="Louisiana" data-select2-id="38">
-                Louisiana
-              </option>
-              <option value="Maine" data-select2-id="39">Maine</option>
-              <option value="Maryland" data-select2-id="40">Maryland</option>
-              <option value="Massachusetts" data-select2-id="41">
-                Massachusetts
-              </option>
-              <option value="Michigan" data-select2-id="42">Michigan</option>
-              <option value="Minnesota" data-select2-id="43">
-                Minnesota
-              </option>
-              <option value="Mississippi" data-select2-id="44">
-                Mississippi
-              </option>
-              <option value="Missouri" data-select2-id="45">Missouri</option>
-              <option value="Montana" data-select2-id="46">Montana</option>
-              <option value="Nebraska" data-select2-id="47">Nebraska</option>
-              <option value="Nevada" data-select2-id="48">Nevada</option>
-              <option value="New Hampshire" data-select2-id="49">
-                New Hampshire
-              </option>
-              <option value="New Jersey" data-select2-id="50">
-                New Jersey
-              </option>
-              <option value="New Mexico" data-select2-id="51">
-                New Mexico
-              </option>
-              <option value="New York" data-select2-id="52">New York</option>
-              <option value="North Carolina" data-select2-id="53">
-                North Carolina
-              </option>
-              <option value="North Dakota" data-select2-id="54">
-                North Dakota
-              </option>
-              <option value="Ohio" data-select2-id="55">Ohio</option>
-              <option value="Oklahoma" data-select2-id="56">Oklahoma</option>
-              <option value="Oregon" data-select2-id="57">Oregon</option>
-              <option value="Pennsylvania" data-select2-id="58">
-                Pennsylvania
-              </option>
-              <option value="Rhode Island" data-select2-id="59">
-                Rhode Island
-              </option>
-              <option value="South Carolina" data-select2-id="60">
-                South Carolina
-              </option>
-              <option value="South Dakota" data-select2-id="61">
-                South Dakota
-              </option>
-              <option value="Tennessee" data-select2-id="62">
-                Tennessee
-              </option>
-              <option value="Texas" data-select2-id="63">Texas</option>
-              <option value="Utah" data-select2-id="64">Utah</option>
-              <option value="Vermont" data-select2-id="65">Vermont</option>
-              <option value="Virginia" data-select2-id="66">Virginia</option>
-              <option value="Washington" data-select2-id="67">
-                Washington
-              </option>
-              <option value="West Virginia" data-select2-id="68">
-                West Virginia
-              </option>
-              <option value="Wisconsin" data-select2-id="69">
-                Wisconsin
-              </option>
-              <option value="Wyoming" data-select2-id="70">Wyoming</option>
-            </select>
-            <input type="text" placeholder="*Name" />
-
-            <!-- Second row -->
-            <input type="number" placeholder="*Destination Zip" />
-            <input type="email" placeholder="*Destination City" />
-            <select>
-              <option value="" disabled selected>Select an option</option>
-              <option value="Alabama" data-select2-id="20">Alabama</option>
-              <option value="Alaska" data-select2-id="21">Alaska</option>
-              <option value="Arizona" data-select2-id="22">Arizona</option>
-              <option value="Arkansas" data-select2-id="23">Arkansas</option>
-              <option value="California" data-select2-id="24">
-                California
-              </option>
-              <option value="Colorado" data-select2-id="25">Colorado</option>
-              <option value="Columbia" data-select2-id="26">Columbia</option>
-              <option value="Connecticut" data-select2-id="27">
-                Connecticut
-              </option>
-              <option value="Delaware" data-select2-id="28">Delaware</option>
-              <option value="Florida" data-select2-id="29">Florida</option>
-              <option value="Georgia" data-select2-id="30">Georgia</option>
-              <option value="Hawaii" data-select2-id="31">Hawaii</option>
-              <option value="Idaho" data-select2-id="32">Idaho</option>
-              <option value="Illinois" data-select2-id="33">Illinois</option>
-              <option value="Indiana" data-select2-id="34">Indiana</option>
-              <option value="Iowa" data-select2-id="35">Iowa</option>
-              <option value="Kansas" data-select2-id="36">Kansas</option>
-              <option value="Kentucky" data-select2-id="37">Kentucky</option>
-              <option value="Louisiana" data-select2-id="38">
-                Louisiana
-              </option>
-              <option value="Maine" data-select2-id="39">Maine</option>
-              <option value="Maryland" data-select2-id="40">Maryland</option>
-              <option value="Massachusetts" data-select2-id="41">
-                Massachusetts
-              </option>
-              <option value="Michigan" data-select2-id="42">Michigan</option>
-              <option value="Minnesota" data-select2-id="43">
-                Minnesota
-              </option>
-              <option value="Mississippi" data-select2-id="44">
-                Mississippi
-              </option>
-              <option value="Missouri" data-select2-id="45">Missouri</option>
-              <option value="Montana" data-select2-id="46">Montana</option>
-              <option value="Nebraska" data-select2-id="47">Nebraska</option>
-              <option value="Nevada" data-select2-id="48">Nevada</option>
-              <option value="New Hampshire" data-select2-id="49">
-                New Hampshire
-              </option>
-              <option value="New Jersey" data-select2-id="50">
-                New Jersey
-              </option>
-              <option value="New Mexico" data-select2-id="51">
-                New Mexico
-              </option>
-              <option value="New York" data-select2-id="52">New York</option>
-              <option value="North Carolina" data-select2-id="53">
-                North Carolina
-              </option>
-              <option value="North Dakota" data-select2-id="54">
-                North Dakota
-              </option>
-              <option value="Ohio" data-select2-id="55">Ohio</option>
-              <option value="Oklahoma" data-select2-id="56">Oklahoma</option>
-              <option value="Oregon" data-select2-id="57">Oregon</option>
-              <option value="Pennsylvania" data-select2-id="58">
-                Pennsylvania
-              </option>
-              <option value="Rhode Island" data-select2-id="59">
-                Rhode Island
-              </option>
-              <option value="South Carolina" data-select2-id="60">
-                South Carolina
-              </option>
-              <option value="South Dakota" data-select2-id="61">
-                South Dakota
-              </option>
-              <option value="Tennessee" data-select2-id="62">
-                Tennessee
-              </option>
-              <option value="Texas" data-select2-id="63">Texas</option>
-              <option value="Utah" data-select2-id="64">Utah</option>
-              <option value="Vermont" data-select2-id="65">Vermont</option>
-              <option value="Virginia" data-select2-id="66">Virginia</option>
-              <option value="Washington" data-select2-id="67">
-                Washington
-              </option>
-              <option value="West Virginia" data-select2-id="68">
-                West Virginia
-              </option>
-              <option value="Wisconsin" data-select2-id="69">
-                Wisconsin
-              </option>
-              <option value="Wyoming" data-select2-id="70">Wyoming</option>
-            </select>
-            <input type="email" placeholder="*Email" />
-
-            <!-- Third row -->
-            <input type="text" placeholder="*Make" />
-            <input type="text" placeholder="*Model" />
-            <input type="text" placeholder="*Year" />
-
-            <!-- Phone input with hover functionality -->
-            <div class="phone-input wide-input">
-              <input type="tel" placeholder="*Phone 000 000-000" />
-            </div>
-
-            <!-- Fourth row -->
-            <select>
-              <option value="" disabled selected>Select an option</option>
-              <option value="1" data-select2-id="77">Car</option>
-              <option value="2" data-select2-id="78">SUV</option>
-              <option value="3" data-select2-id="79">Pickup</option>
-              <option value="4" data-select2-id="80">Dually</option>
-              <option value="5" data-select2-id="81">Van</option>
-              <option value="6" data-select2-id="82">Motorcycle</option>
-              <option value="7" data-select2-id="83">Boat</option>
-              <option value="8" data-select2-id="84">RV</option>
-              <option value="9" data-select2-id="85">Travel Trailer</option>
-              <option value="10" data-select2-id="86">Other</option>
-            </select>
-            <select>
-              <option value="" disabled selected>Select an option</option>
-              <option value="Option 1">Running</option>
-              <option value="Option 2">Not Running</option>
-            </select>
-            <select>
-              <option value="" disabled selected>Select an option</option>
-              <option value="Option 1">Open</option>
-              <option value="Option 2">Enclosed</option>
-            </select>
-            <input type="date" class="date-input" placeholder="*Vehicle Avail. Date" />
-          </div>
-        </div>
-        <div class="row-4">
-          <div class="add-vehicle">
-            <img src="./get-an-instant-quote-images/add-vehicle.webp" alt="" />
-          </div>
-          <div class="wrapper">
-            <div class="zip-code">
-              <button href="https://tools.usps.com/go/ZipLookupAction!input.action" class="find-zip">
-                Find Your ZIP Code
-              </button>
-            </div>
-            <div class="butt">
-              <!-- Clear fields button -->
-              <button class="clear" onclick="clearFields()">
-                <i class="fas fa-undo-alt"></i> Clear Fields
-              </button>
-              <button class="calculator">
-                <i class="fas fa-calculator"></i> Continue
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="row row-5">
-          <p>
-            By submitting your phone number, you consent to our
-            <a href="#">Terms & Condition</a> or
-            <a href="#">Privacy Policy</a>. You authorize us to contact you
-            via email, calls, SMS, and pre-<br />recorded voicemail using
-            automated systems. Message frequency varies. Your agreement is not
-            a condition of purchase. You can opt out anytime by<br />replying
-            STOP. Message & data rates may apply.
-          </p>
         </div>
       </div>
     </div>
-  </section>
-  <section class="sec-4">
-    <div class="container-fluid">
-      <div class="row">
-        <h2>
-          How To Use The Quote Rate Calculator For Standard Car Shipping Rates
-          & <br />Quotes
-        </h2>
-        <h3>
-          What Information Do I Need to Use the Car Shipping Calculator?
-        </h3>
-        <p>
-          Welcome to AmeriFreight's Car Shipping Quote Calculator - your
-          one-stop shop for a stress-free auto transport experience! For over
-          20 years, we've been a trusted leader in the car shipping industry,
-          providing<br />reliable and transparent quotes tailored to your
-          specific needs. Whether you're shipping a prized classic car in an
-          enclosed trailer or a daily driver on an open carrier, our
-          user-friendly calculator delivers instant,<br />personalized quotes
-          to get you started. Let's find your perfect car shipping solution
-          today!
-        </p>
-        <h3>Follow these simple steps.</h3>
-        <p>
-          To give you the most accurate estimate for the cost of shipping a
-          car, make sure you have some key information on hand. We will need
-          the following:
-        </p>
-        <ul>
-          <li>Origin and destination cities, states, and zip codes</li>
-          <li>The car's make, model, year, and vehicle type</li>
-          <li>Running condition</li>
-          <li>Open or enclosed car carrier transport</li>
-          <li>Date your vehicle is first available for pickup</li>
-        </ul>
-        <p>
-          After you enter and submit this information, you'll have a
-          personalized car shipping quote within seconds. You will be
-          contacted by one of our agents to assist you with any further
-          information you<br />may need to ship your vehicle.
-        </p>
-      </div>
-    </div>
-  </section>
-  <section class="sec-5">
-    <div class="container-fluid">
-      <div class="row">
-        <h2>
-          Factors that may increase the cost of shipping your car or other
-          vehicles are:
-        </h2>
-        <h3>Size of Vehicle :</h3>
-        <p>
-          The car delivery cost will increase the bigger the vehicle, as it
-          weighs more and occupies more space. Here are some examples of what
-          the extra cost would be for a:
-        </p>
-        <ul>
-          <li>SUV - $75</li>
-          <li>Large SUV - $125</li>
-          <li>Full-Size Truck - $150</li>
-          <li>Dually - $250</li>
-        </ul>
-        <p>
-          Our services aren't limited by size; from the smallest and most
-          compact vehicle transportation all the way to heavy and large
-          vehicles, we can transport it for you. It's not just SUVs or trucks,
-          but<br>RVs and military vehicles that can be transported as well!
-        </p>
-        <h3>Enclosed Vehicle Shipping :</h3>
-        <p>
-          Enclosed shipment costs will be, on average, 80% more than open auto
-          carrier transport. This type of auto shipping should only be chosen
-          if your car is extremely expensive, custom, or you're<br>transporting a
-          motorsport car. The idea is to protect the car from external
-          elements - something that normal cars are already built for.
-        </p>
-        <ul>
-          <li>Steers and brakes - $100</li>
-          <li>
-            Needs to be forklifted or winched onto a truck - $200 to $500
-            depending on the size
-          </li>
-        </ul>
-        <p>
-          A running vehicle is always more affordable than one that is
-          inoperable when it comes to auto transport costs. It's not that it
-          needs to be driven when transporting it; it just makes the job
-          easier<br>for loading, unloading and reduces maintenance work. Be sure
-          to account for this premium when using the instant quote car
-          shipping rate calculator.
-        </p>
-      </div>
-    </div>
-  </section>
-  <section class="sec-6">
-    <div class="container-fluid">
-      <div class="row">
-        <h3>Shipping Options</h3>
-        <div class="cont cont-1">
-          <h2>Enclosed Vehicle Shipping</h2>
+
+    <div class="common-wrapper" id="common-wrapper"><button type="button" class="btn btn-danger move_widget_section"><i
+          class="fas fa-arrows-alt"></i></button><span class="action_widget_section" style="display: none;">
+        <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+          class="btn btn-danger change_background_image_widget_section" style="display: none;">Change Background
+          Image</button>
+      </span>
+      <div class="whyamerifreight decades">
+        <div class="container">
+          <h4>Factors that may increase the cost of shipping your car or other vehicles are:</h4>
+          <h6>Size of Vehicle :</h6>
+          <p class="">The car delivery cost will increase the bigger the vehicle, as it weighs more and occupies more
+            space. Larger vehicles, such as SUVs or trucks, typically increase the car shipping cost. Here are some
+            examples of what the extra cost would be for a:</p>
+          <ul class="smooth">
+            <li>SUV -�&nbsp;$75</li>
+            <li>Large SUV -�&nbsp;$125</li>
+            <li>Full-Size Truck -�&nbsp;$150</li>
+            <li>Dually -�&nbsp;$250</li>
+          </ul>
+          <p>Our services aren't limited by size; from the smallest and most compact vehicle transportation all the
+            way to heavy and large vehicles, we can transport it for you. It's not just SUVs or trucks, but RVs and
+            military vehicles that can be transported as well!</p>
+          <h6>Enclosed Vehicle Shipping :</h6>
           <p>Enclosed shipment costs will be, on average, 80% more than open auto carrier transport. This type of auto
             shipping should only be chosen if your car is extremely expensive, custom, or you're transporting a
-            motorsport car. The idea is to protect the car from external elements - something that normal cars are
+            motorsport car. The idea is to protect the car from external elements�&nbsp;<span
+              class="font-size-16">-</span>�&nbsp;something that normal cars are
             already built for.</p>
-          <h2>
-            Expedited Auto Transport
-          </h2>
-          <p>If you need your car or other vehicle picked up in a short period of time and/or expedited delivery, the
-            cost will increase.</p>
-          <p>These costs will increase for an expedited delivery because a carrier may have to make changes to their
-            schedule or make last-minute adjustments to their plans. This means increased risk, as a driver who
-            usually
-            takes a route during the day might have to drive through the night with minimum stops.</p>
+          <ul class="smooth">
+            <li>Steers and brakes -�&nbsp;$100</li>
+            <li>Needs to be forklifted or winched onto a truck -�&nbsp;$200 to $500 depending on the size</li>
+          </ul>
+          <p class="">A running vehicle is always more affordable than one that is inoperable when it comes to auto
+            transport
+            costs. It's not that it needs to be driven when transporting it; it just makes the job easier for
+            loading, unloading and reduces maintenance work. Be sure to account for this premium when using the
+            instant quote car shipping rate calculator.</p>
         </div>
-        <div class="cont cont-2">
-          <h2>Special Requests
-          </h2>
-          <p>Top loading a vehicle during transport may cost up to $100 more.
-          </p>
-          <h2>Auto Transport Gap Protection Coverage
-          </h2>
-          <p>The AFTA PLAN will protect you up to $2000 for out-of-pocket expenses in case a car carrier's insurance
-            fails to pay. Adding GAP protection, depending on the coverage, will tack on an additional $48-$98. You
-            might think that investing in this plan is not worth the effort, but it is important to note that this
-            coverage will protect you not just at the time of delivery, but also if the damage is detected up to 48
-            hours afterward.
-          </p>
-        </div>
-        <div class="cont cont-3">
-          <h2>Time of Year
-          </h2>
-          <p>Holiday seasons or bad weather may increase the shipping rate. The instant quote car shipping rate
-            calculator will provide a baseline rate that isn't accounting for time of year. High season (Summer) may
-            require higher auto shipping rates due to carrier demand. You should be aware during this time that you may
-            pay anything from $100 to $800 extra during high and holiday seasons. You can also try to plan your moves
-            in
-            accordance with the time of year. Spring and fall are some of the most affordable moving times, since there
-            isn't as much demand, nor is the weather as intense. You can save up on costs by waiting, but we also
-            understand that waiting isn't always possible.
-          </p>
-          <h2>Economic Conditions
+      </div>
+    </div>
 
-          </h2>
-          <p>Gas/Diesel rates, factors into carrier rate adjustments. Expect to pay around $100 to $300 extra during
-            economic downturns. The recent COVID-19 situation also led to an increase in prices because of the
-            precautions drivers had to take, in addition to mandatory lockdowns. However, this is starting to turn back
-            and prices have become more stabilized now.
-          </p>
-        </div>
-        <div class="cont cont-4">
-          <h2>Pickup and Delivery Locations
-          </h2>
-          <p>Remote locations will require car carriers to go outside their well-traveled routes and will likely
-            increase the rate. Depending on how far away your location is from large cities or main interstates, you can
-            expect to pay close to twice your initial quoted rate.
-          </p>
-          <p>However, there is always the option of station-to-station delivery, where truck drivers won't have to
-            deviate from their route. There are also options to drop your car off at some landmarks that are in the way
-            of driver's routes which will significantly reduce costs - but it will require you to pick up the car
-            yourself or someone authorized by you.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="sec-7">
-    <div class="container-fluid">
-      <div class="row">
-        <h2>Do I Have to Pay After Using the Online Car Shipping Calculator?
-        </h2>
-        <p>Absolutely not. You'll be glad to know that our online car shipping calculator is completely FREE. We provide
-          it as a free tool to calculate car shipping rates for you. If you decide not to use our service, you have no
-          obligation to pay simply because you used our calculator. We're here to help you receive the very best care
-          even if you decide not to use our services.</p>
-      </div>
-    </div>
-  </section>
-  <section class="sec-8">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="wrapper">
-          <div class="image">
-            <img src="./get-an-instant-quote-images/start-button.jpg" alt="">
+    <div class="common-wrapper" id="common-wrapper"><button type="button" class="btn btn-danger move_widget_section"><i
+          class="fas fa-arrows-alt"></i></button><span class="action_widget_section" style="display: none;">
+        <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+          class="btn btn-danger change_background_image_widget_section" style="display: block;">Change Background
+          Image</button>
+      </span>
+      <div class="shipping-outer main_background_image">
+
+        <div class="shipping chosen">
+          <div class="container">
+            <h3 class="pb-lg-2" style="padding: 0">Shipping Options</h3>
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-xl-12">
+                <div class="mainship">
+                  <div class="shippingdata px-3">
+                    <div class="ship w-100">
+                      <p class="title mb-1">Enclosed Vehicle Shipping</p>
+                      <p>Enclosed shipment costs will be, on average, 80% more than open auto carrier transport. This
+                        type of auto
+                        shipping should only be chosen if your car is extremely expensive, custom, or you're
+                        transporting a
+                        motorsport car. The idea is to protect the car from external elements�&nbsp;<span
+                          class="font-size-16">-</span>�&nbsp;something that normal cars are
+                        already built for.</p>
+
+                    </div>
+                    <div class="ship w-100">
+                      <p class="title mb-1">Expedited Auto Transport</p>
+                      <p class="">If you need your car or other vehicle picked up in a short period of time and/or
+                        expedited delivery, the
+                        cost will increase.</p>
+                      <p> These costs will increase for an expedited delivery because a carrier may have to make changes
+                        to their
+                        schedule or make last-minute adjustments to their plans. This means increased risk, as a driver
+                        who
+                        usually takes a route during the day might have to drive through the night with minimum stops.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-12 col-md-12 col-xl-12">
+                <div class="mainship">
+                  <div class="shippingdata px-3">
+
+                    <div class="ship w-100">
+                      <p class="title mb-1">Special Requests</p>
+                      <p>Top loading a vehicle during transport may cost up to $100 more.</p>
+                    </div>
+                    <div class="ship w-100">
+                      <p class="title mb-1">Auto Transport Gap Protection Coverage</p>
+                      <p>The AFTA PLAN will protect you up to $2000 for out-of-pocket expenses in case a car carrier's
+                        insurance
+                        fails to pay. Adding GAP protection, depending on the coverage, will tack on an additional
+                        $48-$98. You
+                        might think that investing in this plan is not worth the effort, but it is important to note
+                        that this
+                        coverage will protect you not just at the time of delivery, but also if the damage is detected
+                        up to 48
+                        hours afterward. </p>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-12 col-md-12 col-xl-12">
+                <div class="mainship">
+                  <div class="shippingdata px-3">
+
+                    <div class="ship w-100">
+                      <p class="title mb-1">Time of Year</p>
+                      <p>Holiday seasons or bad weather may increase the shipping rate. The instant quote car shipping
+                        rate
+                        calculator will provide a baseline rate that isn't accounting for time of year. High season
+                        (Summer) may
+                        require higher auto shipping rates due to carrier demand. You should be aware during this time
+                        that you
+                        may pay anything from $100 to $800 extra during high and holiday seasons. You can also try to
+                        plan your
+                        moves in accordance with the time of year. Spring and fall are some of the most affordable
+                        moving times,
+                        since there isn't as much demand, nor is the weather as intense. You can save up on costs by
+                        waiting,
+                        but we also understand that waiting isn't always possible.</p>
+
+                    </div>
+                    <div class="ship w-100">
+                      <p class="title mb-1">Economic Conditions</p>
+                      <p>Gas/Diesel rates, factors into carrier rate adjustments. Expect to pay around $100 to $300
+                        extra during
+                        economic downturns. The recent COVID-19 situation also led to an increase in prices because of
+                        the
+                        precautions drivers had to take, in addition to mandatory lockdowns. However, this is starting
+                        to turn
+                        back and prices have become more stabilized now.</p>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-12 col-md-12 col-xl-12">
+                <div class="mainship">
+                  <div class="shippingdata px-3">
+
+                    <div class="ship w-100">
+                      <p class="title mb-1">Pickup and Delivery Locations</p>
+                      <p>Remote locations will require car carriers to go outside their well-traveled routes and will
+                        likely
+                        increase the rate. Depending on how far away your location is from large cities or main
+                        interstates, you
+                        can expect to pay close to twice your initial quoted rate.</p>
+                      <p>However, there is always the option of station-to-station delivery, where truck drivers won't
+                        have to
+                        deviate from their route. There are also options to drop your car off at some landmarks that are
+                        in the
+                        way of driver's routes which will significantly reduce costs�&nbsp;<span
+                          class="font-size-16">-</span>�&nbsp;but it will require you to pick up the
+                        car yourself or someone authorized by you.</p>
+
+                    </div>
+                    <!--	 <div class="ship w-100">
+                                      <p class="title mb-1">Economic Conditions</p>
+                                      <p>Gas/Diesel rates, factors into carrier rate adjustments. Expect to pay around $100 to $300 extra during
+                                        economic downturns. The recent COVID-19 situation also led to an increase in prices because of the
+                                        precautions drivers had to take, in addition to mandatory lockdowns. However, this is starting to turn
+                                        back and prices have become more stabilized now.</p>
+      
+                                  </div>-->
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
           </div>
-          <div class="txt">
-            <h2>Read These Tips to Find the Cheapest Way to Ship a Car
-            </h2>
+        </div>
+      </div>
+    </div>
+    <div class="common-wrapper" id="common-wrapper"><button type="button" class="btn btn-danger move_widget_section"><i
+          class="fas fa-arrows-alt"></i></button><span class="action_widget_section" style="display: none;">
+        <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+          class="btn btn-danger change_background_image_widget_section" style="display: none;">Change Background
+          Image</button>
+      </span>
+      <div class="whyamerifreight decades">
+        <div class="container">
+          <h4>Do I Have to Pay After Using the Online Car Shipping Calculator? </h4>
+          <p class="concerns">Absolutely not. You'll be glad to know that our online car shipping calculator is
+            completely FREE. We
+            provide it as a free tool to calculate car shipping rates for you. If you decide not to use our service,
+            you have no obligation to pay simply because you used our calculator. We're here to help you receive the
+            very best care even if you decide not to use our services.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="common-wrapper" id="common-wrapper"><button type="button" class="btn btn-danger move_widget_section"><i
+          class="fas fa-arrows-alt"></i></button><span class="action_widget_section" style="display: none;">
+        <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+          class="btn btn-danger change_background_image_widget_section" style="display: none;">Change Background
+          Image</button>
+        <!-- <button type="button" class="btn btn-danger edit_selected_widget">Edit</button> -->
+      </span>
+      <div class="tips Way">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-5 col-xl-4">
+              <img loading="lazy" width="500" height="305"
+                src="style/images/Man-pushing-a-start-button-with-the-text-save-now-500x305.jpg"
+                alt="close-up of a finger pressing a button that says SAVE NOW in large white letters">
+            </div>
+            <div class="col-sm-12 col-md-7 col-xl-8 d-flex align-items-center">
+              <div class="quotedata">
+                <h5>Read These Tips to Find the Cheapest Way to Ship a Car</h5>
+              </div>
+            </div>
           </div>
         </div>
-        <p class="para-1">Need some tips on shipping a car inexpensively? Although the shipping cost varies based on the
-          factors
-          previously mentioned, there are several ways to lessen the cost. Check out the tips below and take advantage
-          of as many as you can!
-        </p>
-        <ul>
-          <li><span>Use Open Transport:</span> This is the car shipping industry's standard method of shipping cars.
-            Cars
-            are transported via an open-air tractor-trailer. Open carrier transport is the most affordable option.</li>
-          <li><span>Have Your Vehicle in Operable Condition:</span> Double-check to see if your vehicle runs and drives
-            before calling a car shipping company. It is more expensive for carriers to handle inoperable cars.</li>
-          <li><span>Schedule Early:</span> If you reserve a pickup/drop-off time in advance, you can avoid expediting
-            costs or last-minute requests that can tack on extra fees.</li>
-          <li><span>Ship During Low Season:</span> It usually costs less to ship a car during the "low" fall and winter
-            seasons than during the "high" spring and summer seasons.</li>
-          <li><span> Ship From a Major City:</span> It is typically cheaper to ship a car to a more populated area. We
-            recommend bringing your vehicle near a larger city if you live in a rural area.</li>
-          <li><span>Ship Multiple Cars if You Have Them:</span> We offer a discount to customers who ship more than one
-            vehicle on the same truck (see below for more discount offers).</li>
-          <li><span>Take Advantage of Our Discounts:</span> We are proud to offer discounts to military members, first
-            responders, students, senior citizens, Early Birds who book with us no later than 48 hours after receiving a
-            quote, return customers, and those with multiple vehicles.</li>
-        </ul>
-        <div class="img-2">
-          <img src="./get-an-instant-quote-images/Big-car-carrier-truck.jpg" alt="">
-        </div>
-        <h2>Consumer Guide to Standard Car Shipping Rates.
-        </h2>
-        <h3>It is important to remember that car shipping is not based on fixed rates.
-        </h3>
-        <p>The rates from the instant quote car transport calculator are purely estimates based on best-case historical
-          auto transport shipment costs for the routes and conditions requested. It all depends on the distance from
-          pickup and delivery. There is NO fixed rate for any vehicle shipment because of too many variables in the auto
-          transport industry.
-        </p>
       </div>
     </div>
-  </section>
-  <section class="sec-9">
-    <div class="row">
-      <h2>AmeriFreight and Car Shipping Costs
-      </h2>
-      <p>AmeriFreight goes the extra mile in order to help you reduce car delivery cost, without cutting corners. Our
-        contracted auto transport carrier fleets of trucks and expert drivers mean that we have resources to spare. Our
-        car shipping costs may not always be the lowest out there, but when you compare the quality of service and
-        reliability with the costs associated with them, you simply can't find a better deal.
-      </p>
-      <p>When you use our instant quote car shipping rate calculator, it automatically uses the different factors that
-        need to be taken into account, such as route, weight, and the size of the vehicle.
-      </p>
-      <p>We understand that when you ask for a quote, you're simply weighing options. Our resolve to give you the best
-        auto transport rates and experience dictates that we respect your privacy and give you <span>hassle-free car
-          shipping
-          quotes.</span> Even then, if you have a budget or have some extra instruction that you believe will impact the
-        car
-        shipping cost, you can give us a call and we'll be glad to give you an accurate quote, without asking you to
-        commit.
-      </p>
-      <p>You can rest assured that with AmeriFreight, you are signing up for a transparent and excellent car shipping
-        experience - not a bunch of spam emails right after you use our instant quote car shipping rate calculator. You
-        will save money on auto transport services with us.
-      </p>
-    </div>
-  </section>
-  <section class="sec-10">
-    <h2>Best Way to Ship a Car - Saving Costs on Car Shipping</h2>
-    <p>Moving is one of the most stressful experiences one can go through; even more so if your precious car is
-      involved. You may wonder how much does car transport cost?With AmeriFreight, it's as simple as getting in touch
-      with us, letting us know where from and where to! Our goal is for you to save money, and to provide excellent auto
-      transport services.
-    </p>
-    <p>Making sure you are working with only the best of the best can be rather difficult, too - which is why we
-      recommend you only work with the vehicle moving companies with deep insight into what they're doing. One surefire
-      way is to check whether the mover has an A or above rating and offers <a href="">AFTA GAP protection.</a>
-    </p>
-    <p>It might seem that because of the protection and high rating, companies charge more, but it's quite the contrary.
-      The extra bit you pay for GAP protection ensures that should your car be damaged during transit, all damages will
-      be covered by the shipping company or <a href="">AFTA</a> - even if it exceeds your insurance amount in some
-      cases! Before you
-      commit, you should research and read reviews, check services, prices, check our instant quote car shipping rate
-      calculator, and most importantly, how they treat their customers. We believe the customer is king, and therefore,
-      nothing short of royalty-like treatment gets the job done. But that doesn't mean we charge you like royalty. You
-      get what you pay for and more with AmeriFreight!
-    </p>
-    <p>If you're looking for cheap vehicle transport options, open transport is the way to go. The majority of our
-      customers go for this option and are satisfied with the service.
-    </p>
-    <p>Plus, the free quote we offer on transporting any vehicle, any make and model, anywhere in the US also helps you
-      save costs. Remember, we won't just give you an 'estimate' for free, but treat you like our customers even before
-      you commit! We want to be your auto transport company.
-    </p>
-  </section>
-  <section class="sec-11">
-    <div class="wrapper">
-      <div class="logo">
-        <img src="./get-an-instant-quote-images/logo.png" alt="" />
-      </div>
-      <div class="quick-link">
-        <h2>QUICK LINK</h2>
-        <div>
-          <h3>About Us</h3>
-          <br />
-          <h3>Get An Instant Quote</h3>
-          <br />
-          <h3>Reviews</h3>
-          <br />
-          <h3>Discounts</h3>
-          <br />
-          <h3>Why AmeriFreight</h3>
-          <br />
-        </div>
-      </div>
-      <div class="contact-us">
-        <h2>CONTACT US</h2>
-        <div class="contact-wrapper">
-          <i class="fa-solid fa-phone-flip" style="color: #747474; margin-top: 2px"></i>
-          <h2>
-            Phone:
-            <h3>(770) 486-1010</h3>
-          </h2>
-        </div>
-        <div class="contact-wrapper">
-          <i class="fa-solid fa-fax" style="color: #747474; margin-top: 2px"></i>
-          <h2>
-            Fax:
-            <h3>1 (770) 745-6078</h3>
-          </h2>
-        </div>
-        <div class="contact-wrapper">
-          <i class="fa-solid fa-envelope" style="color: #747474; margin-top: 2px"></i>
-          <h2>
-            Email:
-            <h3>Click here</h3>
-          </h2>
-        </div>
-        <div class="contact-wrapper">
-          <i class="fa-solid fa-clock" style="color: #747474; margin-top: 4px"></i>
-          <h2 style="line-height: 1.4">
-            Mon - Fri: 8am - 10pm EST <br />Sat: 9am - 6pm <br />Sun: 12pm -
-            4pm
-          </h2>
-        </div>
-        <div class="contact-wrapper">
-          <i class="fa-solid fa-location-dot" style="color: #747474; margin-top: 2px"></i>
-          <h2>205 Greencastle Road Suite A, Tyrone, GA <br />30290</h2>
-        </div>
 
-        <div class="txt"></div>
-      </div>
-      <div class="info">
-        <h2>INFORMATION</h2>
-        <h3>Job Openings</h3>
-        <br />
-        <h3>Contact Us</h3>
-        <br />
-        <h3>Shipping By State</h3>
-        <br />
-        <h3>Terms & Conditions</h3>
-        <br />
-        <h3>Privacy Policy</h3>
-        <br />
-      </div>
-    </div>
-  </section>
-  <section class="sec-12">
-    <div class="wrapper">
-      <div class="txt">
-        <h2>© AmeriFreight Auto Transport 2024</h2>
-      </div>
-      <div class="image">
-        <a href="#"><img src="./get-an-instant-quote-images/facebook.png" alt="" /></a>
-        <a href="#"><img src="./get-an-instant-quote-images/linkedin.png" alt="" /></a>
-        <a href="#"><img src="./get-an-instant-quote-images/x.png" alt="" /></a>
-        <a href="#"><img src="./get-an-instant-quote-images/instagram.png" alt="" /></a>
-      </div>
-    </div>
-  </section>
 
-  <!-- Section 3 row 4 clear field button -->
-  <script>
-    function clearFields() {
-      const inputs = document.querySelectorAll(
-        ".form-container input, .form-container select"
-      );
-      inputs.forEach((input) => {
-        if (input.type === "select-one") {
-          input.selectedIndex = 0; // Reset dropdowns
-        } else {
-          input.value = ""; // Clear all text and number inputs
-        }
+    <div class="common-wrapper" id="common-wrapper"><button type="button" class="btn btn-danger move_widget_section"><i
+          class="fas fa-arrows-alt"></i></button><span class="action_widget_section" style="display: none;">
+        <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+          class="btn btn-danger change_background_image_widget_section" style="display: none;">Change Background
+          Image</button>
+        <!-- <button type="button" class="btn btn-danger edit_selected_widget">Edit</button> -->
+      </span>
+      <div class="quotedata">
+        <div class="container">
+          <div class="quotedata2">
+            <p>Need some tips on shipping a car inexpensively? Although the shipping cost varies based on the factors
+              previously mentioned, there are several ways to lessen the cost. Check out the tips below and take
+              advantage of as many as you can!</p>
+            <ul>
+              <li class=""><b>Use Open Transport:</b> This is the car shipping industry's standard method of shipping
+                cars.
+                Cars are transported via an open-air tractor-trailer. Open carrier transport is the most affordable
+                option.</li>
+              <li><b>Have Your Vehicle in Operable Condition:</b> Double-check to see if your vehicle runs and drives
+                before calling a car shipping company. It is more expensive for carriers to handle inoperable cars.
+              </li>
+              <li><b>Schedule Early:</b> If you reserve a pickup/drop-off time in advance, you can avoid expediting
+                costs or last-minute requests that can tack on extra fees.</li>
+              <li><b>Ship During Low Season:</b> It usually costs less to ship a car during the "low" fall and winter
+                seasons than during the "high" spring and summer seasons.</li>
+              <li><b>Ship From a Major City:</b> It is typically cheaper to ship a car to a more populated area. We
+                recommend bringing your vehicle near a larger city if you live in a rural area.</li>
+              <li><b>Ship Multiple Cars if You Have Them:</b> We offer a discount to customers who ship more than one
+                vehicle on the same truck (see below for more discount offers).</li>
+              <li><b>Take Advantage of Our Discounts:</b> We are proud to offer discounts to military members, first
+                responders, students, senior citizens, Early Birds who book with us no later than 48 hours after
+                receiving a quote, return customers, and those with multiple vehicles.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="common-wrapper" id="common-wrapper"><button type="button" class="btn btn-danger move_widget_section"><i
+          class="fas fa-arrows-alt"></i></button><span class="action_widget_section" style="display: none;">
+        <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+          class="btn btn-danger change_background_image_widget_section" style="display: none;">Change Background
+          Image</button>
+        <!-- <button type="button" class="btn btn-danger edit_selected_widget">Edit</button> -->
+      </span>
+      <div class="tips text-center">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <img loading="lazy" width="650" height="433"
+                src="style/images/Big-car-carrier-truck-of-new-luxury-sport-german-cars-600x383.jpg"
+                alt="This image shows a silver car carrier truck transporting several cars ">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="common-wrapper" id="common-wrapper"><button type="button" class="btn btn-danger move_widget_section"><i
+          class="fas fa-arrows-alt"></i></button><span class="action_widget_section" style="display: none;">
+        <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+          class="btn btn-danger change_background_image_widget_section" style="display: none;">Change Background
+          Image</button>
+        <!-- <button type="button" class="btn btn-danger edit_selected_widget">Edit</button> -->
+      </span>
+      <div class="quotedata">
+        <div class="container">
+          <div class="quotedata2">
+            <h4 class="my-2">Consumer Guide to Standard Car Shipping Rates.</h4>
+            <h6>It is important to remember that car shipping is not based on fixed rates.</h6>
+            <p class="">The rates from the instant quote car transport calculator are purely estimates based on
+              best-case
+              historical auto transport shipment costs for the routes and conditions requested. It all depends on the
+              distance from pickup and delivery. There is NO fixed rate for any vehicle shipment because of too many
+              variables in the auto transport industry.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="common-wrapper" id="common-wrapper"><button type="button" class="btn btn-danger move_widget_section"><i
+          class="fas fa-arrows-alt"></i></button><span class="action_widget_section" style="display: none;">
+        <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+          class="btn btn-danger change_background_image_widget_section" style="display: none;">Change Background
+          Image</button>
+      </span>
+      <div class="whyamerifreight decades">
+        <div class="container">
+          <h4>Cross Atlantic llc and Car Shipping Costs</h4>
+          <p class="">Cross Atlantic llc goes the extra mile in order to help you reduce car delivery cost, without
+            cutting corners. Our contracted auto transport carrier fleets of trucks and expert drivers mean that we
+            have resources to spare. Our car shipping costs may not always be the lowest out there, but when you
+            compare the quality of service and reliability with the costs associated with them, you simply can't
+            find a better deal.</p>
+          <p>When you use our instant quote car shipping rate calculator, it automatically uses the different factors
+            that need to be taken into account, such as route, weight, and the size of the vehicle.</p>
+          <p class="">We understand that when you ask for a quote, you're simply weighing options. Our resolve to give
+            you the
+            best auto transport rates and experience dictates that we respect your privacy and give you
+            <b>hassle-free car shipping quotes.</b> Even then, if you have a budget or have some extra instruction
+            that you believe will impact the car shipping cost, you can give us a call and we'll be glad to give you
+            an accurate quote, without asking you to commit.
+          </p>
+          <p class="">You can rest assured that with Cross Atlantic llc, you are signing up for a transparent and excellent
+            car
+            shipping experience�&nbsp;<span class="font-size-16">-</span>�&nbsp;not a bunch of spam emails right after
+            you use our instant quote car shipping rate
+            calculator. You will save money on auto transport services with us.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="common-wrapper" id="common-wrapper"><button type="button" class="btn btn-danger move_widget_section"><i
+          class="fas fa-arrows-alt"></i></button><span class="action_widget_section" style="display: none;">
+        <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+          class="btn btn-danger change_background_image_widget_section" style="display: none;">Change Background
+          Image</button>
+      </span>
+      <div class="sliderdata fantastic">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <div class="sliderdatahead">
+                <h4>Best Way to Ship a Car - Saving Costs on Car Shipping</h4>
+              </div>
+              <p class="">Moving is one of the most stressful experiences one can go through; even more so if your
+                precious car is
+                involved. You may wonder how much does car transport cost?With Cross Atlantic llc, it's as simple as getting
+                in touch with us, letting us know where
+                from and where to! Our goal is for you to save money, and to provide excellent auto transport services.
+              </p>
+              <p class="">Making sure you are working with only the best of the best can be rather difficult,
+                too�&nbsp;<span class="font-size-16">-</span>�&nbsp;which is why we
+                recommend you only work with the vehicle moving companies with deep insight into what they're doing. One
+                surefire way is to check whether the mover has an A or above rating and offers <a
+                  class="underline text-decoration-none"
+                  href="#">AFTA GAP protection</a>.</p>
+              <p class="">It might seem that because of the protection and high rating, companies charge more, but it's
+                quite the
+                contrary. The extra bit you pay for GAP protection ensures that should your car be damaged during
+                transit, all damages will be covered by the shipping company or <a class="underline"
+                  href="http://www.aftaplan.com/">AFTA</a>�&nbsp;<span class="font-size-16">-</span>�&nbsp;even if it
+                exceeds your insurance amount in some cases!
+                Before you commit, you should research and read reviews, check services, prices, check our instant quote
+                car shipping rate calculator, and most importantly, how they treat their customers. We believe the
+                customer is king, and therefore, nothing short of royalty-like treatment gets the job done. But that
+                doesn't mean we charge you like royalty. You get what you pay for and more with Cross Atlantic llc!</p>
+              <p class="">If you're looking for cheap vehicle transport options, open transport is the way to go. The
+                majority of
+                our customers go for this option and are satisfied with the service.</p>
+              <p class="">Plus, the free quote we offer on transporting any vehicle, any make and model, anywhere in the
+                US also
+                helps you save costs. Remember, we won't just give you an 'estimate' for free, but treat you like our
+                customers even before you commit! We want to be your auto transport company.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="common-wrapper" id="common-wrapper"><button type="button" class="btn btn-danger move_widget_section"><i
+          class="fas fa-arrows-alt"></i></button><span class="action_widget_section" style="display: none;">
+        <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+          class="btn btn-danger change_background_image_widget_section" style="display: none;">Change Background
+          Image</button>
+      </span>
+      <div class="shipping answering support">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-lg-12 calculation">
+              <h3 class="text-center pb-lg-3" style="padding: 0"><span style="color:#ffffff;">Seasonal Insights: How
+                  Summer and Winter Impact Car Shipping Rates</span></h3>
+              <div class="">When planning your auto shipping, it’s crucial to consider how different seasons can affect
+                both the car shipping cost and overall timing of your shipment. Whether you’re looking for car shipping
+                quotes during peak summer months or the colder winter season, understanding these trends can help you
+                plan ahead and potentially save money.<br></div>
+              <div class=""><br></div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+              <div class="mainship arrival">
+                <div class="shippingdata">
+
+                  <div class="ship w-100">
+                    <h5 class="title"><span style="color:#000000;">Summer Shipping Rates: High Demand, Competitive
+                        Pricing</span></h5>
+                    <p class="">Summer is the busiest time of year for car shipping. With schools out and many families
+                      relocating, demand for car transport quotes skyrockets. This increased competition can lead to
+                      slightly higher rates in some areas, but it can also bring more competitive pricing as shipping
+                      companies vie for customers. During this season, you may find that car shipping quotes fluctuate,
+                      especially if you're shipping across long distances or to popular destinations.</p>
+                    <p class="">To keep costs down, it's recommended to book your shipment early, as last-minute
+                      requests may result in premium pricing. On average, summer shipping rates can rise by 10-15%,
+                      particularly for cross-country moves or enclosed transport services. Despite the higher demand,
+                      auto shipping costs can still vary significantly based on your location and the type of transport
+                      (open vs. enclosed).</p>
+                    <div><br></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+              <div class="mainship arrival">
+                <div class="shippingdata">
+
+                  <div class="ship w-100">
+                    <h5 class="title"><span style="color:#000000;">Winter Shipping: Lower Demand, Potential
+                        Delays</span></h5>
+                    <p class=""></p>
+                    <div class=""><span style="color:#000000;" class="">In contrast, winter is generally a slower season
+                        for auto transport, which often leads to reduced rates. However, shipping a car in winter comes
+                        with its own set of challenges, such as inclement weather and shorter daylight hours. Snow and
+                        ice can delay deliveries, and routes to colder regions can be more difficult to navigate, which
+                        may cause slight increases in car shipping costs for those areas.<br><br>That said, if your
+                        schedule is flexible, winter can offer great opportunities to lock in lower car shipping quotes,
+                        especially if you are shipping to southern states where demand is lower during the colder
+                        months. For instance, shipping a car in January or February often leads to reduced rates, but
+                        it’s essential to plan ahead to accommodate potential weather delays.</span><span
+                        style="font-size: 1rem;"></span><br>
+                      <div><span style="color:#000000;" class=""><br></span></div>
+                      <div><span style="color:#000000;" class=""><br></span></div>
+                    </div>
+                    <div><br></div>
+                    <p></p>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <div class="mainship arrival">
+                <div class="shippingdata">
+
+                  <div class="ship w-100">
+                    <p class="title text-left">When to Book for the Best Rates</p>
+                    <p class="">For both summer and winter, booking your auto shipping in advance can make a significant
+                      difference in the final car shipping cost. By comparing car transport quotes from various
+                      providers, you can secure a competitive rate no matter the season.</p>
+                    <p class=""></p>
+                    <p class=""></p>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer pb-0">
+      <div class="container">
+        <div class="row">
+          <div class="col1">
+            <div class="footerdata">
+              <img width="135" height="89" class="img-fluid img-thumbnail" id="bottom_logo"
+                src="style/images/Webp.net-resizeimage-9-e1617178290366.webp" alt="amerifreight logo"
+                loading="lazy">
+            </div>
+          </div>
+          <div class="col2">
+            <div class="footerheading">
+              <h4>QUICK LINK
+              </h4>
+            </div>
+            <div class="footerproduct">
+              <ul>
+                <li>
+                  <a href="#">About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Get An
+                    Instant Quote
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#">Reviews
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Discounts
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Why Cross Atlantic llc
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col3">
+            <div class="footerheading">
+              <h4>CONTACT US
+              </h4>
+            </div>
+            <div class="blurbedata">
+              <ul>
+
+                <li>
+                  <i class="fas fa-phone">
+                  </i>
+                  <p>Phone:
+                    <a href="tel:(770) 486-1010" id="bottom_contact_number">(770) 486-1010
+                    </a>
+                  </p>
+                </li>
+                <li>
+                  <i class="fas fa-fax">
+                  </i>
+                  <p>Fax:
+                    <a href="tel:(470) 745-6078" id="footer_fax">1 (470) 745-6078
+                    </a>
+                  </p>
+                </li>
+                <li>
+                  <i class="fas fa-envelope">
+                  </i>
+                  <p>Email:
+                    <a href="mailto:info@amerifreight.net" id="footer_email">Click here
+                    </a>
+                  </p>
+                </li>
+                <li>
+                  <i class="fas fa-clock">
+                  </i>
+                  <p id="bottom_working_hours">Mon - Fri: 8am - 10pm EST<br> Sat: 9am - 6pm<br> Sun: 12pm - 4pm
+                  </p>
+                </li>
+                <li>
+                  <i class="fas fa-map-marker-alt">
+                  </i>
+                  <p id="footer_address">205 Greencastle Road Suite A, Tyrone, GA 30290
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col4">
+            <div class="footerheading">
+              <h4>INFORMATION
+              </h4>
+            </div>
+            <div class="footerproduct">
+              <ul>
+                <li>
+                  <a href="#">Job Openings
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Contact Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Shipping By State
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Terms &amp; Conditions
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Privacy Policy
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="border-top w-100 d-lg-flex pt-2" style="border-color: #ddd !important;">
+            <div class="col-sm-12 col-12 col-md-12 col-lg-8 col-xl-8 ">
+              <div class="mainbtmlinks">
+                <div class="btmprivacy">
+                  <p>© Cross Atlantic llc Auto Transport 2024
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-12 col-md-12 col-lg-4 col-xl-4 pr-lg-5">
+              <div class="social-links d-lg-flex d-md-flex justify-content-end">
+                <ul class="d-lg-flex d-md-flex p-0 justify-content-between">
+                  <li>
+                    <a rel="noreferrer" id="facebook_url" href="https://www.facebook.com/AFCarShipping/"
+                      target="_blank">
+                      <img loading="lazy" src="style/images/facebook.png" alt="facebook">
+                    </a>
+                  </li>
+                  <li class="mx-3">
+                    <a rel="noreferrer" id="linkedin_url" href="https://www.linkedin.com/company/amerifreight"
+                      target="_blank">
+                      <img loading="lazy" src="style/images/linkedin.png" alt="linkedin">
+                    </a>
+                  </li>
+                  <li class="mr-3">
+                    <a rel="noreferrer" id="twitter_url" href="https://twitter.com/_amerifreight?lang=en"
+                      target="_blank">
+                      <img loading="lazy" src="style/images/x.png" alt="twitter">
+                    </a>
+                  </li>
+                  <li>
+                    <a rel="noreferrer" id="instagram_url" href="https://www.instagram.com/amerifreightcarshipping/"
+                      target="_blank">
+                      <img loading="lazy" src="style/images/instagram.png" alt="Instagram">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $('img').each(function () {
+          if (!$(this).attr('width') && !$(this).attr('height')) {
+            $(this).attr('width', '100%');
+            $(this).attr('height', '100%');
+          }
+        });
       });
+    </script>
+    <script src="js/get-an-instant-quote-js/jquery.inputmask.min.js"></script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://www.amerifreight.net/public/assets/front/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"> </script>
+
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/6.0.0/intro.js"
+      integrity="sha512-iC2jUAfCjQVVR2eGiPYjV2lb7ZIF0Tx3xPj/PdGZSJkSJVz5y+88tRwshNmrso1twhzhSQwBPXNLdAqUYmRAPg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://www.amerifreight.net/public/assets/front/js/mapdata.js"></script>
+    <script async="" src="js/get-an-instant-quote-js/jquery.validate.min.js"></script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://www.amerifreight.net/public/assets/front/js/footer.js"></script>
+
+    <script
+      type="rocketlazyloadscript"> (function(c,l,a,r,i,t,y){ c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)}; t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i; y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y); })(window, document, "clarity", "script", "jy6oslzke7"); </script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://www.amerifreight.net/public/assets/front/js/popper.min.js"></script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://www.googletagmanager.com/gtag/js?id=UA-58169218-1"></script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://www.googletagmanager.com/gtag/js?id=AW-698578430"></script>
+    <script type="rocketlazyloadscript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
     }
+    gtag('js', new Date());
+    gtag('config', 'AW-698578430');
   </script>
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <!-- Optional JavaScript; choose one of the two! -->
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://www.amerifreight.net/public/assets/front/js/slick.js"></script>
+    <!-- TrustBox script -->
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" defer=""
+      fetchpriority="low"></script>
+    <!-- End TrustBox script -->
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://www.amerifreight.net/public/assets/front/owlcarousael/dist/owl.carousel.min.js"></script>
+    <script
+      type="rocketlazyloadscript"> $(window).on("load", function() { function initializeCarousel() { $('.owl-carousel').owlCarousel({ loop: true,  margin: 10, nav: false, dots: true, autoplay: true, autoplayTimeout: 3000, autoplayHoverPause: true,  responsiveClass: true, responsive: {  0: { items: 1, nav: true }, 600: { items: 2, nav: false }, 1000: { items: 4, nav: true, loop: true }  } }); }
+            function setDotAriaLabels() { var checkDotsInterval = setInterval(function() { if ($('.owl-dot').length > 0) { $('.owl-dot').each(function(index) { $(this).attr('aria-label', 'Slider Dot ' + (index + 1));});clearInterval(checkDotsInterval); } }, 200);  } if (typeof introJs !== 'undefined') { introJs().start();  } setDotAriaLabels(); $('.owl-carousel').show(); initializeCarousel();$('.hi').hide();});</script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://www.amerifreight.net/public/assets/front/js/lazysizes.min.js"></script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://cse.google.com/cse.js?cx=5f8fdbb42fdb2deb5"></script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://www.amerifreight.net/public/assets/front/js/select2.min.js"></script>
+    <!--Start of Tawk.to Script-->
+    <script type="rocketlazyloadscript">
+			var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+			(function(){
+			var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+			s1.async=true;
+			s1.src='https://embed.tawk.to/63c96366c2f1ac1e202e9114/1gn5aoi4v';
+			s1.charset='UTF-8';
+			s1.setAttribute('crossorigin','*');
+			s0.parentNode.insertBefore(s1,s0);
+			})();
+		</script>
+    <!--End of Tawk.to Script-->
+    <script>
+      window.addEventListener('load', function () {
+        if (window.location.href.indexOf('/car-shipping-auto-transport-quotes-rates-cost-calculator') != -1) {
+          var timeInt = setInterval(function () {
+            if (jQuery('.sub-step-2').is(":visible")) {
+              gtag('event', 'conversion', {
+                'send_to': 'AW-698578430/YP0LCP-KvMIDEP7rjc0C'
+              });
+              clearInterval(timeInt);
+            }
+          }, 3000);
 
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+        }
 
-  <!-- Option 2: Separate Popper and Bootstrap JS -->
-  <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
+      });
+    </script>
+    <!-- Code for tawk.to to send event to Google Analytics -->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {};
+      Tawk_API.onChatStarted = function () {
+        gtag('event', 'chat_started');
+      }
+    </script>
+
+    <script type="rocketlazyloadscript"
+      data-rocket-type="text/javascript">/* <![CDATA[ */!function(e,n){var r={"selectors":{"block":"pre.EnlighterJSRAW","inline":"code.EnlighterJSRAW"},"options":{"indent":4,"ampersandCleanup":true,"linehover":true,"rawcodeDbclick":false,"textOverflow":"scroll","linenumbers":true,"theme":"enlighter","language":"generic","retainCssClasses":false,"collapse":false,"toolbarOuter":"","toolbarTop":"{BTN_RAW}{BTN_COPY}{BTN_WINDOW}{BTN_WEBSITE}","toolbarBottom":""},"resources":["https:\/\/www.transifex.com\/wp-content\/plugins\/enlighter\/cache\/enlighterjs.min.css?dOSS1a\/3YZ2Sp7U","https:\/\/www.transifex.com\/wp-content\/plugins\/enlighter\/resources\/enlighterjs\/enlighterjs.min.js"]},o=document.getElementsByTagName("head")[0],t=n&&(n.error||n.log)||function(){};e.EnlighterJSINIT=function(){!function(e,n){var r=0,l=null;function c(o){l=o,++r==e.length&&(!0,n(l))}e.forEach(function(e){switch(e.match(/\.([a-z]+)(?:[#?].*)?$/)[1]){case"js":var n=document.createElement("script");n.onload=function(){c(null)},n.onerror=c,n.src=e,n.async=!0,o.appendChild(n);break;case"css":var r=document.createElement("link");r.onload=function(){c(null)},r.onerror=c,r.rel="stylesheet",r.type="text/css",r.href=e,r.media="all",o.appendChild(r);break;default:t("Error: invalid file extension",e)}})}(r.resources,function(e){e?t("Error: failed to dynamically load EnlighterJS resources!",e):"undefined"!=typeof EnlighterJS?EnlighterJS.init(r.selectors.block,r.selectors.inline,r.options):t("Error: EnlighterJS resources not loaded yet!")})},(document.querySelector(r.selectors.block)||document.querySelector(r.selectors.inline))&&e.EnlighterJSINIT()}(window,console); /* ]]> */</script>
+    <script type="text/javascript" id="page-scroll-to-id-plugin-script-js-extra">
+      /* <![CDATA[ */
+      var mPS2id_params = { "instances": { "mPS2id_instance_0": { "selector": "a[href*='#']:not([href='#'])", "autoSelectorMenuLinks": "true", "excludeSelector": "a[href^='#tab-'], a[href^='#tabs-'], a[data-toggle]:not([data-toggle='tooltip']), a[data-slide], a[data-vc-tabs], a[data-vc-accordion], a.screen-reader-text.skip-link", "scrollSpeed": 800, "autoScrollSpeed": "true", "scrollEasing": "easeInOutQuint", "scrollingEasing": "easeOutQuint", "forceScrollEasing": "false", "pageEndSmoothScroll": "true", "stopScrollOnUserAction": "false", "autoCorrectScroll": "false", "autoCorrectScrollExtend": "false", "layout": "vertical", "offset": 0, "dummyOffset": "false", "highlightSelector": "", "clickedClass": "mPS2id-clicked", "targetClass": "mPS2id-target", "highlightClass": "mPS2id-highlight", "forceSingleHighlight": "false", "keepHighlightUntilNext": "false", "highlightByNextTarget": "false", "appendHash": "false", "scrollToHash": "true", "scrollToHashForAll": "true", "scrollToHashDelay": 0, "scrollToHashUseElementData": "true", "scrollToHashRemoveUrlHash": "false", "disablePluginBelow": 0, "adminDisplayWidgetsId": "true", "adminTinyMCEbuttons": "true", "unbindUnrelatedClickEvents": "false", "unbindUnrelatedClickEventsSelector": "", "normalizeAnchorPointTargets": "false", "encodeLinks": "false" } }, "total_instances": "1", "shortcode_class": "_ps2id" };
+      /* ]]> */
+    </script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://7gdrhmqdxblg-u503.pressidiumcdn.com/wp-content/plugins/page-scroll-to-id/js/page-scroll-to-id.min.js?ver=1.7.5"
+      id="page-scroll-to-id-plugin-script-js" defer=""></script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-browser-checker-js-after">
+    /* <![CDATA[ */
+    "use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+    /* ]]> */
+    </script>
+    <script type="text/javascript" id="rocket-preload-links-js-extra">
+      /* <![CDATA[ */
+      var RocketPreloadLinksConfig = { "excludeUris": "\/livechat-lp\/|\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/", "usesTrailingSlash": "1", "imageExt": "jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php", "fileExt": "jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm", "siteUrl": "https:\/\/www.amerifreight.net/", "onHoverDelay": "100", "rateThrottle": "3" };
+      /* ]]> */
+    </script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-preload-links-js-after">
+    /* <![CDATA[ */
+    (function() {
+    "use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),style/images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.style/images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+    }());
+    /* ]]> */
+    </script>
+    <script type="text/javascript" id="rocket_lazyload_css-js-extra">
+      /* <![CDATA[ */
+      var rocket_lazyload_css_data = { "threshold": "300" };
+      /* ]]> */
+    </script>
+    <script type="text/javascript" id="rocket_lazyload_css-js-after">
+      /* <![CDATA[ */
+      !function o(n, c, a) { function s(t, e) { if (!c[t]) { if (!n[t]) { var r = "function" == typeof require && require; if (!e && r) return r(t, !0); if (u) return u(t, !0); throw (r = new Error("Cannot find module '" + t + "'")).code = "MODULE_NOT_FOUND", r } r = c[t] = { exports: {} }, n[t][0].call(r.exports, function (e) { return s(n[t][1][e] || e) }, r, r.exports, o, n, c, a) } return c[t].exports } for (var u = "function" == typeof require && require, e = 0; e < a.length; e++)s(a[e]); return s }({ 1: [function (e, t, r) { "use strict"; !function () { const r = "undefined" == typeof rocket_pairs ? [] : rocket_pairs, e = "undefined" == typeof rocket_excluded_pairs ? [] : rocket_excluded_pairs; e.map(t => { var e = t.selector; const r = document.querySelectorAll(e); r.forEach(e => { e.setAttribute("data-rocket-lazy-bg-".concat(t.hash), "excluded") }) }); const o = document.querySelector("#wpr-lazyload-bg-container"); var t = rocket_lazyload_css_data.threshold || 300; const n = new IntersectionObserver(e => { e.forEach(t => { if (t.isIntersecting) { const e = r.filter(e => t.target.matches(e.selector)); e.map(t => { var e; t && ((e = document.createElement("style")).textContent = t.style, o.insertAdjacentElement("afterend", e), t.elements.forEach(e => { n.unobserve(e), e.setAttribute("data-rocket-lazy-bg-".concat(t.hash), "loaded") })) }) } }) }, { rootMargin: t + "px" }); function c() { 0 < (0 < arguments.length && void 0 !== arguments[0] ? arguments[0] : []).length && r.forEach(t => { try { const e = document.querySelectorAll(t.selector); e.forEach(e => { "loaded" !== e.getAttribute("data-rocket-lazy-bg-".concat(t.hash)) && "excluded" !== e.getAttribute("data-rocket-lazy-bg-".concat(t.hash)) && (n.observe(e), (t.elements || (t.elements = [])).push(e)) }) } catch (e) { console.error(e) } }) } c(); const a = function () { const o = window.MutationObserver; return function (e, t) { if (e && 1 === e.nodeType) { const r = new o(t); return r.observe(e, { attributes: !0, childList: !0, subtree: !0 }), r } } }(); t = document.querySelector("body"), a(t, c) }() }, {}] }, {}, [1]);
+      //# sourceMappingURL=lazyload-css.min.js.map
+      /* ]]> */
+    </script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://7gdrhmqdxblg-u503.pressidiumcdn.com/wp-includes/js/underscore.min.js?ver=1.13.4"
+      id="underscore-js" defer=""></script>
+    <script type="text/javascript"
+      id="wp-util-js-extra">var _wpUtilSettings = { "ajax": { "url": "\/wp-admin\/admin-ajax.php" } };</script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+      data-rocket-src="https://7gdrhmqdxblg-u503.pressidiumcdn.com/wp-includes/js/wp-util.min.js?ver=6.5.5"
+      id="wp-util-js" defer=""></script>
+    <script>window.lazyLoadOptions = [{ elements_selector: "img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]", data_src: "lazy-src", data_srcset: "lazy-srcset", data_sizes: "lazy-sizes", class_loading: "lazyloading", class_loaded: "lazyloaded", threshold: 300, callback_loaded: function (element) { if (element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible") { if (element.classList.contains("lazyloaded")) { if (typeof window.jQuery != "undefined") { if (jQuery.fn.fitVids) { jQuery(element).parent().fitVids() } } } } } }, { elements_selector: ".rocket-lazyload", data_src: "lazy-src", data_srcset: "lazy-srcset", data_sizes: "lazy-sizes", class_loading: "lazyloading", class_loaded: "lazyloaded", threshold: 300, }]; window.addEventListener('LazyLoad::Initialized', function (e) {
+        var lazyLoadInstance = e.detail.instance; if (window.MutationObserver) {
+          var observer = new MutationObserver(function (mutations) {
+            var image_count = 0; var iframe_count = 0; var rocketlazy_count = 0; mutations.forEach(function (mutation) {
+              for (var i = 0; i < mutation.addedNodes.length; i++) {
+                if (typeof mutation.addedNodes[i].getElementsByTagName !== 'function') { continue }
+                if (typeof mutation.addedNodes[i].getElementsByClassName !== 'function') { continue }
+                images = mutation.addedNodes[i].getElementsByTagName('img'); is_image = mutation.addedNodes[i].tagName == "IMG"; iframes = mutation.addedNodes[i].getElementsByTagName('iframe'); is_iframe = mutation.addedNodes[i].tagName == "IFRAME"; rocket_lazy = mutation.addedNodes[i].getElementsByClassName('rocket-lazyload'); image_count += get - an - instant - quote - images.length; iframe_count += iframes.length; rocketlazy_count += rocket_lazy.length; if (is_image) { image_count += 1 }
+                if (is_iframe) { iframe_count += 1 }
+              }
+            }); if (image_count > 0 || iframe_count > 0 || rocketlazy_count > 0) { lazyLoadInstance.update() }
+          }); var b = document.getElementsByTagName("body")[0]; var config = { childList: !0, subtree: !0 }; observer.observe(b, config)
+        }
+      }, !1)</script>
+  </div>
+
+
+
 </body>
 
 </html>

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="csrf-token" content="WVpBPMKmnrRXoLeQ6SddxpTq6pN11PbTms4e3AQx">
-  <link rel="icon" href="images/38x38-AM-5.png" sizes="32x32">
+  <link rel="icon" href="style/images/favicon.png" sizes="32x32">
   <script>if (navigator.userAgent.match(/MSIE|Internet Explorer/i) || navigator.userAgent.match(/Trident\/7\..*?rv:11/i)) { var href = document.location.href; if (!href.match(/[?&]nowprocket/)) { if (href.indexOf("?") == -1) { if (href.indexOf("#") == -1) { document.location.href = href + "?nowprocket=1" } else { document.location.href = href.replace("#", "?nowprocket=1#") } } else { if (href.indexOf("#") == -1) { document.location.href = href + "&nowprocket=1" } else { document.location.href = href.replace("#", "&nowprocket=1#") } } } }</script>
   <script>(() => { class RocketLazyLoadScripts { constructor() { this.v = "1.2.5.1", this.triggerEvents = ["keydown", "mousedown", "mousemove", "touchmove", "touchstart", "touchend", "wheel"], this.userEventHandler = this.t.bind(this), this.touchStartHandler = this.i.bind(this), this.touchMoveHandler = this.o.bind(this), this.touchEndHandler = this.h.bind(this), this.clickHandler = this.u.bind(this), this.interceptedClicks = [], this.interceptedClickListeners = [], this.l(this), window.addEventListener("pageshow", (t => { this.persisted = t.persisted, this.everythingLoaded && this.m() })), document.addEventListener("DOMContentLoaded", (() => { this.p() })), this.delayedScripts = { normal: [], async: [], defer: [] }, this.trash = [], this.allJQueries = [] } k(t) { document.hidden ? t.t() : (this.triggerEvents.forEach((e => window.addEventListener(e, t.userEventHandler, { passive: !0 }))), window.addEventListener("touchstart", t.touchStartHandler, { passive: !0 }), window.addEventListener("mousedown", t.touchStartHandler), document.addEventListener("visibilitychange", t.userEventHandler)) } _() { this.triggerEvents.forEach((t => window.removeEventListener(t, this.userEventHandler, { passive: !0 }))), document.removeEventListener("visibilitychange", this.userEventHandler) } i(t) { "HTML" !== t.target.tagName && (window.addEventListener("touchend", this.touchEndHandler), window.addEventListener("mouseup", this.touchEndHandler), window.addEventListener("touchmove", this.touchMoveHandler, { passive: !0 }), window.addEventListener("mousemove", this.touchMoveHandler), t.target.addEventListener("click", this.clickHandler), this.L(t.target, !0), this.M(t.target, "onclick", "rocket-onclick"), this.C()) } o(t) { window.removeEventListener("touchend", this.touchEndHandler), window.removeEventListener("mouseup", this.touchEndHandler), window.removeEventListener("touchmove", this.touchMoveHandler, { passive: !0 }), window.removeEventListener("mousemove", this.touchMoveHandler), t.target.removeEventListener("click", this.clickHandler), this.L(t.target, !1), this.M(t.target, "rocket-onclick", "onclick"), this.O() } h() { window.removeEventListener("touchend", this.touchEndHandler), window.removeEventListener("mouseup", this.touchEndHandler), window.removeEventListener("touchmove", this.touchMoveHandler, { passive: !0 }), window.removeEventListener("mousemove", this.touchMoveHandler) } u(t) { t.target.removeEventListener("click", this.clickHandler), this.L(t.target, !1), this.M(t.target, "rocket-onclick", "onclick"), this.interceptedClicks.push(t), t.preventDefault(), t.stopPropagation(), t.stopImmediatePropagation(), this.O() } D() { window.removeEventListener("touchstart", this.touchStartHandler, { passive: !0 }), window.removeEventListener("mousedown", this.touchStartHandler), this.interceptedClicks.forEach((t => { t.target.dispatchEvent(new MouseEvent("click", { view: t.view, bubbles: !0, cancelable: !0 })) })) } l(t) { EventTarget.prototype.addEventListenerBase = EventTarget.prototype.addEventListener, EventTarget.prototype.addEventListener = function (e, i, o) { "click" !== e || t.windowLoaded || i === t.clickHandler || t.interceptedClickListeners.push({ target: this, func: i, options: o }), (this || window).addEventListenerBase(e, i, o) } } L(t, e) { this.interceptedClickListeners.forEach((i => { i.target === t && (e ? t.removeEventListener("click", i.func, i.options) : t.addEventListener("click", i.func, i.options)) })), t.parentNode !== document.documentElement && this.L(t.parentNode, e) } S() { return new Promise((t => { this.T ? this.O = t : t() })) } C() { this.T = !0 } O() { this.T = !1 } M(t, e, i) { t.hasAttribute && t.hasAttribute(e) && (event.target.setAttribute(i, event.target.getAttribute(e)), event.target.removeAttribute(e)) } t() { this._(this), "loading" === document.readyState ? document.addEventListener("DOMContentLoaded", this.R.bind(this)) : this.R() } p() { let t = []; document.querySelectorAll("script[type=rocketlazyloadscript][data-rocket-src]").forEach((e => { let i = e.getAttribute("data-rocket-src"); if (i && 0 !== i.indexOf("data:")) { 0 === i.indexOf("//") && (i = location.protocol + i); try { const o = new URL(i).origin; o !== location.origin && t.push({ src: o, crossOrigin: e.crossOrigin || "module" === e.getAttribute("data-rocket-type") }) } catch (t) { } } })), t = [...new Map(t.map((t => [JSON.stringify(t), t]))).values()], this.j(t, "preconnect") } async R() { this.lastBreath = Date.now(), this.P(this), this.F(this), this.q(), this.A(), this.I(), await this.U(this.delayedScripts.normal), await this.U(this.delayedScripts.defer), await this.U(this.delayedScripts.async); try { await this.W(), await this.H(this), await this.J() } catch (t) { console.error(t) } window.dispatchEvent(new Event("rocket-allScriptsLoaded")), this.everythingLoaded = !0, this.S().then((() => { this.D() })), this.N() } A() { document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t => { t.hasAttribute("data-rocket-src") ? t.hasAttribute("async") && !1 !== t.async ? this.delayedScripts.async.push(t) : t.hasAttribute("defer") && !1 !== t.defer || "module" === t.getAttribute("data-rocket-type") ? this.delayedScripts.defer.push(t) : this.delayedScripts.normal.push(t) : this.delayedScripts.normal.push(t) })) } async B(t) { if (await this.G(), !0 !== t.noModule || !("noModule" in HTMLScriptElement.prototype)) return new Promise((e => { let i; function o() { (i || t).setAttribute("data-rocket-status", "executed"), e() } try { if (navigator.userAgent.indexOf("Firefox/") > 0 || "" === navigator.vendor) i = document.createElement("script"), [...t.attributes].forEach((t => { let e = t.nodeName; "type" !== e && ("data-rocket-type" === e && (e = "type"), "data-rocket-src" === e && (e = "src"), i.setAttribute(e, t.nodeValue)) })), t.text && (i.text = t.text), i.hasAttribute("src") ? (i.addEventListener("load", o), i.addEventListener("error", (function () { i.setAttribute("data-rocket-status", "failed"), e() })), setTimeout((() => { i.isConnected || e() }), 1)) : (i.text = t.text, o()), t.parentNode.replaceChild(i, t); else { const i = t.getAttribute("data-rocket-type"), n = t.getAttribute("data-rocket-src"); i ? (t.type = i, t.removeAttribute("data-rocket-type")) : t.removeAttribute("type"), t.addEventListener("load", o), t.addEventListener("error", (function () { t.setAttribute("data-rocket-status", "failed"), e() })), n ? (t.removeAttribute("data-rocket-src"), t.src = n) : t.src = "data:text/javascript;base64," + window.btoa(unescape(encodeURIComponent(t.text))) } } catch (i) { t.setAttribute("data-rocket-status", "failed"), e() } })); t.setAttribute("data-rocket-status", "skipped") } async U(t) { const e = t.shift(); return e && e.isConnected ? (await this.B(e), this.U(t)) : Promise.resolve() } I() { this.j([...this.delayedScripts.normal, ...this.delayedScripts.defer, ...this.delayedScripts.async], "preload") } j(t, e) { var i = document.createDocumentFragment(); t.forEach((t => { const o = t.getAttribute && t.getAttribute("data-rocket-src") || t.src; if (o) { const n = document.createElement("link"); n.href = o, n.rel = e, "preconnect" !== e && (n.as = "script"), t.getAttribute && "module" === t.getAttribute("data-rocket-type") && (n.crossOrigin = !0), t.crossOrigin && (n.crossOrigin = t.crossOrigin), t.integrity && (n.integrity = t.integrity), i.appendChild(n), this.trash.push(n) } })), document.head.appendChild(i) } P(t) { let e = {}; function i(i, o) { return e[o].eventsToRewrite.indexOf(i) >= 0 && !t.everythingLoaded ? "rocket-" + i : i } function o(t, o) { !function (t) { e[t] || (e[t] = { originalFunctions: { add: t.addEventListener, remove: t.removeEventListener }, eventsToRewrite: [] }, t.addEventListener = function () { arguments[0] = i(arguments[0], t), e[t].originalFunctions.add.apply(t, arguments) }, t.removeEventListener = function () { arguments[0] = i(arguments[0], t), e[t].originalFunctions.remove.apply(t, arguments) }) }(t), e[t].eventsToRewrite.push(o) } function n(e, i) { let o = e[i]; e[i] = null, Object.defineProperty(e, i, { get: () => o || function () { }, set(n) { t.everythingLoaded ? o = n : e["rocket" + i] = o = n } }) } o(document, "DOMContentLoaded"), o(window, "DOMContentLoaded"), o(window, "load"), o(window, "pageshow"), o(document, "readystatechange"), n(document, "onreadystatechange"), n(window, "onload"), n(window, "onpageshow") } F(t) { let e; function i(e) { return t.everythingLoaded ? e : e.split(" ").map((t => "load" === t || 0 === t.indexOf("load.") ? "rocket-jquery-load" : t)).join(" ") } function o(o) { if (o && o.fn && !t.allJQueries.includes(o)) { o.fn.ready = o.fn.init.prototype.ready = function (e) { return t.domReadyFired ? e.bind(document)(o) : document.addEventListener("rocket-DOMContentLoaded", (() => e.bind(document)(o))), o([]) }; const e = o.fn.on; o.fn.on = o.fn.init.prototype.on = function () { return this[0] === window && ("string" == typeof arguments[0] || arguments[0] instanceof String ? arguments[0] = i(arguments[0]) : "object" == typeof arguments[0] && Object.keys(arguments[0]).forEach((t => { const e = arguments[0][t]; delete arguments[0][t], arguments[0][i(t)] = e }))), e.apply(this, arguments), this }, t.allJQueries.push(o) } e = o } o(window.jQuery), Object.defineProperty(window, "jQuery", { get: () => e, set(t) { o(t) } }) } async H(t) { const e = document.querySelector("script[data-webpack]"); e && (await async function () { return new Promise((t => { e.addEventListener("load", t), e.addEventListener("error", t) })) }(), await t.K(), await t.H(t)) } async W() { this.domReadyFired = !0, await this.G(), document.dispatchEvent(new Event("rocket-readystatechange")), await this.G(), document.rocketonreadystatechange && document.rocketonreadystatechange(), await this.G(), document.dispatchEvent(new Event("rocket-DOMContentLoaded")), await this.G(), window.dispatchEvent(new Event("rocket-DOMContentLoaded")) } async J() { await this.G(), document.dispatchEvent(new Event("rocket-readystatechange")), await this.G(), document.rocketonreadystatechange && document.rocketonreadystatechange(), await this.G(), window.dispatchEvent(new Event("rocket-load")), await this.G(), window.rocketonload && window.rocketonload(), await this.G(), this.allJQueries.forEach((t => t(window).trigger("rocket-jquery-load"))), await this.G(); const t = new Event("rocket-pageshow"); t.persisted = this.persisted, window.dispatchEvent(t), await this.G(), window.rocketonpageshow && window.rocketonpageshow({ persisted: this.persisted }), this.windowLoaded = !0 } m() { document.onreadystatechange && document.onreadystatechange(), window.onload && window.onload(), window.onpageshow && window.onpageshow({ persisted: this.persisted }) } q() { const t = new Map; document.write = document.writeln = function (e) { const i = document.currentScript; i || console.error("WPRocket unable to document.write this: " + e); const o = document.createRange(), n = i.parentElement; let s = t.get(i); void 0 === s && (s = i.nextSibling, t.set(i, s)); const c = document.createDocumentFragment(); o.setStart(c, 0), c.appendChild(o.createContextualFragment(e)), n.insertBefore(c, s) } } async G() { Date.now() - this.lastBreath > 45 && (await this.K(), this.lastBreath = Date.now()) } async K() { return document.hidden ? new Promise((t => setTimeout(t))) : new Promise((t => requestAnimationFrame(t))) } N() { this.trash.forEach((t => t.remove())) } static run() { const t = new RocketLazyLoadScripts; t.k(t) } } RocketLazyLoadScripts.run() })();</script>
 
@@ -20,9 +20,9 @@
   <link rel="preload" async="" as="style" onload="this.rel='stylesheet'"
     href="https://www.amerifreight.net/public/assets/front/css/owl.carousel.min.css">
   <link rel="preload" href="https://www.amerifreight.net/public/assets/front/js/jquery.min.js" as="script">
-  <link rel="stylesheet" href="about-us-style.css">
-  <script async="" src="js/google-analytics.js"></script>
-  <title>Reliable Car Shipping | AmeriFreight Auto Transport</title>
+  <link rel="stylesheet" href="style/about-us-style.css">
+  <script async="" src="js/about-us-js/google-analytics.js"></script>
+  <title>Reliable Car Shipping | Cross Atlantic llc Auto Transport</title>
   <meta name="keywords"
     content="Get Reliable Car Shipping Services with AmeriFreight – Your Trusted Auto Transport Partner">
   <meta name="description"
@@ -35,12 +35,12 @@
   <meta property="og:title" content="Reliable Car Shipping | AmeriFreight Auto Transport">
   <meta property="og:description"
     content="Experience hassle-free car transport services from AmeriFreight, a leading car shipping company, providing affordable auto transport solutions nationwide.">
-  <meta property="og:image" content="images/200x200.png">
-  <meta property="og:url" content="https://www.amerifreight.net/about-amerifreight-car-shipping-company">
+  <meta property="og:image" content="style/images/200x200.png">
+  <meta property="og:url" content="#">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="AmeriFreight Auto Transport">
-  <link rel="canonical" href="https://www.amerifreight.net/about-amerifreight-car-shipping-company">
+  <link rel="canonical" href="#">
   <link href="https://cdnjs.cloudflare.com" rel="preconnect" crossorigin="anonymous">
   <link href="https://www.googletagmanager.com" rel="preconnect">
   <link href="https://widget.trustpilot.com" rel="preconnect">
@@ -49,7 +49,7 @@
 </head>
 
 <body style="font-family: Roboto, sans-serif;">
-  <script src="js/jquery.min.js"></script>
+  <script src="js/about-us-js/jquery.min.js"></script>
   <script defer="" fetchpriority="low">
     $(document).ready(function () {
       $(".formbt button").html($(".formbt button").text().replace("Submit Now", "<i class='fas fa-calculator'></i> Continue"));
@@ -57,472 +57,470 @@
     });
   </script>
   <div class="main-wraper">
-    <div class="menu-bar">
-      <div class="topbar">
-        <div class="container" style=" max-width: 1400px;margin: 0 auto;">
-          <div class="row">
-            <div class="col-md-12">
-              <ul class="nav top-navbar justify-content-lg-end justify-content-center p-0 border-bottom py-1">
-                <li><a href="blog.html">Blog</a></li>
-                <li><a
-                    href="reviews.html">Reviews</a>
+    <section class="sec-1">
+      <div class="menu-bar">
+        <div class="topbar">
+          <div class="container" style=" max-width: 1400px;margin: 0 auto;">
+            <div class="row">
+              <div class="col-md-12">
+                <ul class="nav top-navbar justify-content-lg-end justify-content-center p-0 border-bottom py-1">
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="reviews.html">Reviews</a>
+                  </li>
+                  <li><a href="contact-us.html">Contact</a></li>
+                  <li><a href="about-us.html">About Us</a></li>
+                  <li><a href="help.html">Help</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container" style=" max-width: 1400px;
+    margin: 0 auto;">
+          <div class="row align-items-center">
+            <div class="col-md-2 col-xl-2 py-2" style="margin-right: -15px;padding-bottom: 9px;
+        padding-left: 20px;">
+              <a class="navbar-brand" href="home.html">
+                <img class="for-desktop" width="120" height="77"
+                  src="style/images/amerifreight_logo1629704252579.webp" alt="Logo">
+                <img width="135" height="65" class="for-mobile img-responsive"
+                  src="style/images/amerifreight_logo1629704252579.webp" alt="Logo"
+                  srcset="style/images/amerifreight_logo1629704252579.webp 767w, style/images/amerifreight_logo1629704252579.webp 1366w"
+                  sizes="135px">
+              </a>
+            </div>
+            <div class="col-xl-8 col-md-4  order-md-1  ml-auto pr-0">
+              <nav class="navbar navbar-expand-lg navbar-light" style="padding-bottom: 7px;">
+                <div id="main" style="padding: 0px">
+                  <div class="navbar-toggler menuBtn">
+                    <i class="fa fa-bars">
+                    </i>
+                    <br>
+                    <p class="menu-name">MENU
+                    </p>
+                  </div>
+                </div>
+                <button class="navbar-toggler menu-bar-button" type="button" data-toggle="collapse"
+                  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+                  </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-0 ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="get-an-instant-quote.html">Get
+                        An Instant Quote
+                      </a>
+                    </li>
+                    <li class="nav-item dropdown menu-step1"> <a class="nav-link dropdown-toggle" href="#" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Why Cross Atlantic llc
+                      </a>
+                      <div class="dropdown-menu dro-left">
+                        <div class="row">
+                          <div class="col-sm-12 col-md-12">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="door-to-door.html">Door-to-Door <br>
+                                  <span>Door-to-door auto transportation.
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-12 col-md-12">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="no-upfront-payment.html">No
+                                  Upfront Payment <br>
+                                  <span>We do the work first.
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-12 col-md-12">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="gap-protection.html">Gap Protection <br>
+                                  <span>For added peace of mind.
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-12 col-md-12">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="open.html">Open <br>
+                                  <span>Conventional, fastest, cheapest.
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-12 col-md-12">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="enclosed.html">Enclosed <br>
+                                  <span>Safer and less risk.
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-12 col-md-12">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="expedited.html">Expedited <br>
+                                  <span>Need it quick? We can help.
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-12 col-md-12">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a
+                                  href="reviews-dd.html">Reviews
+                                  <br>
+                                  <span>Most 5-Star Reviews in the industry.
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown menu-step1"> <a class="nav-link dropdown-toggle" href="#" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">How it Works
+                      </a>
+                      <div class="dropdown-menu dro-left">
+                        <div class="row">
+                          <div class="col-sm-12 col-md-12">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="start-to-finish.html">Start to
+                                  Finish <br>
+                                  <span>How to Ship Your Car
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-12 col-md-12">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="auto-transport-cost.html">Auto Transport Cost
+                                  <br>
+                                  <span>Learn how to Estimate Costs
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-12 col-md-12">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="cross-country-car-shipping.html">Cross
+                                  Country Car Shipping <br>
+                                  <span>Coast to Coast
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown menu-step2"> <a class="nav-link dropdown-toggle" href="#" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Who We Serve
+                      </a>
+                      <div class="dropdown-menu dro-center">
+                        <div class="row">
+                          <div class="col-6 col-md-12">
+                            <h4>
+                              <a href="about-us.html">Customers | Business
+                              </a>
+                            </h4>
+                          </div>
+                          <div class="col-sm-12 col-md-6">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="online-auto-purchases.html">Online
+                                  Auto
+                                  Purchases <br>
+                                  <span>You’ve bought the car, now what?
+                                  </span> </a>
+                              </li>
+                              <li class="dropdown-item">
+                                <a href="seasonal.html">Seasonal <br>
+                                  <span>Ebb and flow through the year.
+                                  </span> </a>
+                              </li>
+                              <li class="dropdown-item">
+                                <a href="students.html">Students <br>
+                                  <span>The smart way to ship your car.
+                                  </span> </a>
+                              </li>
+                              <li class="dropdown-item">
+                                <a href="military.html">Military <br>
+                                  <span>Let us serve you
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-12 col-md-6">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="motorcycle.html">Motorcycles <br>
+                                  <span>Two wheels? Too easy!
+                                  </span> </a>
+                              </li>
+                              <li class="dropdown-item">
+                                <a href="car-enthusiast.html">Car Enthusiast <br>
+                                  <span>Auto Shipping to keep you smiling.
+                                  </span> </a>
+                              </li>
+                              <li class="dropdown-item">
+                                <a href="relocation.html">Relocation <br>
+                                  <span>We can save you a trip.
+                                  </span> </a>
+                              </li>
+                              <li class="dropdown-item">
+                                <a href="seniors.html">Seniors <br>
+                                  <span>we can assist seniors
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown menu-step2"> <a class="nav-link dropdown-toggle" href="#" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Discounts
+                      </a>
+                      <div class="dropdown-menu dro-center">
+                        <div class="row">
+                          <div class="col-sm-12 col-md-6">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="military-discount.html">Military <br>
+                                  <span>Discount for military
+                                  </span> </a>
+                              </li>
+                              <li class="dropdown-item">
+                                <a href="first-response-discount.html">First Responders <br>
+                                  <span>Discount for first responders
+                                  </span> </a>
+                              </li>
+                              <li class="dropdown-item">
+                                <a href="medical-personnel-discount.html">Medical Personnel <br>
+                                  <span>Discount for medical personnel
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-12 col-md-6">
+                            <ul class="megamenu">
+                              <li class="dropdown-item">
+                                <a href="student-discount.html">Student <br>
+                                  <span>Discount for students
+                                  </span> </a>
+                              </li>
+                              <li class="dropdown-item">
+                                <a href="senior-citizen-discount.html">Senior Citizens <br>
+                                  <span>Discount for senior citizens
+                                  </span> </a>
+                              </li>
+                              <li class="dropdown-item">
+                                <a
+                                  href="and-more.html">And
+                                  More <br>
+                                  <span>Explore other discounts
+                                  </span> </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+            <div class="col-md-6 col-xl-2 order-xl-2" style="    font-weight: 700;text-align: end;">
+              <a href="tel:(770) 486-1010" id="top_contact_number">(770) 486-1010</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="mobmain">
+        <div id="mySidenav" class="sidenav">
+          <div class="sidenavdata">
+            <div class="close-menu">
+              <button class="closebtn" id="closebtnm">close
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z">
+                  </path>
+                </svg>
+              </button>
+            </div>
+            <div class="mobilenav">
+              <ul>
+                <li>
+                  <a href="#">
+                    <span class="span-title">Get An Instant Quote
+                    </span>
+                  </a>
                 </li>
-                <li><a href="contact-us.html">Contact</a></li>
-                <li><a href="about-us.html">About Us</a></li>
-                <li><a href="help.html">Help</a></li>
+                <li>
+                  <a class="dropmenu" href="#">
+                    <span class="span-title">Why Cross Atlantic llc
+                    </span>
+                    <i class="fas fa-angle-down">
+                    </i>
+                  </a>
+                  <ul class="megamenu">
+                    <li> <a href="#">
+                        <span>Door-to-Door
+                        </span>
+                      </a> <a href="#">
+                        <span>No Upfront Payment
+                        </span>
+                      </a> <a href="#">
+                        <span>Gap Protection
+                        </span>
+                      </a> <a href="#">
+                        <span>Open
+                        </span>
+                      </a> <a href="#">
+                        <span>Enclosed
+                        </span>
+                      </a> <a href="#">
+                        <span>Expedited
+                        </span>
+                      </a> <a
+                        href="#">
+                        <span>Reviews
+                        </span>
+                      </a> </li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="dropmenu" href="#">
+                    <span class="span-title">How it Works
+                    </span>
+                    <i class="fas fa-angle-down">
+                    </i>
+                  </a>
+                  <ul class="megamenu">
+                    <li> <a href="#">
+                        <span>Start to Finish
+                        </span>
+                      </a> <a href="#">
+                        <span>Auto Transport Cost
+                        </span>
+                      </a> <a href="#">
+                        <span>Cross Country Car Shipping
+                        </span>
+                      </a> </li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="dropmenu" href="#">
+                    <span class="span-title">Who We Serve
+                    </span>
+                    <i class="fas fa-angle-down">
+                    </i>
+                  </a>
+                  <ul class="megamenu">
+                    <li> <a href="#">
+                        <span>Online Auto Purchases
+                        </span>
+                      </a> <a href="#">
+                        <span>Seasonal
+                        </span>
+                      </a> <a href="#">
+                        <span>Students
+                        </span>
+                      </a> <a href="#">
+                        <span>Military
+                        </span>
+                      </a> <a href="#">
+                        <span>Motorcycles
+                        </span>
+                      </a> <a href="#">
+                        <span>Car Enthusiast
+                        </span>
+                      </a> <a href="#">
+                        <span>Relocation
+                        </span>
+                      </a> <a href="#">
+                        <span>Seniors
+                        </span>
+                      </a> </li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="dropmenu" href="#">
+                    <span class="span-title">Discounts
+                    </span>
+                    <i class="fas fa-angle-down">
+                    </i>
+                  </a>
+                  <ul class="megamenu">
+                    <li> <a href="#">
+                        <span>Military
+                        </span>
+                      </a> <a href="#">
+                        <span>First Responders
+                        </span>
+                      </a> <a href="#">
+                        <span>Medical Personnel
+                        </span>
+                      </a> <a href="#">
+                        <span>Student
+                        </span>
+                      </a> <a href="#">
+                        <span>Senior Citizens
+                        </span>
+                      </a> <a
+                        href="#">
+                        <span>And More
+                        </span>
+                      </a> </li>
+                  </ul>
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="container" style=" max-width: 1400px;
-    margin: 0 auto;">
-        <div class="row align-items-center">
-          <div class="col-md-2 col-xl-2 py-2" style="margin-right: -15px;padding-bottom: 9px;
-        padding-left: 20px;">
-            <a class="navbar-brand" href="Home.html">
-              <img class="for-desktop" width="102" height="67" src="about-us-images/amerifreight_logo1629704252579.png"
-                alt="Logo">
-              <img width="135" height="65" class="for-mobile img-responsive"
-                src="about-us-images/amerifreight_logo1629704252579.png" alt="Logo"
-                srcset="about-us-images/amerifreight_logo1629704252579.png 767w, about-us-images/amerifreight_logo1629704252579.png 1366w"
-                sizes="135px">
-            </a>
-          </div>
-          <div class="col-xl-8 col-md-4  order-md-1  ml-auto pr-0">
-            <nav class="navbar navbar-expand-lg navbar-light" style="padding-bottom: 7px;">
-              <div id="main" style="padding: 0px">
-                <div class="navbar-toggler menuBtn">
-                  <i class="fa fa-bars">
-                  </i>
-                  <br>
-                  <p class="menu-name">MENU
-                  </p>
-                </div>
-              </div>
-              <button class="navbar-toggler menu-bar-button" type="button" data-toggle="collapse"
-                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">
-                </span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-0 ml-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="get-an-instant-quote.html">Get
-                      An Instant Quote
-                    </a>
-                  </li>
-                  <li class="nav-item dropdown menu-step1"> <a class="nav-link dropdown-toggle" href="#" role="button"
-                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Why AmeriFreight
-                    </a>
-                    <div class="dropdown-menu dro-left">
-                      <div class="row">
-                        <div class="col-sm-12 col-md-12">
-                          <ul class="megamenu">
-                            <li class="dropdown-item">
-                              <a href="Door-to-Door.html">Door-to-Door <br>
-                                <span>Door-to-door auto transportation.
-                                </span> </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="col-sm-12 col-md-12">
-                          <ul class="megamenu">
-                            <li class="dropdown-item">
-                              <a href="https://www.amerifreight.net/no-upfront-payment-auto-transport-solutions">No
-                                Upfront Payment <br>
-                                <span>We do the work first.
-                                </span> </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="col-sm-12 col-md-12">
-                          <ul class="megamenu">
-                            <li class="dropdown-item">
-                              <a href="https://www.amerifreight.net/auto-transport-assurance">Gap Protection <br>
-                                <span>For added peace of mind.
-                                </span> </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="col-sm-12 col-md-12">
-                          <ul class="megamenu">
-                            <li class="dropdown-item">
-                              <a href="https://www.amerifreight.net/open-auto-transport-service">Open <br>
-                                <span>Conventional, fastest, cheapest.
-                                </span> </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="col-sm-12 col-md-12">
-                          <ul class="megamenu">
-                            <li class="dropdown-item">
-                              <a href="https://www.amerifreight.net/enclosed-auto-transport-service">Enclosed <br>
-                                <span>Safer and less risk.
-                                </span> </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="col-sm-12 col-md-12">
-                          <ul class="megamenu">
-                            <li class="dropdown-item">
-                              <a href="https://www.amerifreight.net/expedited-auto-transport-service">Expedited <br>
-                                <span>Need it quick? We can help.
-                                </span> </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="col-sm-12 col-md-12">
-                          <ul class="megamenu">
-                            <li class="dropdown-item">
-                              <a
-                                href="https://www.amerifreight.net/amerifreight-bbb-top-rated-car-shipping-company-auto-transport-reviews">Reviews
-                                <br>
-                                <span>Most 5-Star Reviews in the industry.
-                                </span> </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="nav-item dropdown menu-step1"> <a class="nav-link dropdown-toggle" href="#" role="button"
-                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">How it Works
-                    </a>
-                    <div class="dropdown-menu dro-left">
-                      <div class="row">
-                        <div class="col-sm-12 col-md-12">
-                          <ul class="megamenu">
-                            <li class="dropdown-item">
-                              <a href="https://www.amerifreight.net/start-to-finish-work-with-amerifreight">Start to
-                                Finish <br>
-                                <span>How to Ship Your Car
-                                </span> </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="col-sm-12 col-md-12">
-                          <ul class="megamenu">
-                            <li class="dropdown-item">
-                              <a href="https://www.amerifreight.net/auto-transport-cost-shipping">Auto Transport Cost
-                                <br>
-                                <span>Learn how to Estimate Costs
-                                </span> </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="col-sm-12 col-md-12">
-                          <ul class="megamenu">
-                            <li class="dropdown-item">
-                              <a href="https://www.amerifreight.net/cross-country-car-shipping-with-amerifreight">Cross
-                                Country Car Shipping <br>
-                                <span>Coast to Coast
-                                </span> </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="nav-item dropdown menu-step2"> <a class="nav-link dropdown-toggle" href="#" role="button"
-                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Who We Serve
-                    </a>
-                    <div class="dropdown-menu dro-center">
-                      <div class="row">
-                        <div class="col-6 col-md-12">
-                          <h4>
-                            <a href="#">Customers | Business
-                            </a>
-                          </h4>
-                        </div>
-                        <div class="col-sm-12 col-md-6">
-                          <ul class="megamenu">
-                            <li class="dropdown-item">
-                              <a href="https://www.amerifreight.net/online-auto-shipping-buyers-and-sellers">Online Auto
-                                Purchases <br>
-                                <span>You’ve bought the car, now what?
-                                </span> </a>
-                            </li>
-                            <li class="dropdown-item">
-                              <a href="https://www.amerifreight.net/seasonal-movers">Seasonal <br>
-                                <span>Ebb and flow through the year.
-                                </span> </a>
-                            </li>
-                            <li class="dropdown-item">
-                              <a href="https://www.amerifreight.net/student-car-shipping">Students <br>
-                                <span>The smart way to ship your car.
-                                </span> </a>
-                            </li>
-                            <li class="dropdown-item">
-                              <a href="https://www.amerifreight.net/service-members">Military <br>
-                                <span>Let us serve you
-                                </span> </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="col-sm-12 col-md-6">
-                          <ul class="megamenu">
-                            <li class="dropdown-item">
-                              <a href="https://www.amerifreight.net/motorcycle-enthusiasts">Motorcycles <br>
-                                <span>Two wheels? Too easy!
-                                </span> </a>
-                            </li>
-                            <li class="dropdown-item">
-                              <a href="https://www.amerifreight.net/car-enthusiasts">Car Enthusiast <br>
-                                <span>Auto Shipping to keep you smiling.
-                                </span> </a>
-                            </li>
-                            <li class="dropdown-item">
-                              <a href="https://www.amerifreight.net/car-services-for-home-movers">Relocation <br>
-                                <span>We can save you a trip.
-                                </span> </a>
-                            </li>
-                            <li class="dropdown-item">
-                              <a href="https://www.amerifreight.net/senior-citizens">Seniors <br>
-                                <span>we can assist seniors
-                                </span> </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="nav-item dropdown menu-step2"> <a class="nav-link dropdown-toggle" href="#" role="button"
-                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Discounts
-                    </a>
-                    <div class="dropdown-menu dro-center">
-                      <div class="row">
-                        <div class="col-sm-12 col-md-6">
-                          <ul class="megamenu">
-                            <li class="dropdown-item">
-                              <a href="https://www.amerifreight.net/military-discount">Military <br>
-                                <span>Discount for military
-                                </span> </a>
-                            </li>
-                            <li class="dropdown-item">
-                              <a href="https://www.amerifreight.net/first-response-discount">First Responders <br>
-                                <span>Discount for first responders
-                                </span> </a>
-                            </li>
-                            <li class="dropdown-item">
-                              <a href="https://www.amerifreight.net/medical-personnel-discount">Medical Personnel <br>
-                                <span>Discount for medical personnel
-                                </span> </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="col-sm-12 col-md-6">
-                          <ul class="megamenu">
-                            <li class="dropdown-item">
-                              <a href="https://www.amerifreight.net/student-discount">Student <br>
-                                <span>Discount for students
-                                </span> </a>
-                            </li>
-                            <li class="dropdown-item">
-                              <a href="https://www.amerifreight.net/senior-citizen-discount">Senior Citizens <br>
-                                <span>Discount for senior citizens
-                                </span> </a>
-                            </li>
-                            <li class="dropdown-item">
-                              <a
-                                href="https://www.amerifreight.net/military-student-senior-discount-vehicle-auto-transport">And
-                                More <br>
-                                <span>Explore other discounts
-                                </span> </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-          </div>
-          <div class="col-md-6 col-xl-2 order-xl-2" style="    font-weight: 700;text-align: end;">
-            <a href="tel:(770) 486-1010" id="top_contact_number">(770) 486-1010</a>
-          </div>
-        </div>
-      </div>
-    </div>
 
-
-    <div id="mobmain">
-      <div id="mySidenav" class="sidenav">
-        <div class="sidenavdata">
-          <div class="close-menu">
-            <button class="closebtn" id="closebtnm">close
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
-                viewBox="0 0 16 16">
-                <path
-                  d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z">
-                </path>
-              </svg>
-            </button>
-          </div>
-          <div class="mobilenav">
-            <ul>
-              <li>
-                <a href="https://www.amerifreight.net/car-shipping-auto-transport-quotes-rates-cost-calculator">
-                  <span class="span-title">Get An Instant Quote
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a class="dropmenu" href="#">
-                  <span class="span-title">Why AmeriFreight
-                  </span>
-                  <i class="fas fa-angle-down">
-                  </i>
-                </a>
-                <ul class="megamenu">
-                  <li> <a href="https://www.amerifreight.net/door-to-door-shipping">
-                      <span>Door-to-Door
-                      </span>
-                    </a> <a href="https://www.amerifreight.net/no-upfront-payment-auto-transport-solutions">
-                      <span>No Upfront Payment
-                      </span>
-                    </a> <a href="https://www.amerifreight.net/auto-transport-assurance">
-                      <span>Gap Protection
-                      </span>
-                    </a> <a href="https://www.amerifreight.net/open-auto-transport-service">
-                      <span>Open
-                      </span>
-                    </a> <a href="https://www.amerifreight.net/enclosed-auto-transport-service">
-                      <span>Enclosed
-                      </span>
-                    </a> <a href="https://www.amerifreight.net/expedited-auto-transport-service">
-                      <span>Expedited
-                      </span>
-                    </a> <a
-                      href="https://www.amerifreight.net/amerifreight-bbb-top-rated-car-shipping-company-auto-transport-reviews">
-                      <span>Reviews
-                      </span>
-                    </a> </li>
-                </ul>
-              </li>
-              <li>
-                <a class="dropmenu" href="#">
-                  <span class="span-title">How it Works
-                  </span>
-                  <i class="fas fa-angle-down">
-                  </i>
-                </a>
-                <ul class="megamenu">
-                  <li> <a href="https://www.amerifreight.net/start-to-finish-work-with-amerifreight">
-                      <span>Start to Finish
-                      </span>
-                    </a> <a href="https://www.amerifreight.net/auto-transport-cost-shipping">
-                      <span>Auto Transport Cost
-                      </span>
-                    </a> <a href="https://www.amerifreight.net/cross-country-car-shipping-with-amerifreight">
-                      <span>Cross Country Car Shipping
-                      </span>
-                    </a> </li>
-                </ul>
-              </li>
-              <li>
-                <a class="dropmenu" href="#">
-                  <span class="span-title">Who We Serve
-                  </span>
-                  <i class="fas fa-angle-down">
-                  </i>
-                </a>
-                <ul class="megamenu">
-                  <li> <a href="https://www.amerifreight.net/online-auto-shipping-buyers-and-sellers">
-                      <span>Online Auto Purchases
-                      </span>
-                    </a> <a href="https://www.amerifreight.net/seasonal-movers">
-                      <span>Seasonal
-                      </span>
-                    </a> <a href="https://www.amerifreight.net/student-car-shipping">
-                      <span>Students
-                      </span>
-                    </a> <a href="https://www.amerifreight.net/service-members">
-                      <span>Military
-                      </span>
-                    </a> <a href="https://www.amerifreight.net/motorcycle-enthusiasts">
-                      <span>Motorcycles
-                      </span>
-                    </a> <a href="https://www.amerifreight.net/car-enthusiasts">
-                      <span>Car Enthusiast
-                      </span>
-                    </a> <a href="https://www.amerifreight.net/car-services-for-home-movers">
-                      <span>Relocation
-                      </span>
-                    </a> <a href="https://www.amerifreight.net/senior-citizens">
-                      <span>Seniors
-                      </span>
-                    </a> </li>
-                </ul>
-              </li>
-              <li>
-                <a class="dropmenu" href="#">
-                  <span class="span-title">Discounts
-                  </span>
-                  <i class="fas fa-angle-down">
-                  </i>
-                </a>
-                <ul class="megamenu">
-                  <li> <a href="https://www.amerifreight.net/military-discount">
-                      <span>Military
-                      </span>
-                    </a> <a href="https://www.amerifreight.net/first-response-discount">
-                      <span>First Responders
-                      </span>
-                    </a> <a href="https://www.amerifreight.net/medical-personnel-discount">
-                      <span>Medical Personnel
-                      </span>
-                    </a> <a href="https://www.amerifreight.net/student-discount">
-                      <span>Student
-                      </span>
-                    </a> <a href="https://www.amerifreight.net/senior-citizen-discount">
-                      <span>Senior Citizens
-                      </span>
-                    </a> <a href="https://www.amerifreight.net/military-student-senior-discount-vehicle-auto-transport">
-                      <span>And More
-                      </span>
-                    </a> </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="common-wrapper" id="common-wrapper"><button type="button" class="btn btn-danger move_widget_section"><i
-          class="fas fa-arrows-alt"></i></button><span class="action_widget_section" style="display: none;">
-        <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
-          class="btn btn-danger change_background_image_widget_section" style="display: block;">Change Background
-          Image</button>
-        <!-- <button type="button" class="btn btn-danger edit_selected_widget">Edit</button> -->
-      </span>
-      <div class="shipping-outer main_background_image about-us-header-image">
-        <div class="inner_background_image">
-          <img fetchpriority="high" loading="eager" class="header-bgimg"
-            src="about-us-images/about-us-stripe1666769523.webp"
-            alt="a graphic cotaning the word about us and a hand holding a marker" width="1500" height="573">
-        </div>
-
-        <div class="about about-us-overlay">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                <div class="position-relative humble">
-                  <!--<h1 class="text-dark">About Us</h1>-->
-                  <p class="para text-dark">AmeriFreight, a proud American brand name that stands for quality auto
-                    transport service at an affordable price.</p>
+      <div class="common-wrapper" id="common-wrapper"><button type="button"
+          class="btn btn-danger move_widget_section"><i class="fas fa-arrows-alt"></i></button><span
+          class="action_widget_section" style="display: none;">
+          <button type="button" class="btn btn-danger remove_widget_section">Delete</button><button type="button"
+            class="btn btn-danger change_background_image_widget_section" style="display: block;">Change Background
+            Image</button>
+          <!-- <button type="button" class="btn btn-danger edit_selected_widget">Edit</button> -->
+        </span>
+        <div class="shipping-outer main_background_image about-us-header-image">
+          <div class="about about-us-overlay">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <div class="position-relative humble">
+                    <h2>ABOUT US</h2>
+                    <p class="para">Cross Atlantic llc, a proud American brand name that<br>stands for quality auto
+                      transport service at an<br>affordable price.</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
 
 
@@ -538,15 +536,15 @@
           <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
               <div class="whoweareimg">
-                <img width="135" height="89" src="about-us-images/amerifreight_logo1629704252579.webp"
-                  data-src="https://www.amerifreight.net/public/assets/front/about-us-images/amerifreight_logo1629704252579.webp"
+                <img width="135" height="89" src="style/images/amerifreight_logo1629704252579.webp"
+                  data-src="https://www.amerifreight.net/public/assets/front/style/images/amerifreight_logo1629704252579.webp"
                   class="vc_single_image-img attachment-thumbnail lazyloaded" alt="Amerifreight logo">
               </div>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-9 col-xl-9">
               <div class="whowearedata">
                 <h1>Who We Are</h1>
-                <p>Established in greater Atlanta in 2004, we built AmeriFreight on true American values such as
+                <p>Established in greater Atlanta in 2004, we built Cross Atlantic llc on true American values such as
                   integrity, innovation, and quality of service. It is not an accident our company colors mirror the
                   U.S. flag: red, white, and blue. </p>
               </div>
@@ -554,18 +552,18 @@
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <p class="">The auto shipping industry can be complicated, and we strive to simplify it for our customers.
                 Although we have shipped thousands of cars over the past two decades, we always consider the fact that
-                many customers have never shipped a car before and deserve to know the entire process. AmeriFreight
+                many customers have never shipped a car before and deserve to know the entire process. Cross Atlantic llc
                 continues to bring honesty, accountability, and transparency into the complexities of the <a
-                  href="https://www.amerifreight.net/start-to-finish-work-with-amerifreight" style="color:#000000;">auto
+                  href="#" style="color:#000000;">auto
                   transport</a> industry. </p>
 
               <!-- <h6>We CARE</h6>-->
               <div class="w-50 m-auto">
                 <p class="fs-5"><b>It is a core value to tailor every customer interaction around their unique situation
-                    and never use a one-size-fits-all approach. Customers at AmeriFreight find authenticity, not
+                    and never use a one-size-fits-all approach. Customers at Cross Atlantic llc find authenticity, not
                     scripted telephone calls.</b></p>
               </div>
-              <p>AmeriFreight operates with a 'people first' approach in everything we do. We aspire to create a great
+              <p>Cross Atlantic llc operates with a 'people first' approach in everything we do. We aspire to create a great
                 work environment for our team. We firmly believe that a happy and enthusiastic team will deliver
                 excellent service to our customers.</p>
               <p>We treat our customers like we treat our employees: like family. Beyond just shipping cars, we want to
@@ -591,26 +589,26 @@
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <div class="whowearedata">
                 <h5>Our team takes pride in the amazing work they do for customers every day. You will be in good hands
-                  when you choose AmeriFreight for your car shipping needs.</h5>
-                <p>To learn more about why you should choose AmeriFreight, or to learn more about how the process works,
+                  when you choose Cross Atlantic llc for your car shipping needs.</h5>
+                <p>To learn more about why you should choose Cross Atlantic llc, or to learn more about how the process works,
                   please visit the pages below.</p>
                 <ul class="trans PROPS pt-0">
-                  <li class=""><a href="https://www.amerifreight.net/"
+                  <li class=""><a href="#"
                       style="color: rgb(41, 38, 223); animation: 1.3s ease-in 0s 1 normal none running bong;">Why choose
-                      AmeriFreight?</a></li>
+                      Cross Atlantic llc?</a></li>
                   <li class=""><a
-                      href="https://www.amerifreight.net/amerifreight-bbb-top-rated-car-shipping-company-auto-transport-reviews"
+                      href="#"
                       style="color:#000000;"></a><a
-                      href="https://www.amerifreight.net/amerifreight-bbb-top-rated-car-shipping-company-auto-transport-reviews"
+                      href="#"
                       style="color: rgb(35, 63, 205); animation: 1.3s ease-in 0s 1 normal none running bang;">Customer
                       Reviews</a><a
-                      href="https://www.amerifreight.net/amerifreight-bbb-top-rated-car-shipping-company-auto-transport-reviews"
+                      href="#"
                       style="color:#233fcd;"></a></li>
-                  <li class=""><a href="https://www.amerifreight.net/start-to-finish-work-with-amerifreight"
+                  <li class=""><a href="#"
                       style="color: rgb(35, 63, 205); animation: 1.3s ease-in 0s 1 normal none running bang;">How Car
                       Shipping Works</a></li>
                   <li class=""><a
-                      href="https://www.amerifreight.net/car-shipping-auto-transport-quotes-rates-cost-calculator"
+                      href="#"
                       style="color: rgb(35, 62, 205); animation: 1.3s ease-in 0s 1 normal none running bang;">Get
                       Started</a></li>
                 </ul>
@@ -650,7 +648,7 @@
               <thead>
                 <tr class="tr">
                   <th>FEATURES</th>
-                  <th class="tableth">AMERIFREIGHT</th>
+                  <th class="tableth">Cross Atlantic llc</th>
                   <th>IMPORTANCE</th>
                 </tr>
               </thead>
@@ -658,14 +656,14 @@
                 <tr>
                   <td>
                     <div class="icon-text">
-                      <div class="icon-image"><img class="lazyloaded" src="about-us-images/cash-1-1.webp"
-                          data-src="https://www.amerifreight.net/public/assets/front/about-us-images/cash-1-1.webp"
+                      <div class="icon-image"><img class="lazyloaded" src="style/images/cash-1-1.webp"
+                          data-src="https://www.amerifreight.net/public/assets/front/style/images/cash-1-1.webp"
                           width="32" height="32" alt="an icon of a dollar bill symbolizing payment"></div>
                       <div class="icon-textbox">Discounts</div>
                     </div>
                   </td>
-                  <td><img class="lazyloaded" src="about-us-images/checkmark-64-1-1.webp"
-                      data-src="https://www.amerifreight.net/public/assets/front/about-us-images/checkmark-64-1-1.webp"
+                  <td><img class="lazyloaded" src="style/images/checkmark-64-1-1.webp"
+                      data-src="https://www.amerifreight.net/public/assets/front/style/images/checkmark-64-1-1.webp"
                       alt="check mark symbol" width="64" height="64"></td>
                   <td>We provide a wide range of discounts including: Military, First Responders, Seniors, Students,
                     Return Customers, and Early Bird.</td>
@@ -673,32 +671,32 @@
                 <tr>
                   <td>
                     <div class="icon-text">
-                      <div class="icon-image"><img class="lazyloaded" src="about-us-images/insurance.webp"
-                          data-src="https://www.amerifreight.net/public/assets/front/about-us-images/insurance.webp"
+                      <div class="icon-image"><img class="lazyloaded" src="style/images/insurance.webp"
+                          data-src="https://www.amerifreight.net/public/assets/front/style/images/insurance.webp"
                           width="32" height="32"
                           alt="a shield icon with checkmark representing protection or reliability"></div>
                       <div class="icon-textbox">Insurance</div>
                     </div>
                   </td>
-                  <td><img class="lazyloaded" src="about-us-images/checkmark-64-1-1.webp"
-                      data-src="https://www.amerifreight.net/public/assets/front/about-us-images/checkmark-64-1-1.webp"
+                  <td><img class="lazyloaded" src="style/images/checkmark-64-1-1.webp"
+                      data-src="https://www.amerifreight.net/public/assets/front/style/images/checkmark-64-1-1.webp"
                       alt="check mark symbol" width="64" height="64"></td>
                   <td>We vet all the carriers and ensure they carry adequate insurance to cover your car during loading,
-                    unloading, and transport. This is standard for ALL transports at AmeriFreight at no additional cost.
+                    unloading, and transport. This is standard for ALL transports at Cross Atlantic llc at no additional cost.
                   </td>
                 </tr>
                 <tr>
                   <td>
                     <div class="icon-text">
                       <div class="icon-image"><img class="lazyloaded"
-                          src="about-us-images/lion-face-outlined-front.webp"
-                          data-src="https://www.amerifreight.net/public/assets/front/about-us-images/lion-face-outlined-front.webp"
+                          src="style/images/lion-face-outlined-front.webp"
+                          data-src="https://www.amerifreight.net/public/assets/front/style/images/lion-face-outlined-front.webp"
                           width="32" height="32" alt="an icon of a face of a lion"></div>
                       <div class="icon-textbox">AFTA GAP Protection</div>
                     </div>
                   </td>
-                  <td><img class="lazyloaded" src="about-us-images/checkmark-64-1-1.webp"
-                      data-src="https://www.amerifreight.net/public/assets/front/about-us-images/checkmark-64-1-1.webp"
+                  <td><img class="lazyloaded" src="style/images/checkmark-64-1-1.webp"
+                      data-src="https://www.amerifreight.net/public/assets/front/style/images/checkmark-64-1-1.webp"
                       alt="check mark symbol" width="64" height="64"></td>
                   <td>A carrier's regular insurance may not protect your vehicle from all damage and inconvenience that
                     can happen during shipment. AFTA GAP Protection offers additional protection over the carrier's
@@ -707,30 +705,30 @@
                 <tr>
                   <td>
                     <div class="icon-text">
-                      <div class="icon-image"><img class="lazyloaded" src="about-us-images/favorites.webp"
-                          data-src="https://www.amerifreight.net/public/assets/front/about-us-images/favorites.webp"
+                      <div class="icon-image"><img class="lazyloaded" src="style/images/favorites.webp"
+                          data-src="https://www.amerifreight.net/public/assets/front/style/images/favorites.webp"
                           width="32" height="32" alt="an icon of a star, related to favorites"></div>
                       <div class="icon-textbox">Customer Reviews</div>
                     </div>
                   </td>
-                  <td><img class="lazyloaded" src="about-us-images/checkmark-64-1-1.webp"
-                      data-src="https://www.amerifreight.net/public/assets/front/about-us-images/checkmark-64-1-1.webp"
+                  <td><img class="lazyloaded" src="style/images/checkmark-64-1-1.webp"
+                      data-src="https://www.amerifreight.net/public/assets/front/style/images/checkmark-64-1-1.webp"
                       alt="check mark symbol" width="64" height="64"></td>
                   <td>Reviews are an excellent indicator of the type of service you can expect when shipping a car. Our
-                    20-year track record speaks for itself. AmeriFreight has industry-leading reviews with the BBB,
+                    20-year track record speaks for itself. Cross Atlantic llc has industry-leading reviews with the BBB,
                     Google, and many others.</td>
                 </tr>
                 <tr>
                   <td>
                     <div class="icon-text">
-                      <div class="icon-image"><img class="lazyloaded" src="about-us-images/handshake-1-1.webp"
-                          data-src="https://www.amerifreight.net/public/assets/front/about-us-images/handshake-1-1.webp"
+                      <div class="icon-image"><img class="lazyloaded" src="style/images/handshake-1-1.webp"
+                          data-src="https://www.amerifreight.net/public/assets/front/style/images/handshake-1-1.webp"
                           width="32" height="32" alt="icon of two hands shaking"></div>
                       <div class="icon-textbox">Upfront Payment</div>
                     </div>
                   </td>
-                  <td><img class="lazyloaded" src="about-us-images/checkmark-64-1-1.webp"
-                      data-src="https://www.amerifreight.net/public/assets/front/about-us-images/checkmark-64-1-1.webp"
+                  <td><img class="lazyloaded" src="style/images/checkmark-64-1-1.webp"
+                      data-src="https://www.amerifreight.net/public/assets/front/style/images/checkmark-64-1-1.webp"
                       alt="check mark symbol" width="64" height="64"></td>
                   <td>We do not take upfront payments. We only accept payments after you approve a carrier that can meet
                     your needs.</td>
@@ -738,34 +736,34 @@
                 <tr>
                   <td>
                     <div class="icon-text">
-                      <div class="icon-image"><img class="lazyloaded" src="about-us-images/investigation.webp"
-                          data-src="https://www.amerifreight.net/public/assets/front/about-us-images/investigation.webp"
+                      <div class="icon-image"><img class="lazyloaded" src="style/images/investigation.webp"
+                          data-src="https://www.amerifreight.net/public/assets/front/style/images/investigation.webp"
                           width="32" height="32" alt="icon of a magnifying glass over a mobile device and computer">
                       </div>
                       <div class="icon-textbox">Carrier Vetting</div>
                     </div>
                   </td>
-                  <td><img class="lazyloaded" src="about-us-images/checkmark-64-1-1.webp"
-                      data-src="https://www.amerifreight.net/public/assets/front/about-us-images/checkmark-64-1-1.webp"
+                  <td><img class="lazyloaded" src="style/images/checkmark-64-1-1.webp"
+                      data-src="https://www.amerifreight.net/public/assets/front/style/images/checkmark-64-1-1.webp"
                       alt="check mark symbol" width="64" height="64"></td>
-                  <td>AmeriFreight vets all the carriers we present to you, and makes sure they are properly registered
+                  <td>Cross Atlantic llc vets all the carriers we present to you, and makes sure they are properly registered
                     with the U.S. Department of Transportation, while also being properly insured. We only use
                     highly-ranked carriers using both an internal and external rating system.</td>
                 </tr>
                 <tr>
                   <td>
                     <div class="icon-text">
-                      <div class="icon-image"><img class="lazyloaded" src="about-us-images/reputation.webp"
-                          data-src="https://www.amerifreight.net/public/assets/front/about-us-images/reputation.webp"
+                      <div class="icon-image"><img class="lazyloaded" src="style/images/reputation.webp"
+                          data-src="https://www.amerifreight.net/public/assets/front/style/images/reputation.webp"
                           width="32" height="32" alt="A thumbs-up icon with a star icon atop it"></div>
                       <div class="icon-textbox">Experience Matter</div>
                     </div>
                   </td>
-                  <td><img class="lazyloaded" src="about-us-images/checkmark-64-1-1.webp"
-                      data-src="https://www.amerifreight.net/public/assets/front/about-us-images/checkmark-64-1-1.webp"
+                  <td><img class="lazyloaded" src="style/images/checkmark-64-1-1.webp"
+                      data-src="https://www.amerifreight.net/public/assets/front/style/images/checkmark-64-1-1.webp"
                       alt="check mark symbol" width="64" height="64"></td>
                   <td class="">We have shipped every kind of vehicle to every state in the country. We are well-prepared
-                    for your shipping needs and are ready to serve you with confidence. AmeriFreight is proudly one of
+                    for your shipping needs and are ready to serve you with confidence. Cross Atlantic llc is proudly one of
                     the oldest companies in the auto transport industry.
                   </td>
                 </tr>
@@ -788,7 +786,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <h5>At AmeriFreight we believe in doing the right thing. Honesty, compassion, a desire to serve with
+              <h5>At Cross Atlantic llc we believe in doing the right thing. Honesty, compassion, a desire to serve with
                 enthusiasm, and do a good job fuel the work we do. And we do it well. </h5>
 
             </div>
@@ -810,70 +808,70 @@
                 <div class="carousel-inner">
                   <div class="carousel-item">
                     <a href="#">
-                      <img loading="lazy" width="115" height="101" src="about-us-images/Bitmap-1.webp" alt="AFta logo">
+                      <img loading="lazy" width="115" height="101" src="style/images/Bitmap-1.webp" alt="AFta logo">
                     </a>
                     <a href="#">
-                      <img loading="lazy" width="115" height="101" src="about-us-images/Bitmap-2.webp"
+                      <img loading="lazy" width="115" height="101" src="style/images/Bitmap-2.webp"
                         alt="Department of Transportation logo">
                     </a>
                     <a href="#">
-                      <img loading="lazy" width="115" height="102" src="about-us-images/Bitmap-3.webp"
+                      <img loading="lazy" width="115" height="102" src="style/images/Bitmap-3.webp"
                         alt="Central Dispatch logo">
                     </a>
                     <a href="#">
-                      <img loading="lazy" width="115" height="103" src="about-us-images/Bitmap-4.webp" alt="BBB logo">
+                      <img loading="lazy" width="115" height="103" src="style/images/Bitmap-4.webp" alt="BBB logo">
                     </a>
                   </div>
                   <div class="carousel-item">
                     <a href="#">
-                      <img loading="lazy" width="115" height="102" src="about-us-images/cl2.webp"
+                      <img loading="lazy" width="115" height="102" src="style/images/cl2.webp"
                         alt="Angie's List Super Service Award">
                     </a>
                     <a href="#">
-                      <img loading="lazy" width="115" height="100" src="about-us-images/CONSUMER.webp"
+                      <img loading="lazy" width="115" height="100" src="style/images/CONSUMER.webp"
                         alt="Cosunmer affairs accredited badge">
                     </a>
                     <a href="#">
-                      <img loading="lazy" width="115" height="100" src="about-us-images/GoogleRevws.webp"
+                      <img loading="lazy" width="115" height="100" src="style/images/GoogleRevws.webp"
                         alt="Google reviews badge">
                     </a>
                     <a href="#">
-                      <img loading="lazy" width="115" height="101" src="about-us-images/TRANSPORT.webp"
+                      <img loading="lazy" width="115" height="101" src="style/images/TRANSPORT.webp"
                         alt="Transport reviews logo">
                     </a>
                   </div>
                   <div class="carousel-item active">
                     <a href="#">
-                      <img loading="lazy" width="114" height="100" src="about-us-images/reviewsorg.webp"
+                      <img loading="lazy" width="114" height="100" src="style/images/reviewsorg.webp"
                         alt="reviews org logo">
                     </a>
                     <a href="#">
-                      <img loading="lazy" width="115" height="100" src="about-us-images/HercRentalLogo2.webp"
+                      <img loading="lazy" width="115" height="100" src="style/images/HercRentalLogo2.webp"
                         alt="herc rentals logo">
                     </a>
                     <a href="#">
-                      <img loading="lazy" width="115" height="100" src="about-us-images/moveorg4.webp"
+                      <img loading="lazy" width="115" height="100" src="style/images/moveorg4.webp"
                         alt="move org logo">
                     </a>
                     <a href="#">
-                      <img loading="lazy" width="115" height="100" src="about-us-images/OreillyLogo2.webp"
+                      <img loading="lazy" width="115" height="100" src="style/images/OreillyLogo2.webp"
                         alt="reilly auto parts logo">
                     </a>
                   </div>
                   <div class="carousel-item">
                     <a href="#">
-                      <img loading="lazy" width="115" height="101" src="about-us-images/AnniversaryBadgeLarge.webp"
+                      <img loading="lazy" width="115" height="101" src="style/images/AnniversaryBadgeLarge.webp"
                         alt="16 years business anniversary award to AmeriFreight awarded by Dun and Bradstreet">
                     </a>
                     <a href="#">
-                      <img loading="lazy" width="115" height="100" src="about-us-images/retirelvglogo.webp"
+                      <img loading="lazy" width="115" height="100" src="style/images/retirelvglogo.webp"
                         alt="Retirement living logo">
                     </a>
                     <a href="#">
-                      <img loading="lazy" width="115" height="101" src="about-us-images/Bitmap-1.webp" alt="AFta logo">
+                      <img loading="lazy" width="115" height="101" src="style/images/Bitmap-1.webp" alt="AFta logo">
                     </a>
                     <a href="#">
-                      <img loading="lazy" width="115" height="101" src="about-us-images/Bitmap-2.webp"
+                      <img loading="lazy" width="115" height="101" src="style/images/Bitmap-2.webp"
                         alt="Department of Transportation logo">
                     </a>
                   </div>
@@ -902,7 +900,7 @@
           </span>
           <div class="freequote-outer main_background_image">
             <div class="inner_background_image">
-              <img class="header-bgimg" src="about-us-images/cta_bg.webp" alt="Amerifreight image" width="1500"
+              <img class="header-bgimg" src="style/images/cta_bg.webp" alt="Amerifreight image" width="1500"
                 height="398" loading="lazy">
             </div>
             <div class="bg-overlay"></div>
@@ -915,7 +913,7 @@
                       <h5>SEE HOW WE CAN SAVE YOU MONEY</h5>
                     </div>
                     <div class="quotemoneybtn"><a
-                        href="https://www.amerifreight.net/car-shipping-auto-transport-quotes-rates-cost-calculator"><span></span><i
+                        href="#"><span></span><i
                           class="fas fa-calculator"></i> Get A Quote</a></div>
                   </div>
                 </div>
@@ -1390,7 +1388,7 @@
           <div class="col1">
             <div class="footerdata">
               <img width="135" height="89" class="img-fluid img-thumbnail" id="bottom_logo"
-                src="about-us-images/Webp.net-resizeimage-9-e1617178290366.webp" alt="amerifreight logo" loading="lazy">
+                src="style/images/Webp.net-resizeimage-9-e1617178290366.webp" alt="amerifreight logo" loading="lazy">
             </div>
           </div>
           <div class="col2">
@@ -1401,25 +1399,25 @@
             <div class="footerproduct">
               <ul>
                 <li>
-                  <a href="https://www.amerifreight.net/about-amerifreight-car-shipping-company">About Us
+                  <a href="#">About Us
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.amerifreight.net/car-shipping-auto-transport-quotes-rates-cost-calculator">Get An
+                  <a href="#">Get An
                     Instant Quote
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://www.amerifreight.net/amerifreight-bbb-top-rated-car-shipping-company-auto-transport-reviews">Reviews
+                    href="#">Reviews
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.amerifreight.net/military-student-senior-discount-vehicle-auto-transport">Discounts
+                  <a href="#">Discounts
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.amerifreight.net/start-to-finish-work-with-amerifreight">Why AmeriFreight
+                  <a href="#">Why Cross Atlantic llc
                   </a>
                 </li>
               </ul>
@@ -1481,23 +1479,23 @@
             <div class="footerproduct">
               <ul>
                 <li>
-                  <a href="https://www.amerifreight.net/auto-transport-job-openings">Job Openings
+                  <a href="#">Job Openings
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.amerifreight.net/contact-amerifreight">Contact Us
+                  <a href="#">Contact Us
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.amerifreight.net/shipping-car-state-by-state">Shipping By State
+                  <a href="#">Shipping By State
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.amerifreight.net/terms-and-conditions">Terms &amp; Conditions
+                  <a href="#">Terms &amp; Conditions
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.amerifreight.net/privacy-policy">Privacy Policy
+                  <a href="#">Privacy Policy
                   </a>
                 </li>
               </ul>
@@ -1507,7 +1505,7 @@
             <div class="col-sm-12 col-12 col-md-12 col-lg-8 col-xl-8 ">
               <div class="mainbtmlinks">
                 <div class="btmprivacy">
-                  <p>© AmeriFreight Auto Transport 2024
+                  <p>© Cross Atlantic llc Auto Transport 2024
                   </p>
                 </div>
               </div>
@@ -1518,25 +1516,25 @@
                   <li>
                     <a rel="noreferrer" id="facebook_url" href="https://www.facebook.com/AFCarShipping/"
                       target="_blank">
-                      <img loading="lazy" src="about-us-images/facebook.png" alt="facebook">
+                      <img loading="lazy" src="style/images/facebook.png" alt="facebook">
                     </a>
                   </li>
                   <li class="mx-3">
                     <a rel="noreferrer" id="linkedin_url" href="https://www.linkedin.com/company/amerifreight"
                       target="_blank">
-                      <img loading="lazy" src="about-us-images/linkedin.png" alt="linkedin">
+                      <img loading="lazy" src="style/images/linkedin.png" alt="linkedin">
                     </a>
                   </li>
                   <li class="mr-3">
                     <a rel="noreferrer" id="twitter_url" href="https://twitter.com/_amerifreight?lang=en"
                       target="_blank">
-                      <img loading="lazy" src="about-us-images/x.png" alt="twitter">
+                      <img loading="lazy" src="style/images/x.png" alt="twitter">
                     </a>
                   </li>
                   <li>
                     <a rel="noreferrer" id="instagram_url" href="https://www.instagram.com/amerifreightcarshipping/"
                       target="_blank">
-                      <img loading="lazy" src="about-us-images/instagram.png" alt="Instagram">
+                      <img loading="lazy" src="style/images/instagram.png" alt="Instagram">
                     </a>
                   </li>
                 </ul>
@@ -1556,7 +1554,7 @@
         });
       });
     </script>
-    <script src="js/jquery.inputmask.min.js"></script>
+    <script src="js/about-us-js/jquery.inputmask.min.js"></script>
     <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
       data-rocket-src="https://www.amerifreight.net/public/assets/front/js/bootstrap.bundle.min.js"
       crossorigin="anonymous"> </script>
@@ -1567,7 +1565,7 @@
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
       data-rocket-src="https://www.amerifreight.net/public/assets/front/js/mapdata.js"></script>
-    <script async="" src="js/jquery.validate.min.js"></script>
+    <script async="" src="js/about-us-js/jquery.validate.min.js"></script>
     <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
       data-rocket-src="https://www.amerifreight.net/public/assets/front/js/footer.js"></script>
 
